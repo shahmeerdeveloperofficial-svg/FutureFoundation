@@ -65,8 +65,8 @@ export const HeroSection = () => {
   };
 
   return (
-    <div className="container-fluid p-0  position-relative hero_main_div">
-      <div className="video_container">
+    <div className="container-fluid p-0 position-relative hero_main_div">
+      <div className="video_container position-relative">
         <video
           controls
           width="100%"
@@ -83,8 +83,8 @@ export const HeroSection = () => {
         </video>
       </div>
       <div className="hero_top_wave">
-        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "clamp(45px, 6vw, 85px)", display: "block" }}>
-          <path d="M0,25 C380,80 1060,15 1440,50 L1440,100 L0,100 Z" fill="#061D52" />
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "clamp(20px, 3vw, 45px)", display: "block" }}>
+          <path d="M0,15 C380,50 1060,5 1440,30 L1440,60 L0,60 Z" fill="#061D52" />
         </svg>
       </div>
       <div className="container position-relative hero_div ">

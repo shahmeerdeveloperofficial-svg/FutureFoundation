@@ -153,7 +153,7 @@
     }
 
     .map_main_div {
-        padding: 100px 90px 50px 90px;
+        padding: 80px 50px 40px 60px;
     }
 
     .map_line {
@@ -167,7 +167,7 @@
 
     .map_loc {
         font-size: 45px;
-        line-height: 60px;
+        line-height: 54px;
     }
 
     .map_find {
@@ -176,8 +176,8 @@
 
     .map_find_now {
         padding: 10px;
-        font-size: 12px;
-        width: 130px;
+        font-size: 14px;
+        width: 120px;
     }
 }
 
@@ -186,8 +186,12 @@
         margin-top: 0;
     }
 
+    .map_main_div {
+        padding: 60px 40px 40px 40px;
+    }
+
     .map_load{
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -197,17 +201,34 @@
     }
 
     .map_main_div {
-        padding: 100px 50px 50px 90px;
+        padding: 50px 30px 30px 30px;
     }
 
     .map_load{
-        height: 500px;
+        height: 380px;
+    }
+
+    .map_loc {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .map_find {
+        font-size: 20px;
     }
 }
 
-@media(max-width: 576px) {
+@media(max-width: 575.98px) {
     .location_main_div {
         margin-top: 0;
+    }
+
+    .map_icon {
+        display: none;
+    }
+
+    .map_yellow_circle {
+        display: none;
     }
 
     .map_line {
@@ -219,29 +240,49 @@
     }
 
     .map_main_div {
-        padding: 100px 50px 50px 90px;
+        padding: 40px 20px 35px 20px;
+        text-align: center;
+    }
+
+    .map_main_div .d-flex {
+        justify-content: center;
+    }
+
+    .map_name {
+        font-size: 52px;
+        line-height: 52px;
+    }
+
+    .map_cap {
+        font-size: 15px;
     }
 
     .map_load{
-        height: 500px;
+        height: 320px;
     }
 
     .map_loc {
-        font-size: 45px;
-        line-height: 60px;
+        font-size: 34px;
+        line-height: 42px;
+        margin-top: 20px;
     }
 
     .map_find {
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .map_input_body {
+        padding: 4px 4px 4px 14px;
     }
 
     .map_find_now {
-        padding: 10px;
-        font-size: 12px;
-        width: 130px;
+        padding: 8px 12px;
+        font-size: 13px;
+        width: 100px;
     }
 
     .map_circle_img {
-        right: 50px;
+        display: none;
     }
-}
+}

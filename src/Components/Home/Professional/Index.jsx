@@ -168,10 +168,10 @@ export const ProfessionalSection = () => {
       <div className="container-fluid p-0 mt-5 overflow-hidden">
         <div className="student_color p-0" data-aos="fade-up">
           <img src={Alpha} alt="" className="alpha" />
-          <div className="row counter_div m-0">
+          <div className="row counter_div m-0 justify-content-center">
             {counterData.map((item) => (
-              <div key={item.id} className="col p-0 d-flex flex-column gap-3">
-                <div className="d-flex justify-content-center position-relative">
+              <div key={item.id} className="col-6 col-md-3 p-2 d-flex flex-column gap-2 text-center">
+                <div className="counter_icon_wrapper position-relative d-flex justify-content-center align-items-center mb-1">
                   <img src={Rounded} alt="" className="rounded_img" />
                   <img src={item.img} alt="" className="one_img" />
                 </div>

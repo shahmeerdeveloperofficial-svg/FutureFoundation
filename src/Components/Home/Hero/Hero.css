@@ -59,13 +59,13 @@ video::-webkit-media-controls-panel {
     width: 100%;
     position: relative;
     z-index: 4;
-    margin-top: clamp(-45px, -6vw, -80px);
+    margin-top: -2px;
     line-height: 0;
     pointer-events: none;
 }
 
 .hero_div {
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     padding-bottom: 3rem;
 }
 
@@ -86,6 +86,7 @@ video::-webkit-media-controls-panel {
     margin-bottom: 0;
     margin-top: 5px;
 }
+
 
 .hero_desp {
     font-family: 'Montserrat';

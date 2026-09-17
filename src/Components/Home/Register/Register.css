@@ -4,8 +4,9 @@
     background-image: url("../../../assets/images/register_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: relative;
-    height: 520px;
+    min-height: 520px;
     z-index: 0;
 }
 
@@ -19,6 +20,7 @@
     background-image: url("../../../assets/images/register_bg_one.png"); 
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     opacity: 0.9;
     z-index: 0;
 }
@@ -26,76 +28,107 @@
 .register_main{
     position: relative;
     z-index: 1;
+    align-items: center;
+    padding: 40px 20px;
 }
 
 .reg_name {
     font-family: 'RecoletaAlt';
-    font-size: 65px;
-    line-height: 86px;
+    font-size: clamp(32px, 5vw, 65px);
+    line-height: 1.15;
     color: var(--whiteColor);
     margin-bottom: 0;
-    padding-top: 100px;
-    width: 500px;
+    padding-top: 20px;
+    max-width: 500px;
 }
 
 .reg_desp {
     font-family: 'Montserrat';
-    font-size: 14px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 24px;
     color: var(--whiteColor);
     margin-bottom: 0;
-    margin-top: 30px;
-    width: 600px;
+    margin-top: 20px;
+    max-width: 600px;
 }
 
 .reg_btn {
     border-radius: 50px;
     padding: 8px 10px 8px 25px;
     font-family: 'Montserrat';
-    font-size: 16px;
-    display: flex;
-    gap: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-flex;
+    gap: 15px;
     background: var(--primaryColor);
     border: none;
     align-items: center;
     color: var(--whiteColor);
     margin-top: 22px;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .reg_btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 
 .reg_circle {
-    border-radius: 50px;
+    border-radius: 50%;
     background: var(--whiteColor);
-    padding: 10px;
+    padding: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 32px;
+    height: 32px;
 }
 
 .reg_circle_icon {
     color: var(--primaryColor);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .reg_btn_one {
     border-radius: 50px;
     padding: 8px 10px 8px 25px;
     font-family: 'Montserrat';
-    font-size: 16px;
-    display: flex;
-    gap: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-flex;
+    gap: 15px;
     background: #5666A5;
     border: none;
     align-items: center;
     color: var(--whiteColor);
     margin-top: 22px;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .reg_btn_one:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
+
+@media (max-width: 991.98px) {
+    .register_bg {
+        min-height: auto;
+    }
+
+    .register_main {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .reg_name,
+    .reg_desp {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .register_main .d-flex {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

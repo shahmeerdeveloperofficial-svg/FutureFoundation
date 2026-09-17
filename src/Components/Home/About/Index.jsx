@@ -68,7 +68,7 @@ export const AboutSection = () => {
             {Curdata.slice(0, 6).map((item) => (
               <div key={item.id} className="mt-3 col-lg-6" data-aos="fade-up">
                 <div className="cur_body_data">
-                  <div className="cur_thumb d-none d-sm-block">
+                  <div className="cur_thumb">
                     <img src={item.image} alt="" className="cur_img" />
                     <img src={item.imageone} alt="" className="cur_imageone" />
                   </div>

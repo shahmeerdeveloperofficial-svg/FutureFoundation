@@ -3,14 +3,62 @@
 .navbar_bg{
     background: var(--blueColor);
     position: fixed;
-    top: 34px;
+    top: 40px;
     width: 100%;
     z-index: 1002;
+    box-shadow: 0 4px 18px rgba(6, 29, 82, 0.35);
+}
+
+.navbar-inner-row {
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+}
+
+.navbar-brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.navbar-brand-link:hover {
+    text-decoration: none;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.15;
+}
+
+.navbar-brand-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.navbar-brand-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #F5B800;
+    white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .navbar-logo {
-    width: 76px;
-    height: 76px;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
     object-fit: contain;
     border-radius: 50%;
     background: #ffffff;
@@ -18,6 +66,7 @@
     border: 2px solid var(--secondaryColor);
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    flex-shrink: 0;
 }
 
 .navbar-logo:hover {
@@ -61,11 +110,11 @@
 
 .navbar_link {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     color: var(--whiteColor);
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -73,6 +122,7 @@
     padding: 0;
     min-height: auto;
     transition: color 0.25s ease;
+    white-space: nowrap;
 }
 
 .navbar_link:hover{
@@ -82,18 +132,18 @@
 
 .navbar_icon {
     color: var(--whiteColor);
-    font-size: 24px;
+    font-size: 20px;
     transition: transform 0.3s ease;
 }
 
 .dropdown_menu {
     position: absolute;
     top: 100%;
-    left: -50px;
+    left: -20px;
     background-color: #fff;
     color: #1d2b33;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -128,18 +178,19 @@
 .navbar_btn{
     border: none;
     border-radius: 50px;
-    padding: 7px 8px 7px 24px;
+    padding: 7px 8px 7px 20px;
     font-family: 'Montserrat';
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     display: flex;
-    gap: 12px;
+    gap: 10px;
     background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
     align-items: center;
     color: #061D52;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    white-space: nowrap;
 }
 
 .navbar_btn:hover {
@@ -151,8 +202,8 @@
 .navbar_circle{
     border-radius: 50%;
     background: #061D52;
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +216,7 @@
 
 .navbar_circle_icon{
     color: #ffffff;
-    font-size: 19px;
+    font-size: 17px;
 }
 
 .navbar_toggle{
@@ -174,8 +225,8 @@
 
 .navbar_toggle_btn,
 .mobile_nav_close {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border: 1px solid rgba(255,255,255,.35);
     border-radius: 50%;
     background: rgba(255,255,255,.1);
@@ -183,8 +234,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 26px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .mobile_nav_backdrop {
@@ -192,7 +244,7 @@
     inset: 0;
     z-index: 1003;
     border: 0;
-    background: rgba(0,0,0,.45);
+    background: rgba(0,0,0,.5);
 }
 
 .mobile_nav_panel {
@@ -206,9 +258,9 @@
     color: var(--whiteColor);
     transform: translateX(100%);
     transition: transform .28s ease;
-    box-shadow: -18px 0 45px rgba(0,0,0,.28);
+    box-shadow: -18px 0 45px rgba(0,0,0,.35);
     overflow-y: auto;
-    padding: 18px;
+    padding: 16px;
 }
 
 .mobile_nav_panel.is-open {
@@ -219,38 +271,46 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 18px;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .mobile_nav_logo {
-    width: 72px;
-    height: 72px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
     object-fit: contain;
     border-radius: 50%;
     background: #ffffff;
     border: 2px solid var(--secondaryColor);
+    flex-shrink: 0;
+}
+
+.mobile-brand-link {
+    gap: 10px;
 }
 
 .mobile_nav_links {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .mobile_nav_parent {
     width: 100%;
     border: 0;
-    border-bottom: 1px solid rgba(255,255,255,.14);
+    border-bottom: 1px solid rgba(255,255,255,.12);
     background: transparent;
     color: var(--whiteColor);
-    padding: 14px 16px;
+    padding: 12px 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
     text-align: left;
     text-decoration: none;
     border-radius: 0;
@@ -258,13 +318,13 @@
 
 .mobile_nav_parent svg {
     flex: 0 0 auto;
-    font-size: 23px;
+    font-size: 20px;
     color: var(--whiteColor);
 }
 
 .mobile_submenu {
     display: none;
-    padding: 6px 0 10px 12px;
+    padding: 6px 0 10px 10px;
 }
 
 .mobile_submenu.is-open {
@@ -275,14 +335,14 @@
 .mobile_submenu_item {
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 16px;
+    padding: 9px 14px;
     font-family: 'Montserrat';
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 500;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     transition: all 0.2s ease;
     display: block;
 }
@@ -292,12 +352,12 @@
     background: rgba(212, 175, 55, 0.2);
     border-color: var(--secondaryColor);
     color: var(--secondaryColor);
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .mobile_admission_link {
-    margin-top: 24px;
-    min-height: 50px;
+    margin-top: 20px;
+    min-height: 46px;
     border-radius: 999px;
     background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
     color: #061D52;
@@ -308,7 +368,7 @@
     gap: 10px;
     text-decoration: none;
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
     box-shadow: 0 4px 16px rgba(212, 175, 55, 0.45);
     transition: transform 0.2s ease;
 }
@@ -325,53 +385,59 @@ body.mobile-nav-open {
 @media (min-width: 1200px) and (max-width: 1400px){
     .navbar_link {
         gap: 6px;
-        font-size: 14px;
+        font-size: 13.5px;
     }
     .navbar_btn {
-        padding: 8px 10px 8px 20px;
+        padding: 7px 8px 7px 16px;
+        font-size: 13px;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
     .navbar_link {
-        gap: 6px;
+        gap: 5px;
         font-size: 12px;
+    }
+    .navbar-brand-title {
+        font-size: 14px;
+    }
+    .navbar-brand-subtitle {
+        font-size: 9px;
     }
     .navbar_btn {
-        padding: 8px 10px 8px 10px;
+        padding: 6px 8px 6px 14px;
         font-size: 12px;
-    }
-}
-
-@media (min-width: 992px) {
-    .navbar_bg .pt-3 {
-        padding-top: .55rem !important;
-    }
-
-    .navbar_bg .pb-2 {
-        padding-bottom: .45rem !important;
     }
 }
 
 @media (max-width: 991.98px) {
     .navbar_bg {
-        top: 34px;
+        top: 36px;
     }
 
     .navbar-logo {
-        width: 62px;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+    .navbar-brand-title {
+        font-size: 14.5px;
+    }
+
+    .navbar-brand-subtitle {
+        font-size: 9.5px;
+    }
+
+    .navbar-brand-link {
+        gap: 10px;
     }
 
     .navbar_bg .container {
         max-width: 100%;
-    }
-
-    .navbar_bg .pt-3 {
-        padding-top: .45rem !important;
-    }
-
-    .navbar_bg .pb-2 {
-        padding-bottom: .4rem !important;
+        padding-left: 14px;
+        padding-right: 14px;
     }
 
     .navbar_toggle_btn,
@@ -382,12 +448,54 @@ body.mobile-nav-open {
     }
 
     .mobile_nav_parent {
-        font-size: 15px;
+        font-size: 14.5px;
     }
 }
 
 @media (max-width: 575.98px) {
     .navbar_bg {
-        top: 28px;
+        top: 36px;
+    }
+
+    .navbar-logo {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .navbar-brand-title {
+        font-size: 13px;
+        letter-spacing: 0.2px;
+    }
+
+    .navbar-brand-subtitle {
+        font-size: 8.5px;
+        letter-spacing: 0.8px;
+    }
+
+    .navbar-brand-link {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar-logo {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        min-height: 38px;
+    }
+
+    .navbar-brand-title {
+        font-size: 11.5px;
+    }
+
+    .navbar-brand-subtitle {
+        font-size: 7.5px;
+    }
+
+    .navbar-brand-link {
+        gap: 6px;
     }
 }
