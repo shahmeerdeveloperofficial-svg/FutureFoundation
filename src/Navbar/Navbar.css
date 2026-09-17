@@ -126,38 +126,46 @@
 }
 
 .navbar_btn{
-    border: 1px solid var(--whiteColor);
+    border: none;
     border-radius: 50px;
-    padding: 8px 10px 8px 40px;
+    padding: 7px 8px 7px 24px;
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 700;
     display: flex;
-    gap: 10px;
-    background: transparent;
+    gap: 12px;
+    background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
     align-items: center;
-    color: var(--whiteColor);
-    transition: transform 0.3s ease-in-out;
+    color: #061D52;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar_btn:hover {
-    background-color: var(--primaryColor);
-    border: none;
-    transform: scale(1.1);
-    /* Scale up when hovered */
+    background: linear-gradient(135deg, #FFC700 0%, #E5A800 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
 }
 
 .navbar_circle{
-    border-radius: 50px;
-    background: var(--whiteColor);
-    padding: 10px;
+    border-radius: 50%;
+    background: #061D52;
+    width: 34px;
+    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar_btn:hover .navbar_circle {
+    transform: translateX(3px);
 }
 
 .navbar_circle_icon{
-    color: var(--blueColor);
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 19px;
 }
 
 .navbar_toggle{
@@ -265,23 +273,35 @@
 }
 
 .mobile_submenu_item {
-    color: #1d2b33;
+    color: #ffffff;
     text-decoration: none;
-    padding: 10px 14px;
+    padding: 10px 16px;
     font-family: 'Montserrat';
     font-size: 14px;
-    border-radius: 999px;
-    background: #f1e2c2;
-    border: 1px solid rgba(29, 43, 51, 0.08);
+    font-weight: 500;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     margin-bottom: 8px;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.mobile_submenu_item:hover,
+.mobile_submenu_item:active {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: var(--secondaryColor);
+    color: var(--secondaryColor);
+    padding-left: 20px;
 }
 
 .mobile_admission_link {
     margin-top: 24px;
-    min-height: 48px;
+    min-height: 50px;
     border-radius: 999px;
-    background: var(--primaryColor);
-    color: var(--whiteColor);
+    background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
+    color: #061D52;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -289,6 +309,13 @@
     text-decoration: none;
     font-family: 'Montserrat';
     font-size: 16px;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.45);
+    transition: transform 0.2s ease;
+}
+
+.mobile_admission_link:hover {
+    transform: translateY(-2px);
+    color: #061D52;
 }
 
 body.mobile-nav-open {

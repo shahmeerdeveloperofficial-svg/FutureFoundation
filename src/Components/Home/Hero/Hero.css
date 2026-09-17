@@ -103,31 +103,42 @@ video::-webkit-media-controls-panel {
     padding: 8px 10px 8px 25px;
     font-family: 'Montserrat';
     font-size: 16px;
+    font-weight: 700;
     display: flex;
-    gap: 20px;
-    background: var(--primaryColor);
+    gap: 16px;
+    background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
     border: none;
     align-items: center;
-    color: var(--whiteColor);
+    color: #061D52;
     margin-top: 22px;
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.45);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .hero_btn:hover {
-    transform: scale(1.2);
+    background: linear-gradient(135deg, #FFC700 0%, #E5A800 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 22px rgba(212, 175, 55, 0.6);
 }
 
 .hero_circle {
-    border-radius: 50px;
-    background: var(--whiteColor);
-    padding: 10px;
+    border-radius: 50%;
+    background: #061D52;
+    width: 36px;
+    height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.hero_btn:hover .hero_circle {
+    transform: translateX(3px);
 }
 
 .hero_circle_icon {
-    color: var(--primaryColor);
+    color: #ffffff;
     font-size: 20px;
 }
 
