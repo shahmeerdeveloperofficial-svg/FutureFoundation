@@ -13,8 +13,13 @@ export const AdmissionPopup = () => {
       return;
     }
 
-    const dismissed = window.sessionStorage.getItem(STORAGE_KEY) === "1";
-    if (!dismissed) {
+    try {
+      const dismissed = window.sessionStorage.getItem(STORAGE_KEY) === "1";
+      if (!dismissed) {
+        const timer = window.setTimeout(() => setIsOpen(true), 700);
+        return () => window.clearTimeout(timer);
+      }
+    } catch {
       const timer = window.setTimeout(() => setIsOpen(true), 700);
       return () => window.clearTimeout(timer);
     }
@@ -25,7 +30,9 @@ export const AdmissionPopup = () => {
       return;
     }
 
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    try {
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    } catch {}
 
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -35,16 +42,20 @@ export const AdmissionPopup = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      try {
+        document.body.style.overflow = "";
+      } catch {}
       window.removeEventListener("keydown", handleKeyDown);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const handleClose = () => {
-    if (typeof window !== "undefined") {
-      window.sessionStorage.setItem(STORAGE_KEY, "1");
-    }
+    try {
+      if (typeof window !== "undefined") {
+        window.sessionStorage.setItem(STORAGE_KEY, "1");
+      }
+    } catch {}
     setIsOpen(false);
   };
 

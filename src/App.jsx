@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Home } from "./Pages/Home";
 import { Lms } from "./Pages/Lms";
 import { Facilities } from "./Pages/Facilities";
@@ -25,8 +28,18 @@ import { Franchiseoffer } from "./Pages/Franchiseoffer.jsx";
 import { OurCampuses } from "./Pages/OurCampuses.jsx";
 import { FranchiseModel } from "./Pages/FranchiseModel.jsx";
 
-
 function App() {
+  useEffect(() => {
+    try {
+      AOS.init({
+        offset: 20,
+        duration: 600,
+        once: true,
+        disable: false,
+      });
+    } catch {}
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
