@@ -67,8 +67,10 @@ function App() {
       <Route path="/franchise-offer" element={<Franchiseoffer />} />
       <Route path="/franchise-model" element={<FranchiseModel />} />
       <Route path="/our-campuses" element={<OurCampuses />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 }
 
 export default App;
+
