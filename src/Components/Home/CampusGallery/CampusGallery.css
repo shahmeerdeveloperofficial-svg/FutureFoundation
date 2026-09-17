@@ -1,0 +1,351 @@
+/* ==========================================================================
+   PIS EXACT PICTURE SHOWCASE & CAMPUS GALLERY
+   ========================================================================== */
+
+.pis-gallery-section {
+  padding: 60px 0 80px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.pis-gallery-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   PIS HORIZONTAL RECTANGULAR TAB NAVIGATION
+   ========================================================================== */
+.pis-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.pis-tabs-nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 0px;
+  box-shadow: 0 2px 8px rgba(0, 33, 71, 0.05);
+  overflow: hidden;
+}
+
+.pis-tab-btn {
+  background: #ffffff;
+  color: #002147;
+  border: none;
+  border-right: 1px solid #d0d7de;
+  padding: 13px 26px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  outline: none;
+  line-height: 1.2;
+}
+
+.pis-tab-btn:last-child {
+  border-right: none;
+}
+
+.pis-tab-btn:hover {
+  background-color: #002147;
+  color: #ffffff;
+}
+
+.pis-tab-btn.active {
+  background-color: #002147;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   4-COLUMN PICTURE GRID (EXACT 4x2 PIS LAYOUT)
+   ========================================================================== */
+.pis-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.pis-gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #002147;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pis-img-box {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.pis-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pis-gallery-item:hover .pis-gallery-img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   YELLOW / GOLD HOVER OVERLAY WITH CIRCULAR LINK ICON
+   ========================================================================== */
+.pis-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(245, 179, 24, 0.88); /* Exact bright golden yellow tone from screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pis-gallery-item:hover .pis-hover-overlay {
+  opacity: 1;
+}
+
+.pis-circle-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #002147; /* Dark navy circle */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transform: scale(0.85);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.pis-gallery-item:hover .pis-circle-btn {
+  transform: scale(1);
+}
+
+.pis-circle-btn:hover {
+  background-color: #0a3a94;
+  transform: scale(1.1);
+}
+
+.pis-link-icon {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   LIGHTBOX POPUP MODAL
+   ========================================================================== */
+.pis-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pis-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 15, 36, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+.pis-lightbox-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: #002147;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.pis-lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #001733;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pis-lightbox-title {
+  color: #f5b318;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pis-lightbox-close {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.pis-lightbox-close:hover {
+  color: #e53e3e;
+}
+
+.pis-lightbox-body {
+  position: relative;
+  background: #000000;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pis-lightbox-media {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.pis-lightbox-img {
+  max-width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+}
+
+.pis-lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 33, 71, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.pis-lightbox-arrow.prev {
+  left: 15px;
+}
+
+.pis-lightbox-arrow.next {
+  right: 15px;
+}
+
+.pis-lightbox-arrow:hover {
+  background: #f5b318;
+  color: #002147;
+  border-color: #f5b318;
+}
+
+.pis-lightbox-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #001733;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pis-lightbox-caption {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.pis-lightbox-count {
+  color: #f5b318;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .pis-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pis-gallery-section {
+    padding: 40px 0 50px;
+  }
+  
+  .pis-tabs-nav {
+    width: 100%;
+    border-radius: 0px;
+  }
+  
+  .pis-tab-btn {
+    flex: 1 1 auto;
+    padding: 10px 12px;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+  
+  .pis-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .pis-img-box {
+    height: 180px;
+  }
+  
+  .pis-lightbox-body {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pis-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pis-img-box {
+    height: 220px;
+  }
+}

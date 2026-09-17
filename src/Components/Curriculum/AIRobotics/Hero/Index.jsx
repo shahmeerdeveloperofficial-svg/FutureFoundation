@@ -19,7 +19,7 @@ export const HeroSection = () => {
           <h1 className="lms_hero_title">AI & Robotics</h1>
           <p className="lms_heo_desp">
             Home
-            <span className="lms-hero-breadcrumb-icon">🔻</span> AI & Robotics
+            <span className="lms-hero-breadcrumb-icon">&#9660;</span> AI & Robotics
           </p>
         </div>
         <div className="hero_cloud_img" />

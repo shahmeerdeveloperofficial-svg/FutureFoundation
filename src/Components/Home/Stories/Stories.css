@@ -1,0 +1,109 @@
+﻿@import url('../../../App.css');
+
+.iskl_stories_section {
+  padding: 5.5rem 0;
+  background: #ffffff;
+}
+
+.iskl_stories_header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.iskl_stories_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.iskl_story_card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 20px rgba(0, 45, 116, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.iskl_story_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 45, 116, 0.12);
+  border-color: var(--tertiary-color);
+}
+
+.iskl_story_img_wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: #f0f4f9;
+}
+
+.iskl_story_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.iskl_story_card:hover .iskl_story_img {
+  transform: scale(1.05);
+}
+
+.iskl_story_badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: var(--primary-color);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.iskl_story_body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.iskl_story_title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.iskl_story_text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.iskl_story_author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.iskl_author_name {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.iskl_author_role {
+  font-size: 0.8rem;
+  color: var(--tertiary-color);
+  font-weight: 600;
+}

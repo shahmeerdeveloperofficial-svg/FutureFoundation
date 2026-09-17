@@ -58,7 +58,7 @@ export const LocationSection = () => {
                 <img src={Map_one} alt="" className="map_one_img" />
                 <img src={Map_two} alt="" className="map_two_img" />
                 <div>
-                  <p className="map_name">72</p>
+                  <p className="map_name">70+</p>
                   <p className="map_cap">Campuses</p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ export const LocationSection = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106389.83298142784!2d72.93574724333932!3d33.561630353449104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df948974419acb%3A0x984357e1632d30f!2sRawalpindi%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1739156070719!5m2!1sen!2s"
             className="map_load"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

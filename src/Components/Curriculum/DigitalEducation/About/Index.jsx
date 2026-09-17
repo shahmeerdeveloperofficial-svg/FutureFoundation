@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import About from "../../../../assets/images/facilities/about.png";
-import About_one from "../../../../assets/images/facilities/about-one.png";
-import About_two from "../../../../assets/images/facilities/about-two.png";
-import { Curdata } from "../../../../Data/pro";
+import DgLeft from "../../../../assets/images/curiculum/dgedu_left.jpg";
+import DgRight from "../../../../assets/images/curiculum/dgedu_right.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,30 +14,28 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    <div className="container-fluid pb-4 mt-4  bg-dgedu-color">
+    <div className="container-fluid py-5 bg-dgedu-color">
       <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <img src={About} alt="" className="pt-5" />
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-3 col-md-4 d-none d-md-flex justify-content-center" data-aos="fade-right">
+            <div className="dgedu-img-wrapper">
+              <img src={DgLeft} alt="Digital Education - Smart Board" className="dgedu-side-img img-fluid" />
+            </div>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
-            <img src={About_two} alt="" />
-            <h1 className="dgedu-about-title">
-              Digital Education
-            </h1>
+          <div className="col-lg-6 col-md-8 d-flex flex-column align-items-center text-center px-lg-4" data-aos="fade-up">
+            <h1 className="dgedu-about-title">Digital Education</h1>
+            <div className="dgedu-title-line"></div>
             <p className="dgedu-about-desp">
-Digital education is the innovative use of digital tools and technologies during teaching and learning and is often referred to as technology-enhanced learning (TEL) or e-learning. Exploring the use of digital technologies allows educators to design engaging learning opportunities in the courses they teach, and these can take the form of blended or fully online courses and programs.            </p>
-            
-            <p className="dgedu-about-desp">
-Education. We are always motivated to adopt all innovative ideas and practices to fulfil the requirements of modern education.
+              Digital education represents the innovative integration of cutting-edge tools and technologies into the core teaching and learning experience. Often referred to as Technology-Enhanced Learning (TEL) or E-Learning, exploring these digital frontiers allows our educators to design highly engaging, interactive, and personalized learning opportunities. Whether through blended environments or immersive digital platforms, we are deeply motivated to adopt forward-thinking practices that meet and exceed the requirements of modern education.
             </p>
-            
             <p className="dgedu-about-desp">
-Future Foundation Schools has launched <span>SMART BOARD</span> Technology in our preschool. Moreover, we aim to implement this technology across all of our campuses and at all student levels.
+              As part of our commitment to experiential learning, Future Foundation School has successfully launched state-of-the-art SMART Board Technology in our Montessori and Preschool wings. Moving forward, our vision is to scale this interactive technology across all of our 70+ campuses, embedding it seamlessly at every student level to transform traditional classrooms into dynamic hubs of global discovery.
             </p>
           </div>
-          <div className="col-4">
-            <img src={About_one} alt="" className="pt-5" />
+          <div className="col-lg-3 col-md-4 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+            <div className="dgedu-img-wrapper">
+              <img src={DgRight} alt="Digital Education - TEL & E-Learning" className="dgedu-side-img img-fluid" />
+            </div>
           </div>
         </div>
       </div>

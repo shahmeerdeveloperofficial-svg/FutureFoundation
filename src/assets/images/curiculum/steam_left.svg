@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgStm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="blueStm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B43BD"/>
+      <stop offset="100%" stop-color="#061D52"/>
+    </linearGradient>
+    <linearGradient id="goldStm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="cyanStm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="shStm" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B43BD" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="500" height="500" rx="36" fill="url(#bgStm)"/>
+  <circle cx="250" cy="220" r="165" fill="none" stroke="url(#goldStm)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <g transform="translate(250, 220)" stroke="url(#blueStm)" stroke-width="3" fill="none" opacity="0.75">
+    <ellipse cx="0" cy="0" rx="140" ry="50" transform="rotate(0)"/>
+    <ellipse cx="0" cy="0" rx="140" ry="50" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="140" ry="50" transform="rotate(120)"/>
+    <circle cx="140" cy="0" r="9" fill="url(#goldStm)" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="-70" cy="121" r="9" fill="url(#cyanStm)" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="-70" cy="-121" r="9" fill="url(#goldStm)" stroke="#FFFFFF" stroke-width="2"/>
+  </g>
+  <g filter="url(#shStm)">
+    <path d="M235 150 L265 150 L265 190 L315 285 Q325 305 305 315 L195 315 Q175 305 185 285 L235 190 Z" fill="url(#blueStm)"/>
+    <path d="M205 280 L295 280 L310 305 Q315 312 300 312 L200 312 Q185 312 190 305 Z" fill="url(#cyanStm)"/>
+    <rect x="230" y="145" width="40" height="10" rx="4" fill="url(#goldStm)"/>
+    <circle cx="245" cy="265" r="6" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="260" cy="245" r="4" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="252" cy="225" r="3" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+  <g transform="translate(130, 230) scale(0.6)" fill="url(#goldStm)">
+    <circle cx="0" cy="0" r="32" fill="none" stroke="url(#goldStm)" stroke-width="10"/>
+    <circle cx="0" cy="0" r="14" fill="#0B43BD"/>
+    <rect x="-5" y="-42" width="10" height="84" rx="3"/>
+    <rect x="-42" y="-5" width="84" height="10" rx="3"/>
+    <rect x="-5" y="-42" width="10" height="84" rx="3" transform="rotate(45)"/>
+    <rect x="-42" y="-5" width="84" height="10" rx="3" transform="rotate(45)"/>
+  </g>
+  <g fill="url(#goldStm)" font-family="serif" font-size="24" font-weight="bold">
+    <text x="340" y="140">∑</text>
+    <text x="130" y="140">π</text>
+    <text x="360" y="250">∞</text>
+  </g>
+  <g transform="translate(250, 440)">
+    <path d="M-150 -18 L150 -18 L135 18 L-135 18 Z" fill="url(#blueStm)" filter="url(#shStm)"/>
+    <rect x="-130" y="-14" width="260" height="28" rx="6" fill="none" stroke="url(#goldStm)" stroke-width="1.5"/>
+    <text x="0" y="5" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="800" letter-spacing="2" text-anchor="middle">SCIENCE &amp; ENGINEERING</text>
+  </g>
+</svg>

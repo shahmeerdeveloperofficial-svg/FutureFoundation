@@ -16,10 +16,9 @@ export const HeroSection = () => {
       <div className="hero_fac_bg">
         <div className="lms_overlay"></div>
         <div className="lms_hero_content">
-          <h1 className="lms_hero_title">Our Campuses </h1>
+          <h1 className="lms_hero_title">Our Campuses</h1>
           <p className="lms_heo_desp">
-            Home
-            <span className="lms-hero-breadcrumb-icon">🔻</span> Become Franchisee
+            Home <span className="lms-hero-breadcrumb-icon">&gt;</span> School Network
           </p>
         </div>
         <div className="hero_cloud_img" />

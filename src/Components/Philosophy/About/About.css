@@ -1,39 +1,155 @@
-@import url('../../../App.css');
+@import url("../../../App.css");
 
-.fac-about-main{
-    font-family: 'Montserrat';
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--secondaryblueColor);
-    text-align: center;
-}
-
-.bg-fac-color{
-    background: #f0e2c8;
-}
-.fac-about-title1{
-    text-decoration: underline;
-    font-family: 'Montserrat';
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.fac-about-title{
-    text-decoration: underline;
-    font-family: 'Montserrat';
-    font-weight: 800;
-    text-align: center;;
+.message-page {
+  position: relative;
+  overflow: hidden;
+  background: #f0e2c8;
+  min-height: calc(100vh - 120px);
+  padding: 12px 0 54px;
 }
 
-.fac-about-desp{
-    word-spacing: 2px;
-    font-size: 18px;
-    font-family: 'RecoletaAlt';
-    text-align: center;
-    letter-spacing: .5px;
+.message-page__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  padding-top: 8px;
 }
 
-.fac-card:hover{
-    background: var(--secondaryblueColor);
-    color: white;
+.message-copy {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.message-title {
+  margin: 0 0 10px;
+  font-family: "RecoletaAlt";
+  font-size: clamp(40px, 4vw, 58px);
+  line-height: 1.04;
+  color: #1d252d;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+
+.message-text {
+  margin: 0 auto 16px;
+  font-family: "RecoletaAlt";
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.6;
+  color: #30241e;
+  max-width: 920px;
+}
+
+.message-name {
+  margin: 8px 0 6px;
+  font-family: "RecoletaAlt";
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.05;
+  color: #d63a2f;
+}
+
+.message-role {
+  margin: 0;
+  font-family: "Montserrat";
+  font-size: clamp(15px, 1.4vw, 20px);
+  line-height: 1.25;
+  color: #3e352c;
+}
+
+.message-decor {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.message-decor img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.message-decor--planet {
+  top: 16px;
+  left: 56px;
+  width: 150px;
+}
+
+.message-decor--pencil {
+  top: 16px;
+  right: 56px;
+  width: 125px;
+  transform: rotate(6deg);
+}
+
+.message-decor--abacus {
+  top: 16px;
+  left: 50%;
+  width: 78px;
+  transform: translateX(-50%);
+  opacity: 0.88;
+}
+
+@media (max-width: 991.98px) {
+  .message-page {
+    padding: 8px 0 46px;
+    min-height: auto;
+  }
+
+  .message-copy {
+    max-width: 100%;
+  }
+
+  .message-title {
+    font-size: clamp(30px, 7vw, 44px);
+  }
+
+  .message-text {
+    font-size: 17px;
+  }
+
+  .message-decor--planet {
+    width: 110px;
+    left: 30px;
+    top: 12px;
+  }
+
+  .message-decor--pencil {
+    right: 30px;
+    top: 12px;
+    width: 96px;
+  }
+
+  .message-decor--abacus {
+    top: 14px;
+    width: 62px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .message-page {
+    padding: 8px 0 34px;
+  }
+
+  .message-text {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .message-decor--planet {
+    width: 92px;
+    left: 20px;
+    top: 10px;
+  }
+
+  .message-decor--pencil {
+    right: 18px;
+    width: 78px;
+  }
+
+  .message-decor--abacus {
+    top: 12px;
+    width: 50px;
+  }
 }

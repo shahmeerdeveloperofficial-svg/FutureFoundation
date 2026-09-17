@@ -1,0 +1,732 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+.container,
+.container-fluid {
+  min-width: 0;
+}
+
+@media (max-width: 991.98px) {
+  html,
+  body,
+  #root {
+    max-width: 100vw;
+    overflow-x: clip;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .row {
+    row-gap: 24px;
+  }
+
+  [class*="col-"] {
+    min-width: 0;
+  }
+
+  .hero_main_div {
+    margin-top: 5.2rem;
+  }
+
+  .navbar_bg,
+  .announcement_banner,
+  .hero_main_div,
+  .hero_main_div > .video_container,
+  .hero_main_div > .hero_img_three,
+  .about_div,
+  .footer_bg,
+  .currculum_bg {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+  }
+
+  .hero_main_div .container,
+  .about_div .container,
+  .about_div .container-fluid,
+  .footer_bg .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .navbar_bg,
+  .announcement_banner {
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero_chairman_bg,
+  .hero_principal_bg,
+  .hero_phil_bg,
+  .hero_mon_bg,
+  .hero_dig_bg,
+  .hero_fac_bg,
+  .hero_lms_bg,
+  .hero_steam_bg,
+  .hero_comp_bg,
+  .hero_quran_bg,
+  .hero_char_bg,
+  .hero_personality_bg,
+  .hero_talent_bg,
+  .hero_phy_bg,
+  .hero_out_bg,
+  .hero_admissionProcess_bg,
+  .discipline_hero_bg,
+  .hero_franchiseoffer_bg,
+  .hero_fmodel_bg {
+    height: clamp(170px, 34vw, 290px) !important;
+    min-height: 0 !important;
+    margin-top: 4.8rem !important;
+    top: 0 !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-color: transparent !important;
+  }
+
+  .hero_cloud_img::after {
+    height: clamp(24px, 5.5vw, 40px) !important;
+    bottom: -1px !important;
+  }
+
+  .video_container {
+    width: 100% !important;
+    height: auto !important;
+    overflow: hidden;
+    line-height: 0;
+    background: #000;
+  }
+
+  video,
+  #customVideo,
+  .video_container video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .hero_div {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero_title,
+  .about_title,
+  .history_title,
+  .professional_title,
+  .register_title,
+  .news_title,
+  .location_title,
+  .modal-head {
+    font-size: clamp(22px, 6vw, 34px) !important;
+    line-height: 1.18 !important;
+  }
+
+  .hero_sub_title,
+  .about_desp,
+  .register_subtitle,
+  .news_subtitle,
+  .location_subtitle,
+  .page_title,
+  .campus-title {
+    font-size: clamp(32px, 10vw, 48px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .hero_desp,
+  .history_desp,
+  .history_desp_one,
+  .professional_desp,
+  .cur_desp,
+  .footer_desp,
+  p,
+  li {
+    max-width: 100%;
+    line-height: 1.65;
+  }
+
+  .hero_btn,
+  .navbar_btn,
+  .about_btn,
+  .register_btn,
+  .footer_btn,
+  button {
+    min-height: 44px;
+  }
+
+  .about_div {
+    position: relative !important;
+    top: auto !important;
+    padding-top: 42px;
+  }
+
+  .about_message_div,
+  .cur_body_data,
+  .campus-card,
+  .franchise-card,
+  .model-card {
+    border-radius: 18px !important;
+  }
+
+  .about_message_div {
+    padding: 26px 18px !important;
+  }
+
+  .container-fluid[class*="bg-"][class*="-color"] {
+    background: #f0e2c8;
+    overflow: hidden;
+  }
+
+  .container-fluid[class*="bg-"][class*="-color"] > .container > .row {
+    align-items: center;
+    justify-content: center;
+    row-gap: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .container-fluid[class*="bg-"][class*="-color"] .col-4 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .container-fluid[class*="bg-"][class*="-color"] .row > .col-4:first-child img,
+  .container-fluid[class*="bg-"][class*="-color"] .row > .col-4:last-child img {
+    width: auto;
+    max-width: 120px;
+    max-height: 120px;
+    height: auto;
+    object-fit: contain;
+    padding-top: 1rem !important;
+  }
+
+  .container-fluid[class*="bg-"][class*="-color"] .row > .d-flex > img:first-child,
+  .container-fluid[class*="bg-"][class*="-color"] .row > [class*="col-"].d-flex > img:first-child {
+    width: auto;
+    max-width: 86px;
+    max-height: 86px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  [class$="-about-title"],
+  [class$="-about-title2"],
+  [class$="-about-desp"],
+  [class$="-about-desp-head"],
+  [class$="-specs"],
+  [class$="-specs-title"],
+  [class$="-specs-head"],
+  [class$="-specs-head2"],
+  [class$="-specs-list"],
+  [class$="-specs-list2"],
+  [class$="-specs-container"],
+  [class$="-specs-container2"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow-wrap: anywhere;
+  }
+
+  [class$="-about-title"],
+  [class$="-about-title2"],
+  [class$="-specs-title"],
+  [class$="-specs-head"],
+  [class$="-specs-head2"] {
+    font-size: clamp(24px, 7vw, 28px) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  [class$="-about-desp"],
+  [class$="-about-desp-head"] {
+    font-family: 'RecoletaAlt' !important;
+    font-size: 18px !important;
+    line-height: 1.52 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+  }
+
+  [class$="-specs"],
+  [class$="-specs-list"],
+  [class$="-specs-list2"],
+  [class$="-specs-container"],
+  [class$="-specs-container2"] {
+    font-family: 'RecoletaAlt' !important;
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+    text-align: left !important;
+  }
+
+  .cur_body_data {
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px !important;
+  }
+
+  .cur_body_data .position-relative {
+    width: 82px;
+    min-width: 82px;
+    height: 82px;
+  }
+
+  .cur_img,
+  .cur_imageone,
+  .cur_imagecir {
+    max-width: 72px !important;
+    max-height: 72px !important;
+    object-fit: contain;
+  }
+
+  .cur_imagecir {
+    right: 0 !important;
+  }
+
+  .bg-fac-color .row:first-child img {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain;
+    padding-top: 1rem !important;
+  }
+
+  .bg-fac-color .row:first-child .col-4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cur_item,
+  .about_message_title {
+    font-size: clamp(23px, 7vw, 31px) !important;
+    line-height: 1.2;
+  }
+
+  .owner_bg_img,
+  .owner_img,
+  .owner_ellipse_img {
+    height: auto !important;
+    max-height: 260px;
+  }
+
+  .owner_img,
+  .owner_ellipse_img {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  .professional_desp {
+    width: auto !important;
+  }
+
+  .slick-slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
+  .footer_main {
+    padding-top: 2.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer_bg .row > [class*="col-"] {
+    text-align: left;
+  }
+
+  .footer_bg .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+    column-gap: 18px;
+    row-gap: 24px;
+  }
+
+  .footer_bg .row > [class*="col-"] {
+    width: auto;
+  }
+
+  .footer_bg .row > [class*="col-"]:nth-child(1) {
+    order: 1;
+  }
+
+  .footer_bg .row > [class*="col-"]:nth-child(2) {
+    order: 3;
+  }
+
+  .footer_bg .row > [class*="col-"]:nth-child(3) {
+    order: 2;
+  }
+
+  .footer_bg .row > [class*="col-"]:nth-child(4) {
+    order: 4;
+    grid-column: 1 / -1;
+  }
+
+  .footer_bg .row .d-flex {
+    justify-content: flex-start;
+  }
+
+  .footer_input {
+    max-width: 430px;
+    margin: 0;
+  }
+
+  .footer_line {
+    width: min(78vw, 420px);
+  }
+
+  .footer-person,
+  .footer-cloud,
+  .footer-cloud-one,
+  .footer-sun,
+  .footer-girl,
+  .footer-hand,
+  .footer-cloud-two,
+  .hero_img,
+  .hero_img_one,
+  .hero_img_two,
+  .hero_line_img,
+  .hero_rocket_img,
+  .about_img,
+  .about_line_img,
+  .about_rocket_img,
+  .about_ellipse_img,
+  .about_ellipse_img_one,
+  .about_ellipse_img_two,
+  .homework_img,
+  .graduation_img,
+  .history_line,
+  .history_rocket_img,
+  .history_line_img,
+  .History_Ellipse_img,
+  .History_Water_img,
+  .cur_rocket_img,
+  .cur_line,
+  .cur_homwork,
+  .cur_video,
+  .cur_book,
+  .cur_brain,
+  .cur_world,
+  .arrow_pro,
+  .message_yellow_img,
+  .red_img,
+  .yellow_img,
+  .red_img_one {
+    display: none !important;
+  }
+
+  table,
+  .table,
+  .location-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-responsive,
+  .location-table-wrap,
+  .location-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  form,
+  .form,
+  .contact-form,
+  .franchise-form {
+    max-width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .row > [class*="col-"] {
+    width: 100%;
+  }
+
+  .d-flex:not(.navbar_bg .d-flex):not(.mobile_nav_header):not(.mobile_nav_parent):not(.footer_input):not(.footer_bg .d-flex) {
+    flex-wrap: wrap;
+  }
+
+  .hero_main_div {
+    margin-top: 4.8rem;
+  }
+
+  .hero_main_div .row,
+  .about_div .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero_main_div [class*="col-"],
+  .about_div [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .hero_div {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .hero_chairman_bg,
+  .hero_principal_bg,
+  .hero_phil_bg,
+  .hero_mon_bg,
+  .hero_dig_bg,
+  .hero_fac_bg,
+  .hero_lms_bg,
+  .hero_steam_bg,
+  .hero_comp_bg,
+  .hero_quran_bg,
+  .hero_char_bg,
+  .hero_personality_bg,
+  .hero_talent_bg,
+  .hero_phy_bg,
+  .hero_out_bg,
+  .hero_admissionProcess_bg,
+  .discipline_hero_bg,
+  .hero_franchiseoffer_bg,
+  .hero_fmodel_bg {
+    height: clamp(145px, 39vw, 210px) !important;
+    margin-top: 4.25rem !important;
+  }
+
+  .video_container {
+    height: auto !important;
+  }
+
+  .hero_btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .hero_btn:hover,
+  .navbar_btn:hover,
+  .social-icon:hover {
+    transform: none;
+  }
+
+  .cur_body_data {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .cur_img {
+    margin: 0;
+  }
+
+  .history_div,
+  .cur_div {
+    padding-top: 3rem !important;
+  }
+
+  .footer_logo {
+    width: 78px;
+    height: auto;
+  }
+
+  .footer_main > .d-flex:first-of-type {
+    align-items: flex-start !important;
+    text-align: left;
+  }
+
+  .footer_desp {
+    text-align: left;
+    padding-top: 14px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .footer_loc {
+    text-align: left;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .link_item {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .announcement_text {
+    font-size: 12px;
+  }
+
+  .navbar_bg .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .navbar-logo {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hero_chairman_bg,
+  .hero_principal_bg,
+  .hero_phil_bg,
+  .hero_mon_bg,
+  .hero_dig_bg,
+  .hero_fac_bg,
+  .hero_lms_bg,
+  .hero_steam_bg,
+  .hero_comp_bg,
+  .hero_quran_bg,
+  .hero_char_bg,
+  .hero_personality_bg,
+  .hero_talent_bg,
+  .hero_phy_bg,
+  .hero_out_bg,
+  .hero_admissionProcess_bg,
+  .discipline_hero_bg,
+  .hero_franchiseoffer_bg,
+  .hero_fmodel_bg {
+    height: clamp(130px, 43vw, 178px) !important;
+    margin-top: 3.95rem !important;
+  }
+
+  .hero_cloud_img::after {
+    height: 22px !important;
+  }
+
+  .mobile_nav_panel {
+    width: 92vw;
+  }
+
+  .hero_title,
+  .about_title {
+    text-align: center;
+  }
+
+  .hero_sub_title,
+  .hero_desp {
+    text-align: center;
+  }
+
+  .hero_btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-fluid[class*="bg-"][class*="-color"] .row > .col-4:first-child img,
+  .container-fluid[class*="bg-"][class*="-color"] .row > .col-4:last-child img {
+    max-width: 112px;
+    max-height: 112px;
+  }
+
+  .container-fluid[class*="bg-"][class*="-color"] .row > .d-flex > img:first-child,
+  .container-fluid[class*="bg-"][class*="-color"] .row > [class*="col-"].d-flex > img:first-child {
+    max-width: 78px;
+    max-height: 78px;
+  }
+
+  [class$="-about-title"],
+  [class$="-about-title2"],
+  [class$="-specs-title"] {
+    font-size: 26px !important;
+  }
+
+  [class$="-about-desp"],
+  [class$="-about-desp-head"] {
+    font-size: 18px !important;
+  }
+
+  .about_btn {
+    flex: 1 1 auto;
+    white-space: normal;
+  }
+
+  .about_message_title,
+  .about_owner_name,
+  .about_designation,
+  .about_message_desp {
+    text-align: center;
+  }
+
+  .footer_icon {
+    font-size: 24px;
+    min-width: 24px;
+  }
+
+  .link_item {
+    font-size: 19px;
+  }
+
+  .footer_link,
+  .footer_loc {
+    font-size: 14px;
+  }
+}

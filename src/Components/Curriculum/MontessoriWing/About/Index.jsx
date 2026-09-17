@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import About from "../../../../assets/images/facilities/about.png";
-import About_one from "../../../../assets/images/facilities/about-one.png";
-import About_two from "../../../../assets/images/facilities/about-two.png";
-import { Curdata } from "../../../../Data/pro";
+import MonLeft from "../../../../assets/images/curiculum/mon_left.jpg";
+import MonRight from "../../../../assets/images/curiculum/mon_right.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,61 +14,55 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    <div className="container-fluid pb-4 mt-4  bg-mon-color">
+    <div className="container-fluid py-5 bg-mon-color">
       <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <img src={About} alt="" className="pt-5" />
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-3 col-md-4 d-none d-md-flex justify-content-center" data-aos="fade-right">
+            <div className="mon-img-wrapper">
+              <img src={MonLeft} alt="Montessori Wing - Early Learning" className="mon-side-img img-fluid" />
+            </div>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
-            <img src={About_two} alt="" />
-            <h1 className="mon-about-title">
-              Montessori Wing
-            </h1>
+          <div className="col-lg-6 col-md-8 d-flex flex-column align-items-center text-center px-lg-4" data-aos="fade-up">
+            <h1 className="mon-about-title">Montessori Wing</h1>
+            <div className="mon-title-line"></div>
             <p className="mon-about-desp">
-              The Montessori Wing at Future Foundation Schools is designed to create a nurturing environment where young learners can flourish. The first six years of life are a critical period for setting the foundation of learning, and our Montessori approach focuses on holistic development through hands-on activities and age-appropriate materials. Preschool education here is not only about academic learning but also about social development, motor skills, and emotional growth, setting the stage for lifelong learning and scholastic success.
+              Our specialized early childhood ecosystem emphasizes a fun, healthy, and safe environment, high-quality care and education, physical and cognitive milestones, social and emotional development, seamless transitions, self-esteem and independence, equal opportunities for all, and an authentic partnership with parents.
             </p>
-            <h3 className="mon-specs-title">	Montessori Wing Specialties</h3>
+            <h3 className="mon-specs-title">Montessori Wing Specialties</h3>
             <p className="mon-specs-head">
-              Our Montessori Wing offers an enriched learning environment that emphasizes:
+              Writing workshops are a core part of our preschool experience.
             </p>
-            <li className="mon-specs-list">
-              Fun, Healthy, and Safe Environment: We provide a safe, secure, and welcoming space where children can explore and learn through play.
-            </li>
-            <li className="mon-specs-list">
-High-Quality Care and Education: Our curriculum is designed to provide quality care and developmentally appropriate education for children below statutory school age.            </li>
-            <li className="mon-specs-list">
-Physical and Cognitive Development: Activities are carefully planned to develop both gross motor and fine motor skills, alongside cognitive and emotional growth.            </li>
-            <li className="mon-specs-list">
-Social and Emotional Development: Encouraging kindness, understanding, and positive interactions with peers.            </li>
-            <li className="mon-specs-list">
-Smooth Transitions: Supporting children in making the transition from home to Preschool and later, from Preschool to school with confidence.            </li>
-            <li className="mon-specs-list">
-Promoting Self-Esteem and Independence: We nurture self-confidence and independence through engaging activities.            </li>
-            <li className="mon-specs-list">
-Equal Opportunities for All: Our environment is inclusive, ensuring every child has access to the same opportunities for learning and growth.            </li>
-            <li className="mon-specs-list">
-Partnership with Parents: We work closely with parents, maintaining strong, supportive relationships and providing access to regular development assessments and Early Learning Goals.            </li>
-          
-          <div className="mon-specs-container2">
-             <h3 className="mon-specs-title">	Emphasis on Writing Workshops and Handwriting Uniformity</h3>
-            <p className="mon-specs-head2">
-              At Future Foundation Schools, we place a strong emphasis on developing writing skills from an early age. Writing workshops are a key component of our Preschool curriculum, designed to:
-            </p>
-            <li className="mon-specs-list2">
-Promote Early Writing Skills: Children are encouraged to practice writing through creative activities and structured exercises that focus on letter formation and early writing skills.            </li>
-            <li className="mon-specs-list2">
-Handwriting Uniformity: We aim to establish uniform handwriting practices, ensuring that children develop consistent, legible handwriting from the start.            </li>
-            <li className="mon-specs-list2">
-Fine Motor Skill Development: Writing activities also help strengthen fine motor skills, crucial for physical coordination and academic success.           </li>
-            <li className="mon-specs-list2">
-Building Confidence in Writing: By providing a supportive and positive environment, we encourage children to express themselves confidently through writing.            </li>
-
-
+            <ul className="mon-specs-ul text-start">
+              <li className="mon-specs-list">
+                Early Literacy &amp; Writing Skills: Children are encouraged to practice writing through creative, structured exercises that focus on correct letter formation and early composition.
+              </li>
+              <li className="mon-specs-list">
+                Handwriting Uniformity: We aim to establish uniform, elegant handwriting practices from the very beginning, ensuring that children develop consistent, highly legible penmanship.
+              </li>
+              <li className="mon-specs-list">
+                Fine Motor Skill Reinforcement: Our specialized writing activities strengthen the hand muscles and grip crucial for physical coordination and long-term academic success.
+              </li>
+              <li className="mon-specs-list">
+                Building Expressive Confidence: By providing a highly supportive and positive atmosphere, we empower children to express their thoughts, stories, and ideas confidently through the written word.
+              </li>
+              <li className="mon-specs-list">
+                A fun, healthy, and safe environment for active early learning.
+              </li>
+              <li className="mon-specs-list">
+                High-quality care and education matched to age-appropriate needs.
+              </li>
+              <li className="mon-specs-list">
+                Physical and cognitive development through structured activities.
+              </li>
+              <li className="mon-specs-list">
+                Social and emotional development through kindness and teamwork.
+              </li>
+            </ul>
           </div>
-          </div>
-          <div className="col-4">
-            <img src={About_one} alt="" className="pt-5" />
+          <div className="col-lg-3 col-md-4 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+            <div className="mon-img-wrapper">
+              <img src={MonRight} alt="Montessori Wing - Writing Workshop" className="mon-side-img img-fluid" />
+            </div>
           </div>
         </div>
       </div>

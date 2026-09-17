@@ -5,8 +5,8 @@ const navbarlinks = [
     label: "Explore",
     menuItems: [
       { label: "Chairman Message", link: "/chairman-message" },
-      { label: "Principal Message", link: "/principal-message" },
-      { label: "Philosophy", link: "/philosophy" },
+      { label: "Director Message", link: "/principal-message" },
+      { label: "Co-Director Message", link: "/philosophy" },
     ],
   },
   {
@@ -19,14 +19,14 @@ const navbarlinks = [
       { label: "Competency-Based Education", link: "/competency-based-education" },
       { label: "Personality Development", link: "/personality-development" },
       { label: "Character Building", link: "/character-building" },
-      { label: "Qur'an O Seerat As Syllabus", link: "/quran-o-seerat" },
+      { label: "Qur'an & Seerat", link: "/quran-o-seerat" },
     ],
   },
   {
     label: "Admission",
     menuItems: [
       { label: "Admission Process", link: "/admission-process" },
-      { label: "Discipline & Code of Dress", link: "/disipline+code-of-dress" },
+      { label: "Dress Code", link: "/disipline+code-of-dress" },
     ],
   },
   {
@@ -38,7 +38,7 @@ const navbarlinks = [
     ],
   },
   {
-    label: "LMS",
+    label: "Digital Education",
     link: "/lms"
   },
   {
@@ -46,10 +46,10 @@ const navbarlinks = [
     link: "/facilities"
   },
   {
-    label: "Become Franchisee",
+    label: "School Network",
     menuItems: [
-      { label: "Franchise Offer", link: "/franchise-offer" },
-      { label: "Franchise Model", link: "/franchise-model" },
+      { label: "Silent Features", link: "/franchise-offer" },
+      { label: "School Network Model", link: "/franchise-model" },
       { label: "Our Campuses", link: "/our-campuses" },
     ],
   },

@@ -36,7 +36,7 @@ export const Facilities = () => {
       <BringSection />
       {/* <ProblemSection /> */}
       <a
-        href="https://wa.me/yourphonenumber"
+        href="https://wa.me/92510000007"
         target="_blank"
         className="position-fixed"
         style={{
@@ -81,3 +81,4 @@ export const Facilities = () => {
     </Layout>
   );
 };
+

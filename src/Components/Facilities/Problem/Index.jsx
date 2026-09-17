@@ -20,17 +20,18 @@ export const ProblemSection = () => {
         <h1 className="fac-about-title">Extra Curricular Activity</h1>
         <div className="d-flex justify-content-center">
           <p className="fac-pro-desp">
-            Phasellus gravida lacus quis eros lobortis, nec dapibus quam
-            gravida. Duis sed augue vitae felis pellentesque varius nec quis
-            nunc. Morbi mauris augue, pulvinar quis luctus eget.
+            Extra-curricular learning gives students space to think, create, and
+            solve problems in practical ways. Through competitions, model
+            displays, sports, and talent-based events, students learn how to
+            apply knowledge with confidence and teamwork.
           </p>
         </div>
         <img src={Rainbow} alt="" className="fac-pro-raibow-img" />
         <img src={Testing} alt="" className="fac-pro-testing-img" />
         <div className="row">
-            <div className="col-lg-4">
-                <img src="" alt="" />
-            </div>
+          <div className="col-lg-4">
+            <img src="" alt="" />
+          </div>
         </div>
       </div>
     </div>

@@ -1,64 +1,18 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../About/About.css";
-import Controllerleft from "../../../assets/images/slider_controller_left.png";
-import Controllerright from "../../../assets/images/slider_controller_right.png";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { teamMembers } from "../../../Data/pro";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export const TeacherSection = () => {
+  const displayedMembers = teamMembers.slice(0, 3);
+
   useEffect(() => {
     AOS.init({
       offset: 300,
       duration: 1000,
     });
   }, []); // Run this effect only once when the component mounts
-
-  // Custom Previous Arrow
-  const PrevArrow = ({ onClick }) => (
-    <img
-      src={Controllerleft}
-      alt="Previous"
-      className="slick-controller slick-prev"
-      onClick={onClick}
-    />
-  );
-
-  // Custom Next Arrow
-  const NextArrow = ({ onClick }) => (
-    <img
-      src={Controllerright}
-      alt="Next"
-      className="slick-controller slick-next"
-      onClick={onClick}
-    />
-  );
-
-  const settings = {
-    dots: false, // Dots are hidden
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    prevArrow: <PrevArrow />, // Custom left arrow
-    nextArrow: <NextArrow />, // Custom right arrow
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-    ],
-  };
 
   return (
     <div className="container pt-5">
@@ -78,7 +32,7 @@ export const TeacherSection = () => {
           </svg>
         </div>
         <p className="professional_title" data-aos="fade-up">
-          Meet Our Professional
+          Meet Our Professional Team of
         </p>
         <p className="professional_subtitle" data-aos="fade-up">
           Teachers & Trainers
@@ -89,38 +43,25 @@ export const TeacherSection = () => {
           </p>
         </div>
       </div>
-      <div className="row row_div" data-aos="fade-up">
-        <Slider {...settings}>
-          {teamMembers.map((member, index) => (
-            <div key={index} className="col-lg-4 text-center position-relative">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                viewBox="0 0 100 100"
-                className="arrow_pro"
-              >
-                <g>
-                  <path d="M28.3,68.1l-0.5,0l-0.5,0.1l0-0.1l0.5,0l0.5-0.1l-0.4,0.1L28.3,68.1z M28.3,66.3l-0.5-0.2l-0.5,0l0.5,0L27.4,66  c0.2-0.6,0.4-1.3,0.8-2l0.6,0.3L28.2,64l0,0l0.9,0.5c0,0,0,0,0,0l0,0l0,0C28.7,65.1,28.5,65.7,28.3,66.3L28.3,66.3L28.3,66.3z   M27.8,66.1L27.8,66.1L27.8,66.1L27.8,66.1z M30.1,63l-0.4-0.3l-0.4-0.3l0.4,0.2l-0.4-0.3c0.4-0.5,0.8-1,1.3-1.5l0,0l0,0  c0,0,0,0,0,0l0.7,0.7L30.9,61l0.5,0.4C30.9,62,30.5,62.5,30.1,63L30.1,63L30.1,63z M29.7,62.6L29.7,62.6L29.7,62.6L29.7,62.6z   M32.8,60l-0.4-0.4l0,0L32,59.4l0,0l0,0c0.5-0.5,1-0.9,1.4-1.4l0,0l0.1-0.1l0.3,0.5l0,0l0,0l0.2,0.4l-0.2-0.4l0.3,0.3  C33.7,59.1,33.2,59.6,32.8,60z M34.2,58.6l-0.4-0.3L34.2,58.6z M35.6,57.3l-0.3-0.4l0,0l-0.4-0.4l0,0l0,0c0.5-0.5,1-0.9,1.5-1.3  l0,0l0.1-0.1l0.3,0.5l0,0l0,0l0.2,0.4l-0.2-0.4l0.3,0.3C36.6,56.4,36.1,56.8,35.6,57.3z M37.2,55.9l-0.4-0.3L37.2,55.9z M38.6,54.7  l-0.3-0.4l-0.4-0.3l0.3,0.3l0,0L38,53.9c0.5-0.4,1-0.9,1.6-1.3l0.3,0.4l-0.2-0.4l0.2,0.4l0.4,0.4l-0.1,0.1l0,0  C39.7,53.8,39.1,54.2,38.6,54.7L38.6,54.7L38.6,54.7z M38.3,54.3L38.3,54.3L38.3,54.3L38.3,54.3z M41.7,52.2l-0.3-0.4l-0.4-0.3  l0.3,0.3l-0.3-0.4c0.5-0.4,1.1-0.8,1.6-1.2l0.3,0.4l-0.2-0.4l0.2,0.4l0.4,0.4L43.3,51l0,0C42.8,51.4,42.3,51.8,41.7,52.2L41.7,52.2  L41.7,52.2z M41.4,51.7L41.4,51.7L41.4,51.7L41.4,51.7z M44.9,49.8l-0.3-0.4L44.9,49.8L44.4,49l0.2,0.3L44.4,49  c0.5-0.4,1.1-0.8,1.7-1.1l0.1,0.2L46,47.9l0,0l0.5,0.9C46,49.1,45.5,49.4,44.9,49.8z M44.6,49.4L44.3,49L44.6,49.4z M48.2,47.6  l-0.5-0.9l0,0c0.6-0.4,1.1-0.7,1.7-1.1l0,0l0.5,0.9C49.4,46.9,48.8,47.2,48.2,47.6L48,47.2L48.2,47.6z M51.6,45.5l-0.5-0.9l0,0l0,0  c0.6-0.3,1.2-0.7,1.8-1l0,0l0,0l0.5,0.9l0,0l0,0C52.8,44.9,52.2,45.2,51.6,45.5l-0.2-0.4L51.6,45.5z M55.1,43.6l-0.2-0.4l0,0l0,0  l0,0l-0.3-0.4l0,0l0,0c0.6-0.3,1.2-0.6,1.8-0.9l0,0l0.1,0l0.1,0.5l0,0l0,0.1l0.1,0.4l-0.1-0.4l0.2,0.4C56.3,43,55.7,43.3,55.1,43.6  z M56.9,42.7l-0.3-0.4L56.9,42.7z M58.7,41.8l-0.2-0.5l0,0l0,0l0,0L58.2,41l0.1,0l0,0c0.6-0.3,1.2-0.6,1.8-0.8l0,0l0.1,0l0.1,0.5  l0,0l0,0l0.1,0.4l-0.1-0.4l0.2,0.4C59.9,41.3,59.3,41.6,58.7,41.8z M60.6,41l-0.3-0.4L60.6,41z M62.3,40.2l-0.2-0.5l0,0l-0.3-0.4  l0.1,0l0,0c0.6-0.3,1.2-0.5,1.9-0.8L64,39l-0.1-0.4L64,39l0.3,0.5l-0.1,0C63.6,39.7,62.9,40,62.3,40.2z M64,39L64,39L64,39z   M66,38.8l-0.1-0.5l-0.2-0.4l0.2,0.4l-0.2-0.4c0.6-0.2,1.3-0.5,1.9-0.7l0.2,0.4l-0.1-0.4l0.1,0.4l0.3,0.5l-0.1,0  C67.3,38.3,66.7,38.6,66,38.8L66,38.8L66,38.8z M65.8,38.3L65.8,38.3L65.8,38.3L65.8,38.3z M67.7,37.6L67.7,37.6L67.7,37.6z"></path>{" "}
-                  <g>
-                    <path d="M73.7,35.8c-2.4,1.8-5.2,4.6-6.8,7.1l0.2-5.1l-3-4C66.8,35,70.7,35.7,73.7,35.8z"></path>{" "}
-                  </g>
-                </g>
-              </svg>
-              <div className="position-relative">
-                <div className="rounded-circle overflow-hidden d-inline-block">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="img-fluid"
-                  />
-                </div>
+      <div className="row row_div justify-content-center" data-aos="fade-up">
+        {displayedMembers.map((member, index) => (
+          <div
+            key={index}
+            className="col-lg-4 col-md-6 text-center position-relative teacher-card"
+          >
+            <div className="position-relative teacher-card-image">
+              <div className="rounded-circle overflow-hidden d-inline-block teacher-card-image-frame">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="img-fluid"
+                />
               </div>
-              <h5 className="mt-4 text-teal">{member.name}</h5>
-              <p className="text-muted">{member.description}</p>
             </div>
-          ))}
-        </Slider>
+            <h5 className="mt-4 text-teal teacher-card-name">{member.name}</h5>
+            <p className="text-muted teacher-card-desc">{member.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

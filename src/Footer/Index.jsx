@@ -1,25 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.css";
-import Logo from "../assets/images/logo.svg";
+import Logo from "../assets/images/logo.png";
 import { IoLocationOutline } from "react-icons/io5";
-import { MdOutlinePhone } from "react-icons/md";
-import { MdOutlineEmail } from "react-icons/md";
+import { MdOutlinePhone, MdOutlineEmail } from "react-icons/md";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Cloud from "../assets/images/facilities/cloud.png";
 import Sun from "../assets/images/facilities/sun.png";
-import Girl from "../assets/images/facilities/girl.png";
-import Hand from "../assets/images/facilities/hand.png";
 import Person from "../assets/images/facilities/per.png";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 
-
 const handleContactNavigate = () => {
   window.location.href = "/contact-us";
 };
-const handleFranchiseNavigate = () => {
-  window.location.href = "/franchise-offer";
-};
+
 export const Footer = () => {
   return (
     <footer className="container-fluid footer_bg p-0 mt-4">
@@ -31,8 +25,7 @@ export const Footer = () => {
         <div className="d-flex justify-content-center align-items-center flex-column">
           <img src={Logo} alt="" className="footer_logo" />
           <p className="footer_desp">
-            In the year 1998, Future Foundation School started its journey to
-            meet the goals set by the leadership.
+            Founded in 1998, Future Foundation School was established with a singular, profound mission: to inspire critical thinkers and challenge students to view the world with curiosity and wonder.
           </p>
         </div>
         <div className="row mt-4">
@@ -62,17 +55,14 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-decoration-none text-white footer_link"
-                >
-                  Downloads
+                <a href="/admission-process" className="text-decoration-none text-white footer_link">
+                  Admission Process
                 </a>
               </li>
               <li>
                 <a
                   onClick={handleContactNavigate}
-                  className="text-decoration-none text-white footer_link"
+                  className="text-decoration-none text-white footer_link link"
                 >
                   Contact Us
                 </a>
@@ -85,29 +75,15 @@ export const Footer = () => {
             <h5 className="link_item">Others</h5>
             <ul className="list-unstyled d-flex flex-column gap-3">
               <li>
-                <a
-                  href="#"
-                  className="text-decoration-none text-white footer_link"
-                  onClick={handleFranchiseNavigate}
-                >
-                  Franchise Offer
+                <a href="/franchise-offer" className="text-decoration-none text-white footer_link">
+                  Silent Features
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-decoration-none text-white footer_link"
-                >
-                  Feedback
-                </a>
+                <a href="/contact-us" className="text-decoration-none text-white footer_link">Feedback</a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-decoration-none text-white footer_link"
-                >
-                  Complain
-                </a>
+                <a href="/contact-us" className="text-decoration-none footer_link">Complain</a>
               </li>
             </ul>
           </div>
@@ -119,12 +95,22 @@ export const Footer = () => {
               <div className="d-flex gap-3">
                 <IoLocationOutline className="footer_icon" />
                 <p className="footer_loc">
-                  Bandi Khana Chowk, Murree Road, Rawalpindi
+                  Baraf Khana Chowk Misrial Road Rawalpindi
                 </p>
               </div>
               <div className="d-flex align-items-center gap-3">
                 <MdOutlinePhone className="footer_icon" />
-                <p className="footer_loc">051-0000007</p>
+                <div className="d-flex flex-column gap-1">
+                  <a href="tel:+447405431552" className="footer_loc footer_phone_link">
+                    +44 740 543 1552
+                  </a>
+                  <a href="tel:+96878818854" className="footer_loc footer_phone_link">
+                    +968 788 188 54
+                  </a>
+                  <a href="tel:+966590331742" className="footer_loc footer_phone_link">
+                    +966 590 331 742
+                  </a>
+                </div>
               </div>
               <div className="d-flex align-items-center gap-3">
                 <MdOutlineEmail className="footer_icon" />
@@ -147,21 +133,18 @@ export const Footer = () => {
               </button>
             </div>
             <div className="d-flex align-items-center gap-3 mt-4">
-              <a href="#">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                 <FaFacebookF className="footer_icon" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                 <FaInstagram className="footer_icon" />
               </a>
-              <a href="#">
+              <a href="https://x.com/" target="_blank" rel="noreferrer">
                 <FaXTwitter className="footer_icon" />
               </a>
             </div>
           </div>
         </div>
-        <img src={Girl} alt="" className="footer-girl" />
-        <img src={Hand} alt="" className="footer-hand" />
-        <img src={Cloud} alt="" className="footer-cloud-two" />
         <p className="footer_copyright">
           Copyright © 2024 Future Foundation Schools. All Right Reserved.
         </p>

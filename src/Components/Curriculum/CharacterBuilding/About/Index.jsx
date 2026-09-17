@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import About from "../../../../assets/images/facilities/about.png";
-import About_one from "../../../../assets/images/facilities/about-one.png";
-import About_two from "../../../../assets/images/facilities/about-two.png";
-import { Curdata } from "../../../../Data/pro";
+import CharLeft from "../../../../assets/images/curiculum/char_left.jpg";
+import CharRight from "../../../../assets/images/curiculum/char_right.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,26 +14,31 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    <div className="container-fluid pb-4 mt-4  bg-charb-color">
+    <div className="container-fluid py-5 bg-charb-color">
       <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <img src={About} alt="" className="pt-5" />
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-3 col-md-4 d-none d-md-flex justify-content-center" data-aos="fade-right">
+            <div className="charb-img-wrapper">
+              <img src={CharLeft} alt="Character Building - Moral Values" className="charb-side-img img-fluid" />
+            </div>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
-            <img src={About_two} alt="" />
-            <h1 className="charb-about-title">
-            	Character Building
-            </h1>
+          <div className="col-lg-6 col-md-8 d-flex flex-column align-items-center text-center px-lg-4" data-aos="fade-up">
+            <h1 className="charb-about-title">Character Building</h1>
+            <div className="charb-title-line"></div>
             <p className="charb-about-desp">
-Allah Almighty says in the Holy Qur'an, "I do not look at your faces, but at your hearts." The essence of education is not only to impart knowledge, but to purify the hearts and minds of individuals, guiding them to lead lives aligned with the will of Allah. Without good intentions, no action is acceptable in the sight of Allah. Living solely to please oneself or others is ultimately a failure. True success lies in adopting what pleases Allah and forsaking what He dislikes.
-</p>
+              The Holy Prophet Muhammad (PBUH) stated, "Allah does not look at your appearance or your wealth, but He looks at your hearts and your deeds" (Sahih Muslim). The true essence of education extends beyond imparting academic knowledge; it lies in purifying the hearts and minds of individuals, guiding them to lead lives aligned with the will of Allah Almighty. Without sincere intentions (Niyyah), no action holds weight in the sight of the Almighty. While living solely to please oneself or society ultimately leads to failure, true success is found in embracing what pleases Allah and forsaking what He dislikes.
+            </p>
             <p className="charb-about-desp">
-At Future Foundation Schools, we are committed to nurturing individuals who embody these values, guiding them to live in accordance with Allah's will. Our character-building program is designed to instill in students a deep sense of moral responsibility and spiritual integrity. We aim to cultivate true beliefs, sincere worship, and ethical dealings with others. Students are taught to uphold purity in their actions, modesty in their conduct, and justice in their interactions. We emphasize the importance of Taqwa (fear of Allah), patience (Sabr), and the careful balance of duties and rights, alongside thankfulness in all circumstances. By focusing on these core values, we seek to develop students who not only excel academically, but also grow into righteous individuals who will lead lives that reflect the teachings of Islam.
-</p>
+              At Future Foundation Schools, we are dedicated to nurturing students who embody these divine values and strive to live in accordance with Islamic principles. Our character-building program is purposefully designed to instill a profound sense of moral responsibility and spiritual integrity. We aim to cultivate sound beliefs, sincere devotion in worship, and flawless ethics in human dealings (Muamalat).
+            </p>
+            <p className="charb-about-desp">
+              Students are taught to uphold purity in their intentions, modesty (Haya) in their conduct, and unwavering justice in their interactions. We place a strong emphasis on cultivating Taqwa (consciousness of Allah), Sabr (patience), a careful balance of duties and rights, and a spirit of gratitude (Shukr) in all circumstances. By anchoring our educational framework in these core values, we seek to raise righteous individuals who excel academically while beautifully reflecting the timeless teachings of Islam.
+            </p>
           </div>
-          <div className="col-4">
-            <img src={About_one} alt="" className="pt-5" />
+          <div className="col-lg-3 col-md-4 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+            <div className="charb-img-wrapper">
+              <img src={CharRight} alt="Character Building - Wisdom & Deeds" className="charb-side-img img-fluid" />
+            </div>
           </div>
         </div>
       </div>

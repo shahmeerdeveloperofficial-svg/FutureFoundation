@@ -7,10 +7,8 @@ import Hero_two from "../../../assets/images/hero.png";
 import Hero_line from "../../../assets/images/hero_line.png";
 import Hero_rocket from "../../../assets/images/hero_rocket.png";
 import Hero_Img_one from "../../../assets/images/hero_img_one.png";
-import hero_img from "../../../assets/images/hero_img.png"
+import hero_img from "../../../assets/images/hero_img.png";
 import Hero_ellipse from "../../../assets/images/hero_ellipse.png";
-import Hero_three from "../../../assets/images/hero_three.png";
-import About from "../../../assets/images/about_bg.png";
 import { MdArrowForward } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -36,13 +34,14 @@ export const HeroSection = () => {
   };
 
   const modalStyle = {
-    background: "#2B2E82",
+    background: "#061D52",
     color: "#ffffff",
     padding: "1.75rem",
-    borderRadius: "8px",
+    borderRadius: "12px",
     width: "90%",
     maxWidth: "640px",
-    boxShadow: "0 6px 24px rgba(13,110,253,0.3)",
+    boxShadow: "0 8px 32px rgba(11,67,189,0.35)",
+    border: "2px solid #D4AF37",
     position: "relative",
   };
 
@@ -50,43 +49,55 @@ export const HeroSection = () => {
     position: "absolute",
     top: "10px",
     right: "10px",
-    background: "red",
-    border: "none",
+    background: "#0B43BD",
+    border: "2px solid #D4AF37",
     color: "#fff",
     fontSize: "1.5rem",
     cursor: "pointer",
     lineHeight: 1,
+    borderRadius: "50%",
+    width: "36px",
+    height: "36px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   };
 
   return (
     <div className="container-fluid p-0  position-relative hero_main_div">
       <div className="video_container">
-        <video controls width="100%" autoPlay muted loop id="customVideo">
+        <video
+          controls
+          width="100%"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={Hero}
+          id="customVideo"
+        >
           <source src={Dream} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <img src={Hero} alt="" className="hero_img " />
-      <img src={Hero_one} alt="" className="hero_img_one " />
-      <img src={Hero_two} alt="" className="hero_img_two " />
-      <img src={Hero_line} alt="" className="hero_line_img " />
-      <img src={Hero_rocket} alt="" className="hero_rocket_img " />
+      <div className="hero_top_wave">
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "clamp(45px, 6vw, 85px)", display: "block" }}>
+          <path d="M0,25 C380,80 1060,15 1440,50 L1440,100 L0,100 Z" fill="#061D52" />
+        </svg>
+      </div>
       <div className="container position-relative hero_div ">
+        <img src={Hero_line} alt="" className="hero_line_img " />
+        <img src={Hero_rocket} alt="" className="hero_rocket_img " />
         <div className="row">
           <div className="col-lg-6 ps-4 pe-4 ps-sm-0 pe-sm-0" data-aos="fade-left">
             <p className="hero_title">About Us</p>
             <p className="hero_sub_title">A Leading School Chain in Pakistan</p>
             <p className="hero_desp">
-              In the year 1998, Future Foundation School started its journey to
-              meet the goals set by the leardership of Rana Sohail Ahmad & Mrs.
-              Rana Sohail Ahmad. Since then it has been continuously growing by
-              the grace of ALLAH Alimighty.
+              In 1998, Future Foundation School began its journey to fulfill the visionary goals set by the leadership of Mr & Mrs Rana Sohail Ahmed. Since then, by the grace of Allah Almighty, the institution has grown continuously.
             </p>
             <p className="hero_desp pt-4">
-              The school is convering its educational and societal milestones
-              ove time as we are always committed to contributing our best to
-              promote National and Islamic values by uplifting the Educational
-              Standards.
+              Over the years, the school has consistently achieved its educational and societal milestones. We remain deeply committed to promoting National and Islamic values while uplifting educational standards across the country.
             </p>
             <button
               className="hero_btn"
@@ -111,9 +122,10 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      <img src={Hero_three} alt="" className="hero_img_three" />
-      <div className="position-relative">
-        <img src={About} alt="" className="about_img" />
+      <div className="hero_bottom_wave">
+        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "70px", display: "block", marginBottom: "-1px" }}>
+          <path d="M0,35 C360,85 1080,20 1440,55 L1440,90 L0,90 Z" fill="#e7f0fb" />
+        </svg>
       </div>
 
       {modalOpen && (
@@ -134,7 +146,13 @@ export const HeroSection = () => {
 
             <h3 className="modal-head" >About Future Foundation</h3>
             <p className="modal-desp" style={{ fontFamily:"Montserrat", marginBottom: "0.5rem", lineHeight: 1.6 }}>
-              The inspiration behind establishing Future Foundation School came from our leader, Rana Sohail Ahmad, who had a strong ambition to reform the community through education. Throughout his career, he made significant efforts to improve various aspects of education in society. In 1998, Future Foundation School embarked on its journey to fulfill the vision set by Rana Sohail Ahmad and Mrs. Rana Sohail Ahmad. Since its inception, the school has been continuously growing, thanks to the grace of ALLAH Almighty. Over time, the school has achieved numerous educational and societal milestones, always remaining committed to promoting national and Islamic values while uplifting educational standards. Future Foundation School has proudly secured 1st position worldwide in the Federal Board examinations, achieving this remarkable feat two times, once in 2019 and again in 2024.
+              The inspiration behind establishing Future Foundation School stemmed from the visionary leadership of Rana Sohail Ahmed, whose lifelong ambition has been to reform the community through quality education. Throughout his distinguished career, he has made significant contributions to upgrading educational standards across society.
+            </p>
+            <p className="modal-desp" style={{ fontFamily:"Montserrat", marginBottom: "0.5rem", lineHeight: 1.6 }}>
+              In 1998, Future Foundation School embarked on its journey to fulfill the vision set forth by Rana Sohail Ahmed and Mrs. Rana Sohail Ahmed. Since its inception, and by the grace of Allah Almighty, the institution has experienced continuous growth. Over the years, the school has achieved numerous educational and societal milestones, remaining steadfast in its commitment to promoting national and Islamic values.
+            </p>
+            <p className="modal-desp" style={{ fontFamily:"Montserrat", marginBottom: "0.5rem", lineHeight: 1.6 }}>
+              Setting a benchmark of unparalleled academic excellence, Future Foundation School proudly secured the 1st Position Worldwide in the Federal Board examinations a remarkable feat achieved twice, first in 2019 and again in 2024.
             </p>
            
           </div>

@@ -1,0 +1,105 @@
+﻿@import url('../../../App.css');
+
+.iskl_learning_section {
+  padding: 5.5rem 0;
+  background: #f8fafc;
+  position: relative;
+}
+
+.iskl_learning_intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+}
+
+.iskl_learning_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.iskl_learning_card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 380px;
+  box-shadow: 0 8px 24px rgba(0, 45, 116, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none !important;
+}
+
+.iskl_learning_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 45, 116, 0.18);
+}
+
+.iskl_card_bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.iskl_learning_card:hover .iskl_card_bg {
+  transform: scale(1.08);
+}
+
+.iskl_card_gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 31, 82, 0.1) 0%, rgba(0, 31, 82, 0.6) 60%, rgba(0, 31, 82, 0.95) 100%);
+  z-index: 1;
+}
+
+.iskl_card_content {
+  position: relative;
+  z-index: 2;
+  padding: 1.75rem 1.5rem;
+  color: #ffffff;
+}
+
+.iskl_card_category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--secondary-color);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.iskl_card_title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.iskl_card_desc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.iskl_card_cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: gap 0.2s ease;
+}
+
+.iskl_learning_card:hover .iskl_card_cta {
+  gap: 10px;
+}

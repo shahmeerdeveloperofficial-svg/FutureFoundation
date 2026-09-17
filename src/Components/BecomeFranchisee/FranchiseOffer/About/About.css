@@ -1,3 +1,88 @@
+@import url('../../../../App.css');
+
+.bg-silentfeat-color,
+.bg-admissionpro-color{
+    background: linear-gradient(180deg, #F0F6FE 0%, #FFFFFF 50%, #F0F6FE 100%);
+    position: relative;
+    padding: 60px 0;
+}
+
+.silentfeat-about-title{
+  color: var(--blueColor);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.silentfeat-title-line{
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primaryColor), var(--secondaryColor));
+  border-radius: 2px;
+  margin-bottom: 25px;
+}
+
+.silentfeat-about-desp{
+  max-width: 800px;
+  width: 100%;
+  word-spacing: 1px;
+  font-family: 'RecoletaAlt', serif, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: #334155;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.silentfeat-specs{
+  max-width: 750px;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'RecoletaAlt', serif, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.silentfeat-specs p{
+  margin-bottom: 12px;
+}
+
+.silentfeat-specs strong{
+  color: var(--primaryColor);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.silentfeat-img-wrapper{
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(11, 67, 189, 0.12), 0 5px 15px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  padding: 8px;
+  border: 1px solid rgba(11, 67, 189, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.silentfeat-img-wrapper:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(11, 67, 189, 0.2);
+}
+
+.silentfeat-side-img{
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  display: block;
+}
+
 /* Container for the entire form */
 .application-container {
   width: 1300px; 
@@ -64,56 +149,6 @@
     margin: 3px 0 0 0;
 }
 
-/* --- Shared Table Styling --- */
-.personal-data-table, .experience-table, .operation-table, 
-.property-table, .neighborhood-table, .location-table, 
-.financial-table, .availability-table, .remarks-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 0;
-}
-
-.personal-data-table td, .experience-table td, .operation-table td, 
-.property-table td, .neighborhood-table td, .financial-table td, 
-.availability-table td, .remarks-table td {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  height: 30px; 
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-/* Style for input fields inside table cells */
-.personal-data-table input, .experience-table input[type="text"], .operation-table input[type="text"], 
-.property-table input[type="text"], .neighborhood-table input[type="text"], .financial-table input,
-.availability-table input {
-    width: 100%;
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-/* General Checkbox/Radio Group Spacing */
-.radio-group input,
-.checkbox-group input {
-    width: auto;
-}
-.radio-group label,
-.checkbox-group label {
-    margin-right: 15px;
-    margin-left: 5px;
-    white-space: nowrap;
-}
-
-/* --- Personal Data Table (Section 1) --- */
-.personal-data-table .label-col { width: 15%; font-weight: normal; color: #333; }
-.personal-data-table .right-col { width: 20%; }
-.personal-data-table .data-col { width: 30%; font-weight: bold; }
-.personal-data-table .gender-col input[type="radio"], .personal-data-table .gender-col label { margin-right: 15px; }
-
-/* --- Educational Background (Section 2) --- */
 .educational-options {
   display: flex; flex-wrap: wrap; padding: 10px 0; border-left: 1px solid #ccc;
   border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;

@@ -2,11 +2,6 @@ import React, { useEffect } from "react";
 import "./About.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-
-
-// 1. IMPORT THE CAMPUS DATA
-import { campusDetails } from './CampusData'; 
 
 export const AboutSection = () => {
   useEffect(() => {
@@ -17,70 +12,50 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    // Main container uses your provided classes
-    <div className="container-fluid pb-4 mt-4 bg-air-color franchise-page-container">
-      
-      {/* --- Section Header (OUR FRANCHISES style) --- */}
-      <div className="franchise-header" data-aos="fade-down">
-        <h1 className="franchile-title">
-          Our <span className="franchise-highlight">Franchises</span>
+    <div className="container-fluid franchise-models-container">
+      <div className="intro-section container" data-aos="fade-up">
+        <p className="intro-text">
+          What started as a single, visionary branch has now proudly expanded into a prestigious network of 70+ branches across Pakistan.
+        </p>
+
+        <h2 className="section-heading types-of-schools-heading">Our School Network</h2>
+        <ul className="types-of-schools-list">
+          <li data-aos="fade-right" data-aos-delay="100">
+            Throughout this incredible journey of growth, the cornerstone of our success has remained unchanged: the quality of our mentorship.
+          </li>
+          <li data-aos="fade-right" data-aos-delay="200">
+            Over the decades, we have meticulously built a highly experienced, skillful, and dedicated faculty.
+          </li>
+          <li data-aos="fade-right" data-aos-delay="300">
+            By working collaboratively, our teaching and support staff have consistently provided the care, guidance, and academic flexibility required to meet the individual needs of every child.
+          </li>
+        </ul>
+      </div>
+      <div className="models-header-bg">
+        <h1 className="franchise-models-heading" data-aos="zoom-in">
+          Academic Excellence Across the Network
         </h1>
       </div>
-
-      {/* --- Campus Grid Container --- */}
-      <div className="campus-grid-container container">
-        {campusDetails.map((campus, i) => {
-          // Calculate the current row index (3 columns per row on desktop)
-          const rowIndex = Math.floor(i / 3); 
-          
-          // Calculate the delay based on the row index (e.g., 300ms delay per row)
-          const delay = rowIndex * 300; 
-          
-          // Conditional logic for phone and map
-          const phoneContent = campus.phone ? campus.phone : 'Number Not Given';
-          const mapLinkText = campus.mapUrl ? 'Open in Google Maps' : 'Location Not Given';
-
-          return (
-            <div 
-              key={campus.id} 
-              className="campus-franchise-card" 
-              data-aos="fade-up" 
-              data-aos-delay={delay} // Apply the calculated row delay
-            >
-              <h3 className="card-title-franchise">{campus.name}</h3>
-              
-              {/* LOCATION TEXT: Always show location icon */}
-              <p className="card-location-franchise">
-                {/* <i class="fa fa-street-view" aria-hidden="true"></i> {campus.location} */}
-              </p>
-              
-              {/* PHONE NUMBER: Show phone icon and conditionally style the text */}
-              <p className={`card-phone-franchise ${!campus.phone ? 'not-given' : ''}`}>
-                <i className="fas fa-phone"></i> {phoneContent}
-              </p>
-              
-              {/* MAP BUTTON: Conditional rendering based on mapUrl existence */}
-              {campus.mapUrl ? (
-                // Renders the functional button if mapUrl exists
-                <a 
-                  href={campus.mapUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="map-button"
-                >
-                  <i className="fas fa-map-marker-alt"></i> {mapLinkText}
-                </a>
-              ) : (
-                // Renders a disabled span if mapUrl is missing
-                <span className="map-button disabled-map-button">
-                  <i className="fas fa-map-marker-alt"></i> {mapLinkText}
-                </span>
-              )}
-            </div>
-          );
-        })}
+      <div className="models-grid-container container">
+        <div className="model-circle primary" data-aos="flip-left" data-aos-delay="100">
+          <p className="circle-text">70+ Branches</p>
+        </div>
+        <div className="model-circle primary" data-aos="flip-left" data-aos-delay="200">
+          <p className="circle-text">1st Positions Worldwide</p>
+        </div>
+        <div className="model-circle secondary" data-aos="flip-left" data-aos-delay="300">
+          <p className="circle-text">Dedicated Mentorship</p>
+        </div>
+        <div className="model-circle secondary" data-aos="flip-left" data-aos-delay="400">
+          <p className="circle-text">National & Islamic Values</p>
+        </div>
+        <div className="model-circle primary" data-aos="flip-left" data-aos-delay="500">
+          <p className="circle-text">Modern Learning</p>
+        </div>
+        <div className="model-circle secondary" data-aos="flip-left" data-aos-delay="600">
+          <p className="circle-text">Student Growth</p>
+        </div>
       </div>
-      
     </div>
   );
 };

@@ -3,7 +3,6 @@ import "./About.css";
 import About from "../../../assets/images/facilities/about.png";
 import About_one from "../../../assets/images/facilities/about-one.png";
 import About_two from "../../../assets/images/facilities/about-two.png";
-import { Curdata } from "../../../Data/pro";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -22,38 +21,20 @@ export const AboutSection = () => {
           <div className="col-4">
             <img src={About} alt="" className="pt-5" />
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
+          <div className="d-flex flex-column align-items-center">
             <img src={About_two} alt="" />
-            <h2 className="fac-about-main">Educational Programs</h2>
-            <h1 className="fac-about-title">
-              Creating Magical & Engagin Learning Spaces
-            </h1>
+            <h2 className="fac-about-main">Our Curriculum</h2>
+            <h1 className="fac-about-title">A Holistic Approach to Modern Education</h1>
             <p className="fac-about-desp">
-              Phasellus gravida lacus quis eros lobortis, nec dapibus quam
-              gravida. Duis sed augue vitae felis pellentesque varius nec quis
-              nunc. Morbi mauris augue, pulvinar quis luctus eget.
+              At Future Foundation School, our academic curriculum is meticulously designed to match the cognitive, affective, and psychomotor developmental milestones of our students. We believe in providing a progressive learning environment that balances robust modern education with deep-rooted values.
+            </p>
+            <p className="fac-about-desp">
+              Our curriculum is built upon the following core pillars: Montessori Wing, Global Skills, Digital Education, AI & Robotics, STEAM Learning, Competency-Based Education, Qur'an & Seerat as Syllabus, and Character Building & Personality Development.
             </p>
           </div>
           <div className="col-4">
             <img src={About_one} alt="" className="pt-5" />
           </div>
-        </div>
-        <div className="row cur_row_div pt-1">
-          {Curdata.map((item) => (
-            <div key={item.id} className="mt-3 col-lg-6" data-aos="fade-up">
-              <div className="cur_body_data fac-card">
-                <div className="position-relative d-none d-sm-block">
-                  <img src={item.image} alt="" className="cur_img" />
-                  <img src={item.imageone} alt="" className="cur_imageone" />
-                  <img src={item.imagecir} alt="" className="cur_imagecir" />
-                </div>
-                <div>
-                  <p className="cur_item">{item.name}</p>
-                  <p className="cur_desp">{item.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>

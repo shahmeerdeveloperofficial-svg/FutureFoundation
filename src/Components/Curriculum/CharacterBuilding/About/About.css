@@ -1,7 +1,7 @@
 @import url('../../../../App.css');
 
 .charb-about-main{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 800;
     color: var(--secondaryblueColor);
@@ -9,26 +9,64 @@
 }
 
 .bg-charb-color{
-    background: #f0e2c8;
+    background: linear-gradient(180deg, #F0F6FE 0%, #FFFFFF 50%, #F0F6FE 100%);
+    position: relative;
+    padding: 60px 0;
 }
 
 .charb-about-title{
-    width: max-content;
-    text-decoration: underline;
-    font-family: 'Montserrat';
+    color: var(--blueColor);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 20px;
-    z-index: 1;
+    margin-bottom: 12px;
+    position: relative;
 }
 
+.charb-title-line{
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primaryColor), var(--secondaryColor));
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
 
 .charb-about-desp{
-    width: 750px;
-    word-spacing: 2px;
-    font-family: 'RecoletaAlt';
+    max-width: 800px;
+    width: 100%;
+    word-spacing: 1px;
+    font-family: 'RecoletaAlt', serif, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: #334155;
     text-align: center;
-    z-index: 1;
+    margin-bottom: 1.5rem;
+}
+
+.charb-img-wrapper{
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(11, 67, 189, 0.12), 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    padding: 8px;
+    border: 1px solid rgba(11, 67, 189, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.charb-img-wrapper:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(11, 67, 189, 0.2);
+}
+
+.charb-side-img{
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+    display: block;
 }
 
 .charb-card:hover{

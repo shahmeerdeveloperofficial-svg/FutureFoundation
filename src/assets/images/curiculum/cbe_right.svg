@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCbeR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="blueCbeR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B43BD"/>
+      <stop offset="100%" stop-color="#061D52"/>
+    </linearGradient>
+    <linearGradient id="goldCbeR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="cyanCbeR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="shCbeR" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B43BD" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="500" height="500" rx="36" fill="url(#bgCbeR)"/>
+  <circle cx="250" cy="220" r="165" fill="none" stroke="url(#goldCbeR)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <g transform="translate(140, 120)" filter="url(#shCbeR)">
+    <path d="M0 0 L90 0 C90 15 110 15 110 0 L200 0 L200 80 C185 80 185 100 200 100 L200 180 L110 180 C110 165 90 165 90 180 L0 180 L0 100 C15 100 15 80 0 80 Z" fill="url(#blueCbeR)"/>
+    <text x="100" y="95" fill="#FFFFFF" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">THEORY</text>
+  </g>
+  <g transform="translate(160, 180)" filter="url(#shCbeR)">
+    <path d="M0 0 L80 0 C80 15 100 15 100 0 L180 0 L180 90 C165 90 165 110 180 110 L180 180 L100 180 C100 165 80 165 80 180 L0 180 L0 110 C15 110 15 90 0 90 Z" fill="url(#goldCbeR)"/>
+    <text x="90" y="98" fill="#061D52" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">PRACTICAL</text>
+  </g>
+  <polygon points="120,95 124,107 136,107 126,114 130,126 120,119 110,126 114,114 104,107 116,107" fill="url(#goldCbeR)"/>
+  <polygon points="380,105 384,117 396,117 386,124 390,136 380,129 370,136 374,124 364,117 376,117" fill="url(#goldCbeR)"/>
+  <g transform="translate(250, 440)">
+    <path d="M-150 -18 L150 -18 L135 18 L-135 18 Z" fill="url(#blueCbeR)" filter="url(#shCbeR)"/>
+    <rect x="-130" y="-14" width="260" height="28" rx="6" fill="none" stroke="url(#goldCbeR)" stroke-width="1.5"/>
+    <text x="0" y="5" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="800" letter-spacing="2" text-anchor="middle">PRACTICAL APPLICATION</text>
+  </g>
+</svg>

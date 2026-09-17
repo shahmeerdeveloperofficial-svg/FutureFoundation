@@ -24,16 +24,14 @@ export const RegisterSection = () => {
         </div>
         <div className="col-lg-6">
           <p className="reg_name" data-aos="fade-up">
-            Register Yourself For Franchise
+            The Admission Process
           </p>
           <p className="reg_desp" data-aos="fade-up">
-            We aim to inspire critical thinkers and look at the world
-            differently and about challenging them to be fascinated by lessons
-            and subjects.
+            The admission process at Future Foundation Schools is designed to be simple, transparent, and welcoming. We believe that personal interaction between parents or authorized guardians, the prospective student, and our school representatives carries far greater value than any conventional entrance exam.
           </p>
           <div className="d-flex align-items-center gap-3" data-aos="fade-up">
             <button className="reg_btn" >
-              Download Franchise Kit
+              View Admission Steps
               <div className="reg_circle">
                 <MdArrowForward className="reg_circle_icon" />
               </div>

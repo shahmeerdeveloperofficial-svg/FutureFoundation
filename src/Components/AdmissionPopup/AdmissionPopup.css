@@ -1,0 +1,79 @@
+.admission-popup__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at top left, rgba(11, 67, 189, 0.25), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.22), transparent 32%),
+    rgba(6, 29, 82, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.admission-popup__card {
+  position: relative;
+  width: min(92vw, calc((100vh - 2rem) * 447 / 641));
+  max-width: 620px;
+  aspect-ratio: 447 / 641;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  border: 2px solid var(--secondaryColor);
+  box-shadow: 0 20px 70px rgba(5, 14, 61, 0.45);
+}
+
+.admission-popup__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(11, 67, 189, 0.06), transparent 45%);
+}
+
+.admission-popup__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primaryColor), var(--blueColor));
+  box-shadow: 0 10px 24px rgba(11, 67, 189, 0.35);
+}
+
+.admission-popup__poster-shell {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.admission-popup__poster-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.admission-popup__poster-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 575.98px) {
+  .admission-popup__overlay {
+    padding: 0.5rem;
+  }
+
+  .admission-popup__card {
+    border-radius: 14px;
+  }
+}

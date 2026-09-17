@@ -1,7 +1,8 @@
 @import url('../../../App.css');
 
 .location_main_div {
-    margin-top: 130rem;
+    margin-top: 0;
+    position: relative;
 }
 
 .location_bg {
@@ -138,7 +139,7 @@
 
 @media(min-width: 1200px) and (max-width: 1400px) {
     .location_main_div {
-        margin-top: 137.5rem;
+        margin-top: 0;
     }
 
     .map_main_div {
@@ -148,7 +149,7 @@
 
 @media(min-width: 992px) and (max-width: 1200px) {
     .location_main_div {
-        margin-top: 155.4rem;
+        margin-top: 0;
     }
 
     .map_main_div {
@@ -182,7 +183,7 @@
 
 @media(min-width: 768px) and (max-width: 992px) {
     .location_main_div {
-        margin-top: 210.3rem;
+        margin-top: 0;
     }
 
     .map_load{
@@ -192,7 +193,7 @@
 
 @media(min-width: 576px) and (max-width: 768px) {
     .location_main_div {
-        margin-top: 212.2rem;
+        margin-top: 0;
     }
 
     .map_main_div {
@@ -206,7 +207,7 @@
 
 @media(max-width: 576px) {
     .location_main_div {
-        margin-top: 206.5rem;
+        margin-top: 0;
     }
 
     .map_line {

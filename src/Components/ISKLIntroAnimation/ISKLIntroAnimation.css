@@ -1,0 +1,299 @@
+.iskl_intro_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+  overflow: hidden;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s ease,
+              visibility 0.7s ease;
+  user-select: none;
+}
+
+.iskl_intro_overlay.iskl_intro_exiting {
+  opacity: 0;
+  transform: scale(1.08);
+  filter: blur(8px);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Top Pause/Play Button */
+.iskl_intro_top_controls {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 10;
+  animation: introFadeIn 0.6s ease forwards;
+}
+
+.iskl_intro_pause_btn {
+  background: rgba(0, 45, 116, 0.08);
+  border: 1px solid rgba(0, 45, 116, 0.15);
+  color: #0a3a94;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.iskl_intro_pause_btn:hover {
+  background: #0a3a94;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(10, 58, 148, 0.25);
+}
+
+/* Center Content */
+.iskl_intro_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  width: 100%;
+}
+
+.iskl_intro_logo_wrapper {
+  margin-bottom: 2.5rem;
+  animation: introLogoDrop 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.iskl_intro_logo {
+  height: clamp(80px, 11vw, 110px);
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(10, 58, 148, 0.22);
+  transition: transform 0.3s ease;
+}
+
+.iskl_intro_logo:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Typographic Pill Grid */
+.iskl_intro_grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.iskl_intro_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+}
+
+.iskl_intro_text {
+  font-family: 'Poppins', 'Montserrat', -apple-system, sans-serif;
+  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
+  font-weight: 900;
+  color: #0a3a94;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: introTextSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.iskl_row_1 .iskl_intro_text:first-child {
+  animation-delay: 0.15s;
+}
+
+.iskl_row_1 .iskl_intro_text:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.iskl_row_2 .iskl_intro_text {
+  animation-delay: 0.65s;
+}
+
+/* Yellow Capsule / Pill Shapes with Staggered Expansion */
+.iskl_intro_pill {
+  height: clamp(54px, 8vw, 88px);
+  border-radius: 999px;
+  background-color: #f5b318;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 10px 28px rgba(245, 179, 24, 0.4);
+  opacity: 0;
+  transform: scale(0.6);
+  animation: introPillExpand 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.iskl_pill_1 {
+  width: clamp(150px, 21vw, 250px);
+  animation-delay: 0.25s;
+}
+
+.iskl_pill_2 {
+  width: clamp(140px, 18vw, 220px);
+  animation-delay: 0.5s;
+}
+
+.iskl_pill_3 {
+  width: clamp(110px, 15vw, 170px);
+  animation-delay: 0.6s;
+}
+
+.iskl_pill_4 {
+  width: clamp(220px, 30vw, 380px);
+  animation-delay: 0.75s;
+}
+
+.iskl_pill_video,
+.iskl_pill_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+  display: block;
+  animation: mediaZoomSubtle 10s ease-in-out infinite alternate;
+}
+
+/* Bottom Left Skip Animation Button */
+.iskl_intro_bottom_left {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 10;
+  animation: introFadeIn 0.8s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.iskl_skip_btn {
+  background-color: #f5b318;
+  color: #0a3a94;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.6px;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 8px 20px 4px 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(245, 179, 24, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.iskl_skip_btn:hover {
+  background-color: #e5a823;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(245, 179, 24, 0.6);
+}
+
+.iskl_skip_accent_corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #0a3a94;
+  border-top-left-radius: 14px;
+}
+
+/* Keyframes */
+@keyframes introLogoDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-35px) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes introTextSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introPillExpand {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  65% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mediaZoomSubtle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes introFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .iskl_intro_overlay {
+    padding: 1.25rem;
+  }
+
+  .iskl_intro_grid {
+    gap: 0.9rem;
+  }
+
+  .iskl_intro_row {
+    gap: 0.65rem;
+  }
+
+  .iskl_intro_logo_wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .iskl_intro_bottom_left {
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .iskl_skip_btn {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.8rem;
+  }
+}

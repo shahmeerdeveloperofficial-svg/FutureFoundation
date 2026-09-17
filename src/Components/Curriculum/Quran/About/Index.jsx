@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import About from "../../../../assets/images/facilities/about.png";
-import About_one from "../../../../assets/images/facilities/about-one.png";
-import About_two from "../../../../assets/images/facilities/about-two.png";
-import { Curdata } from "../../../../Data/pro";
+import QuranLeft from "../../../../assets/images/curiculum/quran_left.svg";
+import QuranRight from "../../../../assets/images/curiculum/quran_right.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,26 +14,31 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    <div className="container-fluid pb-4 mt-4  bg-qos-color">
+    <div className="container-fluid py-5 bg-qos-color">
       <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <img src={About} alt="" className="pt-5" />
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-3 col-md-4 d-none d-md-flex justify-content-center" data-aos="fade-right">
+            <div className="qos-img-wrapper">
+              <img src={QuranLeft} alt="The Holy Qur'an" className="qos-side-img img-fluid" />
+            </div>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
-            <img src={About_two} alt="" />
-            <h1 className="qos-about-title">
-            	Qura’an O Seerat As Syllabus
-            </h1>
+          <div className="col-lg-6 col-md-8 d-flex flex-column align-items-center text-center px-lg-4" data-aos="fade-up">
+            <h1 className="qos-about-title">Qur'an and Seerat as Core Syllabus</h1>
+            <div className="qos-title-line"></div>
             <p className="qos-about-desp">
-At Future Foundation Schools, we are deeply committed to ensuring that our students gain a profound understanding of the Holy Quran. We believe that the Quran is not just a book of knowledge, but a guide for life, helping students to discern what is right from wrong and to follow the straight path in all aspects of their lives. Understanding the Quran is essential for leading a better life both in this world and the Hereafter. Without this understanding, we risk being unaware of key teachings that our students must know to live a fulfilling and righteous life.</p>
+              At Future Foundation Schools, we are deeply committed to ensuring our students gain a profound, practical understanding of the Holy Qur'an. We recognize the Qur'an not merely as a book of knowledge, but as an essential guide for life, empowering students to discern right from wrong and steadfastly follow the straight path (Sirat al-Mustaqim). True comprehension of the Divine text is vital for leading a fulfilling life in this world and securing success in the Hereafter. Without this foundational anchoring, our youth risk navigating the complexities of modern life unaware of the key spiritual principles meant to protect and guide them.
+            </p>
             <p className="qos-about-desp">
-Additionally, the Seerat of Prophet Muhammad (PBUH) is a core component of our curriculum. Allah Almighty says that the Prophet (PBUH) is the best model for us to follow in life. Therefore, teaching Seerat is crucial for fulfilling our goal of promoting the values of Islam within the community.</p>
+              Complementing this, the Seerat (biography) of the Holy Prophet Muhammad (PBUH) serves as a core pillar of our curriculum. Allah Almighty affirms in the Holy Qur'an that the Prophet (PBUH) is the ultimate role model for humanity. Integrating his life teachings into our daily education is therefore crucial to our mission of cultivating authentic Islamic values within our community.
+            </p>
             <p className="qos-about-desp">
-By the grace of Allah, Future Foundation Schools has made the study of the Quran and Seerat a compulsory daily subject. To ensure the highest quality of education in these areas, we are supported by an internationally recognized organization that assists with research, development, and staff training. This partnership allows us to provide our students with the best possible guidance in their spiritual and educational journeys.</p>
+              By the grace of Allah, Future Foundation Schools has established the study of both the Qur'an and Seerat as a compulsory daily subject for all grade levels. To maintain the highest academic and spiritual standards, we partner with an internationally recognized research organization that provides specialized curriculum development and rigorous staff training. This collaboration ensures our students receive elite, structured guidance on their spiritual and educational journeys.
+            </p>
           </div>
-          <div className="col-4">
-            <img src={About_one} alt="" className="pt-5" />
+          <div className="col-lg-3 col-md-4 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+            <div className="qos-img-wrapper">
+              <img src={QuranRight} alt="Seerat-un-Nabi (PBUH)" className="qos-side-img img-fluid" />
+            </div>
           </div>
         </div>
       </div>

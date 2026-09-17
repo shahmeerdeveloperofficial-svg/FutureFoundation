@@ -1,13 +1,18 @@
 :root {
-    --primaryColor: #FA0000;
-    --whiteColor: white;
-    --blueColor: #101365;
-    --secondaryColor: #FFAA00;
-    --secondaryblueColor: #2B2E82;
-    --darkColor: #D5E1ED;
-    --blackColor: black;
-    --darkblueColor: blue;
-    --inputColor: #1f1c2e;
+    --primaryColor: #0B43BD;
+    --primaryHover: #083296;
+    --primaryLight: #EAF2FD;
+    --whiteColor: #ffffff;
+    --blueColor: #061D52;
+    --secondaryColor: #D4AF37;
+    --secondaryHover: #B88E18;
+    --secondaryblueColor: #1254E8;
+    --darkColor: #EBF3FC;
+    --blackColor: #0f172a;
+    --darkblueColor: #0A369D;
+    --skyBlue: #38BDF8;
+    --accentRed: #DC2626;
+    --inputColor: #1f2937;
 }
 html, body {
   height: 100%;

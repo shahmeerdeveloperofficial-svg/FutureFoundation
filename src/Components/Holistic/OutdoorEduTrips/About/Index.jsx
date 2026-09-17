@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import About from "../../../../assets/images/facilities/about.png";
-import About_one from "../../../../assets/images/facilities/about-one.png";
-import About_two from "../../../../assets/images/facilities/about-two.png";
-import { Curdata } from "../../../../Data/pro";
+import OutdoorTripsLeft from "../../../../assets/images/holistic/outdoor_trips_left.svg";
+import OutdoorTripsRight from "../../../../assets/images/holistic/outdoor_trips_right.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,36 +14,31 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    <div className="container-fluid pb-4 mt-4  bg-oet-color">
+    <div className="container-fluid py-5 bg-oet-color">
       <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <img src={About} alt="" className="pt-5" />
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-3 col-md-4 d-none d-md-flex justify-content-center" data-aos="fade-right">
+            <div className="oet-img-wrapper">
+              <img src={OutdoorTripsLeft} alt="Outdoor Expeditions & Wilderness Learning" className="oet-side-img img-fluid" />
+            </div>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
-            <img src={About_two} alt="" />
-            <h1 className="oet-about-title">
-            	Outdoor Educational Trips
-            </h1>
+          <div className="col-lg-6 col-md-8 d-flex flex-column align-items-center text-center px-lg-4" data-aos="fade-up">
+            <h1 className="oet-about-title">Outdoor Educational Trips</h1>
+            <div className="oet-title-line"></div>
             <p className="oet-about-desp">
-Future Foundation Schools offers students the opportunity to engage in outdoor education, where learning takes place in natural environments. Our outdoor education programs include residential or wilderness-based experiences, allowing students to participate in a range of adventurous challenges and activities, such as hiking, climbing, canoeing, ropes courses, and group games. These activities are designed to foster experiential learning and environmental awareness, building on the principles of experiential and environmental education.</p>
+              Future Foundation Schools provides students with dynamic opportunities to engage in outdoor education, shifting the learning paradigm into natural environments. Our outdoor education programs feature residential and wilderness-based experiences where students participate in an array of adventurous challenges, including hiking, climbing, canoeing, ropes courses, and collaborative team-building games. Rooted in the principles of environmental and experiential learning, these activities turn the great outdoors into a living classroom.
+            </p>
             <p className="oet-about-desp">
-Through these outdoor experiences, students are encouraged to:</p>
-              <div className="oet-specs">
-                <li>
-              Overcome adversity and build resilience
-            </li>
-            <li>
-Enhance their personal growth and social development            </li>
-            <li>
-Develop a deeper connection with nature            </li>
-              </div>
+              Through these immersive outdoor experiences, students are empowered to overcome adversity, foster personal and social growth, and connect with nature.
+            </p>
             <p className="oet-about-desp">
-At Future Foundation Schools, we organize outdoor educational visits and field trips to promote physical health, mental well-being, and self-confidence in our students. These trips are designed to be enjoyable and stress-free, providing hands-on activities that engage and inspire students, helping them become healthier, happier, and more courageous individuals.</p>
-         
-             </div>
-          <div className="col-4">
-            <img src={About_one} alt="" className="pt-5" />
+              At Future Foundation Schools, we meticulously organize outdoor educational visits and field trips to promote physical vitality, mental well-being, and self-confidence. Designed to be both engaging and balanced, these excursions provide hands-on activities that inspire students, helping them grow into healthier, happier, and more courageous individuals.
+            </p>
+          </div>
+          <div className="col-lg-3 col-md-4 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+            <div className="oet-img-wrapper">
+              <img src={OutdoorTripsRight} alt="Experiential Learning & Team Building" className="oet-side-img img-fluid" />
+            </div>
           </div>
         </div>
       </div>

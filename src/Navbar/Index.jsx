@@ -1,40 +1,48 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import "./Navbar.css";
-import Navbar_line from "../assets/images/navbar.png";
-import Logo from "../assets/images/logo.svg";
+import Logo from "../assets/images/logo.png";
 import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
   MdArrowForward,
 } from "react-icons/md";
 import { IoReorderThreeOutline } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 import navbarlinks from "../Data/navbar";
 import { AnnouncementBanner } from "../Components/AnnouncementBanner/Index";
 
 export const CustomNavbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
+
+  useEffect(() => {
+    document.body.classList.toggle("mobile-nav-open", mobileOpen);
+    return () => document.body.classList.remove("mobile-nav-open");
+  }, [mobileOpen]);
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setMobileDropdown(null);
+  };
+
+  const reloadWebsite = (event) => {
+    event.preventDefault();
+    window.location.href = "/";
+  };
 
   return (
     <>
       <AnnouncementBanner />
       <div className="container-fluid navbar_bg">
       <div className="container position-relative">
-        <img
-          src={Navbar_line}
-          alt=""
-          className="position-absolute top-0"
-          style={{ width: "98%" }}
-        />
         <div className="d-flex justify-content-between align-items-center pt-3 pb-2">
-          <Link to="/">
+          <a href="/" onClick={reloadWebsite}>
             <img src={Logo} alt="Logo" className="navbar-logo" />
-          </Link>
+          </a>
           <div className="d-none d-sm-none d-lg-block">
             <div className="d-flex gap-lg-2 gap-xl-2 gap-xxl-3 align-items-center">
-              {/* <Link to="/" className="homes">
-                <div className="navbar_home">Home</div>
-              </Link> */}
               {navbarlinks.map((link, index) => (
                 <div
                   key={index}
@@ -53,7 +61,9 @@ export const CustomNavbar = () => {
                         )}
                       </>
                     ) : (
-                      <Link className="lms_page" to={link.link} activeClassName="active-link">{link.label}</Link> // Render direct link for last two items
+                      <Link className="lms_page" to={link.link}>
+                        {link.label}
+                      </Link>
                     )}
                   </div>
 
@@ -61,7 +71,11 @@ export const CustomNavbar = () => {
                   {openDropdown === index && link.menuItems && (
                     <div className="dropdown_menu">
                       {link.menuItems.map((item, i) => (
-                        <Link to={item.link} className="dropdown_item" key={i}>
+                        <Link
+                          to={item.link}
+                          className="dropdown_item"
+                          key={i}
+                        >
                           {item.label}
                         </Link>
                       ))}
@@ -83,12 +97,68 @@ export const CustomNavbar = () => {
               </Link>
             </div>
             <div className="navbar_toggle d-lg-none">
-              <IoReorderThreeOutline />
+              <button
+                className="navbar_toggle_btn"
+                type="button"
+                aria-label={mobileOpen ? "Close menu" : "Open menu"}
+                aria-expanded={mobileOpen}
+                onClick={() => setMobileOpen((isOpen) => !isOpen)}
+              >
+                {mobileOpen ? <IoClose /> : <IoReorderThreeOutline />}
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {mobileOpen && <button className="mobile_nav_backdrop" type="button" aria-label="Close menu" onClick={closeMobileMenu} />}
+    <nav className={`mobile_nav_panel ${mobileOpen ? "is-open" : ""}`} aria-label="Mobile navigation">
+      <div className="mobile_nav_header">
+        <a href="/" onClick={(event) => {
+          closeMobileMenu();
+          reloadWebsite(event);
+        }}>
+          <img src={Logo} alt="Logo" className="mobile_nav_logo" />
+        </a>
+        <button className="mobile_nav_close" type="button" aria-label="Close menu" onClick={closeMobileMenu}>
+          <IoClose />
+        </button>
+      </div>
+      <div className="mobile_nav_links">
+        {navbarlinks.map((link, index) => (
+          <div className="mobile_nav_group" key={index}>
+            {link.menuItems ? (
+              <>
+                <button
+                  className="mobile_nav_parent"
+                  type="button"
+                  aria-expanded={mobileDropdown === index}
+                  onClick={() => setMobileDropdown((current) => (current === index ? null : index))}
+                >
+                  <span>{link.label}</span>
+                  {mobileDropdown === index ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                </button>
+                <div className={`mobile_submenu ${mobileDropdown === index ? "is-open" : ""}`}>
+                  {link.menuItems.map((item, i) => (
+                    <Link to={item.link} className="mobile_submenu_item" key={i} onClick={closeMobileMenu}>
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <Link className="mobile_nav_parent mobile_nav_link" to={link.link} onClick={closeMobileMenu}>
+                <span>{link.label}</span>
+              </Link>
+            )}
+          </div>
+        ))}
+      </div>
+      <Link to="/admissionnow" className="mobile_admission_link" onClick={closeMobileMenu}>
+        Admission Now
+        <MdArrowForward />
+      </Link>
+    </nav>
     </>
   );
 };

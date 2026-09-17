@@ -3,8 +3,7 @@
     font-family: "Montserrat";
 }
 .bg-air-color {
-  /* Use a subtle background for the entire page section */
-  background-color: #f8f9fa; 
+  background: linear-gradient(180deg, #F0F6FE 0%, #FFFFFF 50%, #F0F6FE 100%); 
 }
 .franchise-page-container {
     padding-bottom: 60px !important; /* Ensure space at the bottom */

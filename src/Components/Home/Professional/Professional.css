@@ -1,7 +1,40 @@
-@import url('../../../App.css');
+﻿@import url('../../../App.css');
 
 .professional_main {
   margin-top: 2rem;
+}
+
+.rainbow_heading_text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0;
+  background: linear-gradient(
+    90deg,
+    #ff1b6b 0%,
+    #ff7300 18%,
+    #ffd000 36%,
+    #00c853 52%,
+    #00b0ff 68%,
+    #7c4dff 84%,
+    #ff1b6b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: rainbowShift 6s linear infinite;
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .rainbow_img {
@@ -49,121 +82,109 @@
   height: 350px;
 }
 
-.pro_name:hover{
+.pro_name:hover {
   color: var(--blueColor);
   cursor: pointer;
 }
 
-.student_color{
-  background: var(--blueColor);
-  height: 350px;
+.pro_name {
+  font-weight: 700;
+}
+
+.student_color {
+  background: linear-gradient(135deg, #eaf2fc 0%, #f4f8fe 100%);
+  min-height: 280px;
   position: relative;
-  padding-left: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #dce8f6;
 }
 
-.study_img{
-  width: 250px;
-  position: absolute;
-  top: -15px;
-  z-index: 1;
-}
-
-.cycle_img{
-  width: 250px;
-  position: absolute;
-  top: -15px;
-  right: 10px;
-  z-index: 1;
-}
-
-.alpha{
+.alpha {
   position: absolute;
   top: 10px;
   z-index: 0;
   width: 90%;
+  opacity: 0.35;
 }
 
-.counter_div{
-  padding: 80px 200px 0px 200px;
-}
-
-.elementor-heading-title {
-  color: #71D1CC;
-  font-family: "Bubblegum Sans", Sans-serif;
-  font-size: 82px;
-  font-weight: 400;
-  line-height: 1.3em;
-  position: absolute;
-  left: 300px;
-  top: 20px;
-}
-
-.elementor-heading-title-b {
-  color: #FCCB13;
-  font-family: "Bubblegum Sans", Sans-serif;
-  font-size: 82px;
-  font-weight: 400;
-  line-height: 1.3em;
-  position: absolute;
-  left: 680px;
-  top: 20px;
-}
-
-.elementor-heading-title-4 {
-  color: #1CBBB4;
-  font-family: "Bubblegum Sans", Sans-serif;
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 1.3em;
-  position: absolute;
-  right: 680px;
-  top: 45px;
-}
-
-.elementor-heading-title-3 {
-  color: #1CBBB4;
-  font-family: "Bubblegum Sans", Sans-serif;
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 1.3em;
-  position: absolute;
-  right: 630px;
-  top: 15x;
-}
-
-.elementor-heading-title-5 {
-  color: #FCCB13;
-  font-family: "Bubblegum Sans", Sans-serif;
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 1.3em;
-  position: absolute;
-  right: 570px;
-  top: 30px;
+.counter_div {
+  padding: 50px 20px;
+  position: relative;
+  z-index: 3;
+  width: 100%;
 }
 
 .wdt-content-counter {
-  font-size: 34px;
+  font-family: 'RecoletaAlt', serif;
+  font-size: 42px;
   font-weight: 700;
-  line-height: 1.3em;
-  color: var(--whiteColor);
+  line-height: 1.2em;
+  color: var(--primaryColor);
   margin-bottom: 0;
 }
 
 .wdt-content-counters {
-  font-size: 20px;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
   line-height: 1.3em;
-  color: var(--whiteColor);
+  color: var(--blueColor);
+  margin-bottom: 0;
 }
 
-.rounded_img{
-  width: 120px;
+.rounded_img {
+  width: 150px;
+  filter: drop-shadow(0 8px 16px rgba(11, 67, 189, 0.08));
 }
 
-.one_img{
+.one_img {
   position: absolute;
-  left: 150px;
-  top: 19px;
-  width: 60px;
+  left: 132px;
+  top: 12px;
+  width: 82px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .rainbow_heading_text {
+    font-size: 28px;
+  }
+
+  .counter_div {
+    padding: 40px 10px;
+  }
+
+  .wdt-content-counter {
+    font-size: 34px;
+  }
+
+  .wdt-content-counters {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rainbow_heading_text {
+    font-size: 22px;
+  }
+
+  .student_color {
+    height: auto;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .counter_div {
+    padding: 20px 10px;
+  }
+
+  .wdt-content-counter {
+    font-size: 30px;
+  }
+
+  .wdt-content-counters {
+    font-size: 14px;
+  }
 }

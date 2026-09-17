@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAir" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="blueAir" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B43BD"/>
+      <stop offset="100%" stop-color="#061D52"/>
+    </linearGradient>
+    <linearGradient id="goldAir" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="cyanAir" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="shAir" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B43BD" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="500" height="500" rx="36" fill="url(#bgAir)"/>
+  <circle cx="250" cy="220" r="165" fill="none" stroke="url(#goldAir)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <g filter="url(#shAir)">
+    <ellipse cx="250" cy="380" rx="165" ry="36" fill="url(#blueAir)"/>
+    <ellipse cx="250" cy="370" rx="150" ry="28" fill="#0A369D"/>
+    <ellipse cx="250" cy="365" rx="135" ry="22" fill="url(#cyanAir)" opacity="0.4"/>
+  </g>
+  <circle cx="160" cy="345" r="26" fill="url(#blueAir)" stroke="url(#goldAir)" stroke-width="4"/>
+  <circle cx="160" cy="345" r="10" fill="#38BDF8"/>
+  <path d="M152 335 L210 215 L235 225 L175 345 Z" fill="url(#blueAir)" filter="url(#shAir)"/>
+  <circle cx="220" cy="220" r="20" fill="url(#goldAir)"/>
+  <circle cx="220" cy="220" r="8" fill="#061D52"/>
+  <path d="M220 215 L310 165 L320 183 L230 233 Z" fill="url(#blueAir)" filter="url(#shAir)"/>
+  <circle cx="315" cy="175" r="15" fill="url(#goldAir)"/>
+  <path d="M325 165 Q345 150 355 170" fill="none" stroke="url(#blueAir)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M325 185 Q345 200 355 180" fill="none" stroke="url(#blueAir)" stroke-width="8" stroke-linecap="round"/>
+  <rect x="350" y="160" width="38" height="38" rx="8" fill="url(#goldAir)" filter="url(#shAir)"/>
+  <rect x="357" y="167" width="24" height="24" rx="4" fill="#061D52"/>
+  <path d="M362 179 L376 179 M369 172 L369 186" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+  <g transform="translate(130, 150) scale(0.65)" fill="url(#goldAir)" opacity="0.85">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="url(#goldAir)" stroke-width="12"/>
+    <circle cx="0" cy="0" r="16" fill="#0B43BD"/>
+    <rect x="-6" y="-48" width="12" height="96" rx="4"/>
+    <rect x="-48" y="-6" width="96" height="12" rx="4"/>
+    <rect x="-6" y="-48" width="12" height="96" rx="4" transform="rotate(45)"/>
+    <rect x="-48" y="-6" width="96" height="12" rx="4" transform="rotate(45)"/>
+  </g>
+  <g transform="translate(260, 90)" filter="url(#shAir)">
+    <rect x="0" y="0" width="110" height="36" rx="10" fill="#061D52" stroke="url(#cyanAir)" stroke-width="1.5"/>
+    <text x="55" y="24" fill="#38BDF8" font-family="monospace" font-size="15" font-weight="bold" text-anchor="middle">&lt;ROBOTICS/&gt;</text>
+  </g>
+  <polygon points="390,95 394,107 406,107 396,114 400,126 390,119 380,126 384,114 374,107 386,107" fill="url(#goldAir)"/>
+  <g transform="translate(250, 440)">
+    <path d="M-150 -18 L150 -18 L135 18 L-135 18 Z" fill="url(#blueAir)" filter="url(#shAir)"/>
+    <rect x="-130" y="-14" width="260" height="28" rx="6" fill="none" stroke="url(#goldAir)" stroke-width="1.5"/>
+    <text x="0" y="5" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="800" letter-spacing="2" text-anchor="middle">ROBOTICS &amp; INNOVATION</text>
+  </g>
+</svg>

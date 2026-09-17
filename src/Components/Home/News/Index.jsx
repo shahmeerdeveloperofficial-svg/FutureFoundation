@@ -15,6 +15,8 @@ import { NewsData, NewsDataSlider } from "../../../Data/pro";
 import { MdArrowForward, MdArrowBack } from "react-icons/md";
 
 export const NewsSection = () => {
+  const isStaticRender = typeof window === "undefined";
+
   useEffect(() => {
     AOS.init({
       offset: 300,
@@ -56,7 +58,7 @@ export const NewsSection = () => {
       <img src={Rocket} alt="" className="news_rocket" />
       <div className="container news_content">
         <div className="d-flex align-items-center justify-content-between">
-          <p className="news_title">News & Events</p>
+          <p className="news_title">School News & Events</p>
           <div className="d-flex align-items-center gap-3">
             <button className="news_prev_controller" onClick={goToPrev}>
               <MdArrowBack />
@@ -80,33 +82,47 @@ export const NewsSection = () => {
             ))}
           </div>
           <div className="col-6">
-            <Slider ref={sliderRef} {...settings}>
-              {NewsDataSlider.map((news) => (
-                <div key={news.id} className="news_bg position-relative">
-                  <p className="news_bg_date">{news.date}</p>
-                  <p className="news_bg_desp">{news.title}</p>
-                  <p className="news_bg_sub_desp">{news.description}</p>
-                  <button className="news_btn">
-                    Read more
-                    <div className="news_circle">
-                      <MdArrowForward className="news_circle_icon" />
-                    </div>
-                  </button>
-
-                  <div className="d-flex flex-column gap-2 indicator_div">
-                    {NewsDataSlider.map((_, index) => (
-                      <button
-                        key={index}
-                        className={`news_btn_one ${
-                          index === activeSlide ? "news_active" : ""
-                        }`}
-                        onClick={() => sliderRef.current.slickGoTo(index)} // Go to specific slide
-                      ></button>
-                    ))}
+            {isStaticRender ? (
+              <div className="news_bg position-relative">
+                <p className="news_bg_date">{NewsDataSlider[0].date}</p>
+                <p className="news_bg_desp">{NewsDataSlider[0].title}</p>
+                <p className="news_bg_sub_desp">{NewsDataSlider[0].description}</p>
+                <button className="news_btn">
+                  Read more
+                  <div className="news_circle">
+                    <MdArrowForward className="news_circle_icon" />
                   </div>
-                </div>
-              ))}
-            </Slider>
+                </button>
+              </div>
+            ) : (
+              <Slider ref={sliderRef} {...settings}>
+                {NewsDataSlider.map((news) => (
+                  <div key={news.id} className="news_bg position-relative">
+                    <p className="news_bg_date">{news.date}</p>
+                    <p className="news_bg_desp">{news.title}</p>
+                    <p className="news_bg_sub_desp">{news.description}</p>
+                    <button className="news_btn">
+                      Read more
+                      <div className="news_circle">
+                        <MdArrowForward className="news_circle_icon" />
+                      </div>
+                    </button>
+
+                    <div className="d-flex flex-column gap-2 indicator_div">
+                      {NewsDataSlider.map((_, index) => (
+                        <button
+                          key={index}
+                          className={`news_btn_one ${
+                            index === activeSlide ? "news_active" : ""
+                          }`}
+                          onClick={() => sliderRef.current.slickGoTo(index)}
+                        ></button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            )}
           </div>
         </div>
       </div>

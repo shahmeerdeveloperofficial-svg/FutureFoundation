@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_dc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0F6FE"/>
+    </linearGradient>
+    <linearGradient id="blue_dc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B43BD"/>
+      <stop offset="100%" stop-color="#061D52"/>
+    </linearGradient>
+    <linearGradient id="gold_dc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="cyan_dc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="sh_dc2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B43BD" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="500" height="500" rx="36" fill="url(#bg_dc2)" stroke="rgba(11,67,189,0.08)" stroke-width="2"/>
+  <circle cx="250" cy="210" r="165" fill="none" stroke="url(#gold_dc2)" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.45"/>
+  <circle cx="250" cy="210" r="145" fill="none" stroke="url(#blue_dc2)" stroke-width="1.5" opacity="0.25"/>
+  
+    <g filter="url(#sh_dc2)">
+      <!-- Golden Shield of Discipline -->
+      <polygon points="250,75 355,115 355,230 250,325 145,230 145,115" fill="url(#gold_dc2)"/>
+      <polygon points="250,90 338,125 338,220 250,305 162,220 162,125" fill="url(#blue_dc2)"/>
+      <!-- Punctuality / Standards Clock -->
+      <circle cx="250" cy="185" r="55" fill="#FFFFFF"/>
+      <circle cx="250" cy="185" r="48" fill="none" stroke="url(#gold_dc2)" stroke-width="3"/>
+      <!-- Clock Hands -->
+      <line x1="250" y1="185" x2="250" y2="155" stroke="url(#blue_dc2)" stroke-width="4" stroke-linecap="round"/>
+      <line x1="250" y1="185" x2="275" y2="185" stroke="url(#gold_dc2)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="250" cy="185" r="5" fill="url(#blue_dc2)"/>
+      <!-- 5 Stars Below -->
+      <g fill="url(#gold_dc2)">
+        <polygon points="210,260 213,266 220,266 215,271 217,277 210,273 203,277 205,271 200,266 207,266"/>
+        <polygon points="230,265 233,271 240,271 235,276 237,282 230,278 223,282 225,276 220,271 227,271"/>
+        <polygon points="250,268 253,274 260,274 255,279 257,285 250,281 243,285 245,279 240,274 247,274"/>
+        <polygon points="270,265 273,271 280,271 275,276 277,282 270,278 263,282 265,276 260,271 267,271"/>
+        <polygon points="290,260 293,266 300,266 295,271 297,277 290,273 283,277 285,271 280,266 287,266"/>
+      </g>
+    </g>
+  
+  <g transform="translate(250, 440)">
+    <path d="M-170 -18 L170 -18 L155 18 L-155 18 Z" fill="url(#blue_dc2)" filter="url(#sh_dc2)"/>
+    <rect x="-150" y="-14" width="300" height="28" rx="6" fill="none" stroke="url(#gold_dc2)" stroke-width="1.5"/>
+    <text x="0" y="5" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" text-anchor="middle">DISCIPLINE &amp; STANDARDS</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_adm2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0F6FE"/>
+    </linearGradient>
+    <linearGradient id="blue_adm2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B43BD"/>
+      <stop offset="100%" stop-color="#061D52"/>
+    </linearGradient>
+    <linearGradient id="gold_adm2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="cyan_adm2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="sh_adm2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B43BD" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="500" height="500" rx="36" fill="url(#bg_adm2)" stroke="rgba(11,67,189,0.08)" stroke-width="2"/>
+  <circle cx="250" cy="210" r="165" fill="none" stroke="url(#gold_adm2)" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.45"/>
+  <circle cx="250" cy="210" r="145" fill="none" stroke="url(#blue_adm2)" stroke-width="1.5" opacity="0.25"/>
+  
+    <g filter="url(#sh_adm2)">
+      <!-- Certificate Shield -->
+      <polygon points="250,75 350,115 350,240 250,320 150,240 150,115" fill="url(#blue_adm2)"/>
+      <polygon points="250,90 335,125 335,230 250,300 165,230 165,125" fill="#FFFFFF"/>
+      <!-- Grade A+ Badge -->
+      <circle cx="250" cy="175" r="50" fill="url(#gold_adm2)"/>
+      <circle cx="250" cy="175" r="42" fill="#FFFFFF"/>
+      <text x="250" y="190" fill="url(#blue_adm2)" font-family="sans-serif" font-size="44" font-weight="900" text-anchor="middle">A+</text>
+      <!-- Laurel Leaves -->
+      <path d="M190 230 C190 270 230 280 250 280 C270 280 310 270 310 230" fill="none" stroke="url(#gold_adm2)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="250" cy="280" r="8" fill="url(#gold_adm2)"/>
+      <!-- Graduation Cap -->
+      <polygon points="250,85 295,105 250,120 205,105" fill="url(#gold_adm2)"/>
+      <rect x="235" y="116" width="30" height="12" rx="4" fill="url(#blue_adm2)"/>
+      <line x1="295" y1="105" x2="295" y2="125" stroke="url(#gold_adm2)" stroke-width="3"/>
+    </g>
+  
+  <g transform="translate(250, 440)">
+    <path d="M-170 -18 L170 -18 L155 18 L-155 18 Z" fill="url(#blue_adm2)" filter="url(#sh_adm2)"/>
+    <rect x="-150" y="-14" width="300" height="28" rx="6" fill="none" stroke="url(#gold_adm2)" stroke-width="1.5"/>
+    <text x="0" y="5" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" text-anchor="middle">STUDENT EVALUATION</text>
+  </g>
+</svg>

@@ -16,10 +16,17 @@ export const HeroSection = () => {
       <div className="hero_fac_bg">
         <div className="lms_overlay"></div>
         <div className="lms_hero_content">
-          <h1 className="lms_hero_title">General Process</h1>
-          <p className="lms_heo_desp">
-            Home
-            <span className="lms-hero-breadcrumb-icon">🔻</span> Admissions
+          <h1 className="lms_hero_title admission_hero_title">
+            <span className="admission_hero_title_line admission_hero_title_line_red">
+              Admissions Open 2026-2027
+            </span>
+            <span className="admission_hero_title_line admission_hero_title_line_blue">
+              <strong>Future Foundation School & College</strong>
+            </span>
+          </h1>
+          <p className="lms_heo_desp admission_hero_desp">
+            Play Group to F.Sc. <span className="lms-hero-breadcrumb-icon">&gt;</span>{" "}
+            Apply Now for Quality Education!
           </p>
         </div>
         <div className="hero_cloud_img" />

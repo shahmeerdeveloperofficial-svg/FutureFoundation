@@ -1,7 +1,7 @@
-@import url('../../../../App.css');
+@import url('../../../App.css');
 
 .hero_fac_bg {
-    background-image: url("../../../../assets/images/facilities/hero.png");
+    background-image: url("../../../assets/images/admission/1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -11,4 +11,39 @@
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.admission_hero_title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.admission_hero_title_line {
+    display: block;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    letter-spacing: 0.5px;
+}
+
+.admission_hero_title_line_red {
+    color: var(--primaryColor);
+}
+
+.admission_hero_title_line_blue {
+    color: var(--secondaryblueColor);
+}
+
+.admission_hero_desp {
+    font-weight: 700;
+    color: var(--whiteColor);
+    background: rgba(16, 19, 101, 0.7);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    display: inline-block;
+}
+
+.admission_hero_desp strong {
+    font-weight: 900;
 }

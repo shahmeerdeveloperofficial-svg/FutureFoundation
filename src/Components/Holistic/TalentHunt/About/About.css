@@ -1,7 +1,7 @@
 @import url('../../../../App.css');
 
 .talenthunt-about-main{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 800;
     color: var(--secondaryblueColor);
@@ -9,51 +9,130 @@
 }
 
 .bg-talenthunt-color{
-    background: #f0e2c8;
+    background: linear-gradient(180deg, #F0F6FE 0%, #FFFFFF 50%, #F0F6FE 100%);
+    position: relative;
+    padding: 60px 0;
 }
 
 .talenthunt-about-title{
-    width: max-content;
-    text-decoration: underline;
-    font-family: 'Montserrat';
+    color: var(--blueColor);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 20px;
-    z-index: 1;
+    margin-bottom: 12px;
+    position: relative;
 }
 
-.span{
+.talenthunt-title-line{
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primaryColor), var(--secondaryColor));
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
+
+.talenthunt-quote{
+    background: #FFFFFF;
+    border-left: 4px solid var(--primaryColor);
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(11, 67, 189, 0.08);
+    font-family: 'RecoletaAlt', serif, sans-serif;
+    font-size: 16px;
     font-style: italic;
-    font-weight: 700;
-    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #1E293B;
+    max-width: 780px;
+    margin-bottom: 25px;
+    text-align: left;
 }
-.talenthunt-about-desp{
-    width: 750px;
-    word-spacing: 2px;
-    font-family: 'RecoletaAlt';
-    text-align: center;
-    z-index: 1;
-}
-.talenthunt-about-desp-head{
-    text-decoration: underline;
-     width: 750px;
-     font-weight: 700;
-    word-spacing: 2px;
-    font-family: 'RecoletaAlt';
-    text-align: center;
-    z-index: 1;
 
+.talenthunt-author{
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primaryColor);
+    text-align: right;
+    font-style: normal;
+}
+
+.talenthunt-about-desp-head{
+    color: var(--blueColor);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.talenthunt-about-title-secondary{
+    color: var(--blueColor);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .talenthunt-specs{
-    width: 600px;
-    margin-bottom: 30px;
-    margin-top: -7px;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    font-family: 'RecoletaAlt';
+    max-width: 750px;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    font-family: 'RecoletaAlt', serif, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.talenthunt-specs li{
+    margin-bottom: 10px;
+}
+
+.talenthunt-specs strong{
+    color: var(--primaryColor);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.talenthunt-about-desp{
+    max-width: 800px;
+    width: 100%;
+    word-spacing: 1px;
+    font-family: 'RecoletaAlt', serif, sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #334155;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.talenthunt-img-wrapper{
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(11, 67, 189, 0.12), 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    padding: 8px;
+    border: 1px solid rgba(11, 67, 189, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.talenthunt-img-wrapper:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(11, 67, 189, 0.2);
+}
+
+.talenthunt-side-img{
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+    display: block;
 }
 
 .talenthunt-card:hover{

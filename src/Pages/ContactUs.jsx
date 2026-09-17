@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "../layout/Index";
 import { HeroSection } from "../Components/ContactUs/Hero/Index";
 import { ContactSection } from "../Components/ContactUs/About/Index";
@@ -32,8 +32,10 @@ export const ContactUs = () => {
       <HeroSection />
       <ContactSection />
       <a
-        href="https://wa.me/yourphonenumber"
+        href="https://wa.me/923707503109"
         target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
         className="position-fixed"
         style={{
           fontSize: "3.5rem",
@@ -77,3 +79,4 @@ export const ContactUs = () => {
     </Layout>
   );
 };
+

@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import About from "../../../../assets/images/facilities/about.png";
-import About_one from "../../../../assets/images/facilities/about-one.png";
-import About_two from "../../../../assets/images/facilities/about-two.png";
-import { Curdata } from "../../../../Data/pro";
+import CbeLeft from "../../../../assets/images/curiculum/cbe_left.svg";
+import CbeRight from "../../../../assets/images/curiculum/cbe_right.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,25 +14,28 @@ export const AboutSection = () => {
   }, []);
 
   return (
-    <div className="container-fluid pb-4 mt-4  bg-cbe-color">
+    <div className="container-fluid py-5 bg-cbe-color">
       <div className="container">
-        <div className="row">
-          <div className="col-4">
-            <img src={About} alt="" className="pt-5" />
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-3 col-md-4 d-none d-md-flex justify-content-center" data-aos="fade-right">
+            <div className="cbe-img-wrapper">
+              <img src={CbeLeft} alt="Competency-Based Education - Mastery" className="cbe-side-img img-fluid" />
+            </div>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
-            <img src={About_two} alt="" />
-            <h1 className="cbe-about-title">
-            	Competency-Based Education
-            </h1>
+          <div className="col-lg-6 col-md-8 d-flex flex-column align-items-center text-center px-lg-4" data-aos="fade-up">
+            <h1 className="cbe-about-title">Competency-Based Education</h1>
+            <div className="cbe-title-line"></div>
             <p className="cbe-about-desp">
-Competency-based learning is a system of education, often referred to as proficiency or mastery-based, in which students advance and move ahead on their lessons based on demonstration of mastery. For students to progress at a meaningful pace, schools and teachers provide differentiated instruction and support.</p>
+              Competency-based learning, often referred to as proficiency- or mastery-based education, is a system where students advance through their lessons only after demonstrating true mastery of the material. To ensure every student progresses at a meaningful pace, schools and educators provide tailored, differentiated instruction and targeted support.
+            </p>
             <p className="cbe-about-desp">
-              Future Foundation Schools discourages root memorization in education and emphasizes that every soft theory and information should be converted into skill as we provide an activity-based teaching approach. As a result, students are more confident as they experience the practices of daily life. 
-</p>
+              At Future Foundation Schools, we actively discourage rote memorization. Instead, we emphasize converting theoretical knowledge into practical skills through our dynamic, activity-based teaching approach. By connecting classroom learning directly to real-world applications, our students build greater confidence and successfully bridge the gap between education and daily life.
+            </p>
           </div>
-          <div className="col-4">
-            <img src={About_one} alt="" className="pt-5" />
+          <div className="col-lg-3 col-md-4 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+            <div className="cbe-img-wrapper">
+              <img src={CbeRight} alt="Competency-Based Education - Practical Skills" className="cbe-side-img img-fluid" />
+            </div>
           </div>
         </div>
       </div>

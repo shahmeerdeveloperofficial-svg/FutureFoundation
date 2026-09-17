@@ -8,6 +8,7 @@ import { NewsSection } from "../Components/Home/News/Index";
 import { ParentsSection } from "../Components/Home/Parents/Index";
 import { TeacherSection } from "../Components/Home/Teacher/Index";
 import { ProfessionalSection } from "../Components/Home/Professional/Index";
+import { GallerySection } from "../Components/Home/Gallery/Index";
 import { FaWhatsappSquare } from "react-icons/fa";
 import Scroll from "../assets/images/scroll.png";
 
@@ -40,12 +41,13 @@ export const Home = () => {
       <LocationSection />
       <TeacherSection />
       <ProfessionalSection />
+      <GallerySection />
       <RegisterSection />
       {/* <NewsSection /> */}
       <ParentsSection />
       
       <a
-        href="https://wa.me/yourphonenumber"
+        href="https://wa.me/92510000007"
         target="_blank"
         className="position-fixed"
         style={{
@@ -90,3 +92,4 @@ export const Home = () => {
     </Layout>
   );
 };
+

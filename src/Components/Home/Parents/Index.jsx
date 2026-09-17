@@ -11,6 +11,8 @@ import { Testimonials } from "../../../Data/pro";
 import { MdArrowForward, MdArrowBack } from "react-icons/md";
 
 export const ParentsSection = () => {
+  const isStaticRender = typeof window === "undefined";
+
   useEffect(() => {
     AOS.init({
       offset: 300,
@@ -78,37 +80,57 @@ export const ParentsSection = () => {
           </div>
         </div>
       </div>
-      <Slider ref={sliderRef} {...settings}>
-        {Testimonials.map((item, index) => (
-          <div key={item.id} className="ps-2 pe-2 mt-4">
-            <div
-              className={`parents_main_card ${
-                index === activeSlide ? "parents_active" : "parent_card"
-              }`}
-            >
-              <div className="mb-2">
-                <img src={item.star} alt="" />
-              </div>
-              <p className="parent_title">{item.review}</p>
-              <div className="d-flex items-center gap-4 mt-5">
-                <div>
-                  <img src={item.image} alt={item.name} />
+      {isStaticRender ? (
+        <div className="container">
+          <div className="row">
+            {Testimonials.slice(0, 6).map((item) => (
+              <div key={item.id} className="col-lg-6 ps-2 pe-2 mt-4">
+                <div className="parents_main_card parent_card">
+                  <div className="mb-2">
+                    <img src={item.star} alt="" />
+                  </div>
+                  <p className="parent_title_color">{item.name}</p>
+                  <p className="parent_title">{item.review}</p>
+                  <div className="d-flex items-center gap-4 mt-5">
+                    <div>
+                      <img src={item.image} alt={item.name} />
+                    </div>
+                    <div className="d-flex gap-2 flex-column">
+                      <p className="parent_date">{item.date}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="d-flex gap-2 flex-column">
-                  <p
-                    className={`${
-                      index === activeSlide ? "parent_title" : "parent_title_color"
-                    }`}
-                  >
-                    {item.name}
-                  </p>
-                  <p className="parent_date">{item.date}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <Slider ref={sliderRef} {...settings}>
+          {Testimonials.map((item, index) => (
+            <div key={item.id} className="ps-2 pe-2 mt-4">
+              <div
+                className={`parents_main_card ${
+                  index === activeSlide ? "parents_active" : "parent_card"
+                }`}
+              >
+                <div className="mb-2">
+                  <img src={item.star} alt="" />
+                </div>
+                <p className="parent_title_color">{item.name}</p>
+                <p className="parent_title">{item.review}</p>
+                <div className="d-flex items-center gap-4 mt-5">
+                  <div>
+                    <img src={item.image} alt={item.name} />
+                  </div>
+                  <div className="d-flex gap-2 flex-column">
+                    <p className="parent_date">{item.date}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

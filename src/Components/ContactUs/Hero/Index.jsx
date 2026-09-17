@@ -18,8 +18,7 @@ export const HeroSection = () => {
         <div className="lms_hero_content">
           <h1 className="lms_hero_title">Contact Us</h1>
           <p className="lms_heo_desp">
-            Contact
-            <span className="lms-hero-breadcrumb-icon">🔻</span> FFS
+            Contact <span className="lms-hero-breadcrumb-icon">&gt;</span> FFS
           </p>
         </div>
         <div className="hero_cloud_img" />

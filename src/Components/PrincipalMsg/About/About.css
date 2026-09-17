@@ -1,33 +1,185 @@
 @import url('../../../App.css');
 
-.fac-about-main{
-    font-family: 'Montserrat';
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--secondaryblueColor);
-    text-align: center;
-}
-
-.bg-fac-color{
+.message-page {
+    position: relative;
+    overflow: hidden;
     background: #f0e2c8;
+    min-height: calc(100vh - 120px);
+    padding: 12px 0 54px;
 }
 
-.fac-about-title{
-    text-decoration: underline;
-    font-family: 'Montserrat';
-    font-weight: 800;
+.message-page__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1180px;
+    padding-top: 8px;
+}
+
+.message-copy {
+    max-width: 980px;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.fac-about-desp{
-    font-size: 18px;
+.message-title {
+    margin: 0 0 10px;
     font-family: 'RecoletaAlt';
-    text-align: center;
-    letter-spacing: .5px;
+    font-size: clamp(40px, 4vw, 58px);
+    line-height: 1.04;
+    color: #1d252d;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
 }
 
-.fac-card:hover{
-    background: var(--secondaryblueColor);
-    color: white;
+.message-subtitle {
+    margin: 0 0 8px;
+    font-family: 'RecoletaAlt';
+    font-size: clamp(20px, 2.1vw, 28px);
+    line-height: 1.2;
+    color: #1f1f1f;
+    font-weight: 700;
+}
+
+.message-text {
+    margin: 0 auto 16px;
+    font-family: 'RecoletaAlt';
+    font-size: clamp(16px, 1.35vw, 18px);
+    line-height: 1.6;
+    color: #30241e;
+    max-width: 920px;
+}
+
+.message-name {
+    margin: 6px 0 10px;
+    font-family: 'RecoletaAlt';
+    font-size: clamp(22px, 2vw, 26px);
+    line-height: 1.15;
+    color: #ff1f1f;
+    font-weight: 700;
+}
+
+.message-role {
+    margin: 0;
+    font-family: 'RecoletaAlt';
+    font-size: clamp(17px, 1.6vw, 22px);
+    line-height: 1.15;
+    color: #1f1f1f;
+}
+
+.message-decor {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.message-decor img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.message-decor--rocket {
+    display: none;
+}
+
+.message-decor--planet {
+    top: 16px;
+    left: 56px;
+    width: 150px;
+}
+
+.message-decor--pencil {
+    top: 16px;
+    right: 56px;
+    width: 125px;
+    transform: rotate(6deg);
+}
+
+.message-decor--abacus {
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    opacity: .88;
+}
+
+@media (max-width: 991.98px) {
+    .message-page {
+        padding: 8px 0 46px;
+        min-height: auto;
+    }
+
+    .message-copy {
+        max-width: 100%;
+    }
+
+    .message-title {
+        font-size: clamp(30px, 7vw, 44px);
+    }
+
+    .message-subtitle {
+        font-size: clamp(20px, 5vw, 24px);
+    }
+
+    .message-text {
+        font-size: 17px;
+    }
+
+    .message-name {
+        font-size: 24px;
+    }
+
+    .message-role {
+        font-size: 20px;
+    }
+
+    .message-decor--rocket {
+        display: none;
+    }
+
+    .message-decor--planet {
+        width: 110px;
+        left: 30px;
+        top: 12px;
+    }
+
+    .message-decor--pencil {
+        right: 30px;
+        top: 14px;
+        width: 96px;
+    }
+
+    .message-decor--abacus {
+        top: 14px;
+        width: 62px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .message-page {
+        padding: 8px 0 34px;
+    }
+
+    .message-text {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .message-decor--planet {
+        width: 92px;
+        left: 20px;
+        top: 10px;
+    }
+
+    .message-decor--pencil {
+        right: 18px;
+        width: 78px;
+    }
+
+    .message-decor--abacus {
+        top: 12px;
+        width: 50px;
+    }
 }
