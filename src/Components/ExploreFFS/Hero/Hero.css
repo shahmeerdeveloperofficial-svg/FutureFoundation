@@ -1,12 +1,11 @@
 @import url('../../../App.css');
 
 .hero_chairman_bg {
-    background-image: url("../../../assets/images/exploreffs/1.png");
+    background-image: url("../../../assets/images/banners/leadership_hero.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
-    top: 15px;
-    height: 365px;
+    height: 450px;
     margin-top: 5.9rem;
     display: flex;
     align-items: center;
