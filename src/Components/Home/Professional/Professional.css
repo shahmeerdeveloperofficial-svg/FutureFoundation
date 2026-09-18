@@ -163,6 +163,11 @@
     font-size: 28px;
   }
 
+  .professional_desp {
+    width: 100%;
+    max-width: 600px;
+  }
+
   .counter_div {
     padding: 40px 10px;
   }
@@ -182,8 +187,37 @@
 }
 
 @media (max-width: 768px) {
+  .rainbow_img,
+  .buterfly_img,
+  .hat_img,
+  .pro_img_one {
+    display: none !important;
+  }
+
   .rainbow_heading_text {
-    font-size: 22px;
+    font-size: clamp(20px, 5.5vw, 26px);
+    padding: 0 10px;
+  }
+
+  .professional_desp {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px;
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+
+  .pro_img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    padding-top: 15px;
+    object-fit: contain;
+  }
+
+  .pro_height {
+    height: auto;
+    min-height: 220px;
   }
 
   .student_color {

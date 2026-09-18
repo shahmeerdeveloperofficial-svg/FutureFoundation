@@ -513,7 +513,11 @@ textarea {
   .message_yellow_img,
   .red_img,
   .yellow_img,
-  .red_img_one {
+  .red_img_one,
+  .rainbow_img,
+  .buterfly_img,
+  .pro_img_one,
+  .hat_img {
     display: none !important;
   }
 
