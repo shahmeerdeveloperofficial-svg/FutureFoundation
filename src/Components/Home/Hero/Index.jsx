@@ -83,8 +83,8 @@ export const HeroSection = () => {
         </video>
       </div>
       <div className="hero_top_wave">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "clamp(20px, 3vw, 45px)", display: "block" }}>
-          <path d="M0,15 C380,50 1060,5 1440,30 L1440,60 L0,60 Z" fill="#061D52" />
+        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="hero_curve_svg">
+          <path d="M0,35 C320,85 720,15 1120,60 C1280,78 1380,48 1440,35 L1440,90 L0,90 Z" fill="#061D52" />
         </svg>
       </div>
       <div className="container position-relative hero_div ">

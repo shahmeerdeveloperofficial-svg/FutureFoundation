@@ -427,9 +427,32 @@ textarea {
     display: none !important;
   }
 
+  .hero_top_wave {
+    margin-top: -18px !important;
+  }
+
+  .hero_curve_svg {
+    height: 38px !important;
+  }
+
+  .history_img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 340px !important;
+    border-radius: 20px !important;
+    margin: 0 auto 1.5rem !important;
+    display: block !important;
+    box-shadow: 0 12px 30px rgba(10, 37, 64, 0.15) !important;
+  }
+
+  .footer_bg {
+    background-position: top center !important;
+  }
+
   .footer_main {
-    padding-top: 2.2rem;
-    padding-bottom: 1rem;
+    padding-top: clamp(4.8rem, 14vw, 6.8rem) !important;
+    padding-bottom: 2rem !important;
   }
 
   .footer_bg .row > [class*="col-"] {
@@ -650,13 +673,18 @@ textarea {
   }
 
   .footer_logo {
-    width: 78px;
-    height: auto;
+    width: 95px !important;
+    height: 95px !important;
+    min-width: 95px !important;
+    min-height: 95px !important;
+    margin-top: 10px !important;
+    border: 2.5px solid var(--secondaryColor) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
   }
 
   .footer_main > .d-flex:first-of-type {
-    align-items: flex-start !important;
-    text-align: left;
+    align-items: center !important;
+    text-align: center;
   }
 
   .footer_desp {
