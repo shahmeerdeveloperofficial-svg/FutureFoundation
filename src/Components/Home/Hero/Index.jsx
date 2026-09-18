@@ -83,8 +83,8 @@ export const HeroSection = () => {
         </video>
       </div>
       <div className="hero_top_wave">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="hero_curve_svg">
-          <path d="M0,40 C360,110 1080,0 1440,65 L1440,120 L0,120 Z" fill="#061D52" />
+        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="hero_curve_svg">
+          <path d="M0,35 C360,85 1080,20 1440,55 L1440,90 L0,90 Z" fill="#061D52" />
         </svg>
       </div>
       <div className="container position-relative hero_div ">
@@ -124,8 +124,8 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className="hero_bottom_wave">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "70px", display: "block", marginBottom: "-1px" }}>
-          <path d="M0,40 C360,110 1080,0 1440,65 L1440,120 L0,120 Z" fill="#e7f0fb" />
+        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "70px", display: "block", marginBottom: "-1px" }}>
+          <path d="M0,35 C360,85 1080,20 1440,55 L1440,90 L0,90 Z" fill="#e7f0fb" />
         </svg>
       </div>
 
