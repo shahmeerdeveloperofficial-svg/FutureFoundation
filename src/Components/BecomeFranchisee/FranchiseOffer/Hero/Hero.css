@@ -1,12 +1,12 @@
 @import url('../../../../App.css');
 
 .hero_franchiseoffer_bg {
-    background-image: url("../../../../assets/images/franchise/franchiseoffer.jpeg");
+    background-image: url("../../../../assets/images/facilities/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 500px;
-    margin-top: 4.8rem;
+    height: 450px;
+    margin-top: 5.9rem;
     display: flex;
     align-items: center;
     justify-content: center;

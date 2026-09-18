@@ -16,9 +16,9 @@ export const HeroSection = () => {
       <div className="hero_franchiseoffer_bg">
         <div className="lms_overlay"></div>
         <div className="lms_hero_content">
-          <h1 className="lms_hero_title">School Partnership Offer</h1>
+          <h1 className="lms_hero_title">Silent Features</h1>
           <p className="lms_heo_desp">
-            Home <span className="lms-hero-breadcrumb-icon">&gt;</span> School Partnerships
+            Home <span className="lms-hero-breadcrumb-icon">&gt;</span> School Network
           </p>
         </div>
         <div className="hero_cloud_img" />

@@ -1,12 +1,11 @@
 @import url('../../../../App.css');
 
 .hero_admissionProcess_bg {
-    background-image: url("../../../../assets//images//admission/1.png");
+    background-image: url("../../../../assets/images/facilities/hero.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
-    top: 15px;
-    height: 365px;
+    height: 450px;
     margin-top: 5.9rem;
     display: flex;
     align-items: center;

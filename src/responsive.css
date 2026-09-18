@@ -124,6 +124,11 @@ textarea {
   .hero_contact_bg,
   .hero_admissionNow_bg,
   .hero_explore_bg,
+  .hero_admissionProcess_bg,
+  .discipline_hero_bg,
+  .hero_franchiseoffer_bg,
+  .hero_fmodel_bg,
+  .hero_campuses_bg,
   [class*="hero_"][class*="_bg"],
   [class*="_hero_bg"] {
     height: clamp(210px, 42vw, 300px) !important;
@@ -138,39 +143,6 @@ textarea {
     justify-content: center !important;
     position: relative !important;
     padding: 10px 15px 30px !important;
-  }
-
-  .hero_admissionProcess_bg,
-  .discipline_hero_bg,
-  .hero_fmodel_bg,
-  .hero_campuses_bg {
-    background-size: 100% auto !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-color: #061D52 !important;
-    height: clamp(140px, 34vw, 220px) !important;
-    min-height: 120px !important;
-    margin-top: clamp(96px, 14vw, 104px) !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-  }
-
-  .hero_franchiseoffer_bg {
-    background-size: 100% auto !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-color: #a07b32 !important;
-    height: clamp(170px, 46vw, 300px) !important;
-    min-height: 150px !important;
-    margin-top: clamp(96px, 14vw, 104px) !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
   }
 
   .lms_hero_content,
@@ -656,8 +628,13 @@ textarea {
   .hero_contact_bg,
   .hero_admissionNow_bg,
   .hero_explore_bg,
-  [class*="hero_"][class*="_bg"]:not(.hero_admissionProcess_bg):not(.discipline_hero_bg):not(.hero_franchiseoffer_bg):not(.hero_fmodel_bg):not(.hero_campuses_bg),
-  [class*="_hero_bg"]:not(.hero_admissionProcess_bg):not(.discipline_hero_bg):not(.hero_franchiseoffer_bg):not(.hero_fmodel_bg):not(.hero_campuses_bg) {
+  .hero_admissionProcess_bg,
+  .discipline_hero_bg,
+  .hero_franchiseoffer_bg,
+  .hero_fmodel_bg,
+  .hero_campuses_bg,
+  [class*="hero_"][class*="_bg"],
+  [class*="_hero_bg"] {
     height: clamp(200px, 45vw, 260px) !important;
     min-height: 200px !important;
     margin-top: 100px !important;
@@ -756,8 +733,13 @@ textarea {
   .hero_contact_bg,
   .hero_admissionNow_bg,
   .hero_explore_bg,
-  [class*="hero_"][class*="_bg"]:not(.hero_admissionProcess_bg):not(.discipline_hero_bg):not(.hero_franchiseoffer_bg):not(.hero_fmodel_bg):not(.hero_campuses_bg),
-  [class*="_hero_bg"]:not(.hero_admissionProcess_bg):not(.discipline_hero_bg):not(.hero_franchiseoffer_bg):not(.hero_fmodel_bg):not(.hero_campuses_bg) {
+  .hero_admissionProcess_bg,
+  .discipline_hero_bg,
+  .hero_franchiseoffer_bg,
+  .hero_fmodel_bg,
+  .hero_campuses_bg,
+  [class*="hero_"][class*="_bg"],
+  [class*="_hero_bg"] {
     height: clamp(190px, 48vw, 240px) !important;
     min-height: 190px !important;
     margin-top: 98px !important;
