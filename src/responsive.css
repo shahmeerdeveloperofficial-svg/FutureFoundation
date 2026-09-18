@@ -73,7 +73,7 @@ textarea {
   }
 
   .hero_main_div {
-    margin-top: 5rem;
+    margin-top: clamp(98px, 14vw, 108px) !important;
   }
 
   .navbar_bg,
@@ -143,6 +143,21 @@ textarea {
     justify-content: center !important;
     position: relative !important;
     padding: 10px 15px 30px !important;
+  }
+
+  .hero_franchiseoffer_bg,
+  .hero_fmodel_bg {
+    background-size: 100% auto !important;
+    background-repeat: no-repeat !important;
+    background-position: center 25% !important;
+    background-color: #8c6a28 !important;
+    height: clamp(230px, 58vw, 360px) !important;
+    min-height: 220px !important;
+  }
+
+  .hero_campuses_bg {
+    background-size: cover !important;
+    background-position: center !important;
   }
 
   .lms_hero_content,
@@ -590,7 +605,7 @@ textarea {
   }
 
   .hero_main_div {
-    margin-top: 4.8rem;
+    margin-top: clamp(96px, 14vw, 104px) !important;
   }
 
   .hero_main_div .row,

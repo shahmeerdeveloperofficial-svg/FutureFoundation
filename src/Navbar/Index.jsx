@@ -35,7 +35,7 @@ export const CustomNavbar = () => {
     <>
       <AnnouncementBanner />
       <header className="container-fluid navbar_bg">
-        <div className="container position-relative">
+        <div className="container-fluid px-3 px-xl-5 position-relative">
           <div className="d-flex justify-content-between align-items-center navbar-inner-row">
             <a href="/" onClick={reloadWebsite} className="navbar-brand-link">
               <img src={Logo} alt="Future Foundation School Logo" className="navbar-logo" />

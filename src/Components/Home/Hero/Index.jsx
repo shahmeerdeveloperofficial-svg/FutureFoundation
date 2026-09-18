@@ -84,7 +84,7 @@ export const HeroSection = () => {
       </div>
       <div className="hero_top_wave">
         <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="hero_curve_svg">
-          <path d="M0,35 C320,85 720,15 1120,60 C1280,78 1380,48 1440,35 L1440,90 L0,90 Z" fill="#061D52" />
+          <path d="M0,35 C360,85 1080,20 1440,55 L1440,90 L0,90 Z" fill="#061D52" />
         </svg>
       </div>
       <div className="container position-relative hero_div ">
