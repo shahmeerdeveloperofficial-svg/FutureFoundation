@@ -38,7 +38,6 @@ export const Home = () => {
   return (
     <Layout>
       <HeroSection />
-      <LeadershipSection />
       <AboutSection />
       <LocationSection />
       <TeacherSection />
@@ -47,6 +46,7 @@ export const Home = () => {
       <RegisterSection />
       {/* <NewsSection /> */}
       <ParentsSection />
+      <LeadershipSection />
       
       <a
         href="https://wa.me/92510000007"

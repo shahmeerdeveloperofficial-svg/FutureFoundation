@@ -11,9 +11,11 @@ import "aos/dist/aos.css";
 
 const leadershipData = {
   chairman: {
+    key: "chairman",
     tabLabel: "Chairman's Message",
     name: "Rana Sohail Ahmed",
     designation: "Founder & Chairman",
+    roleShort: "Founder & Chairman",
     image: ChairmanImg,
     imageClass: "",
     quoteTitle: "Truly A Great Place To Think, Discover & Grow!",
@@ -22,9 +24,11 @@ const leadershipData = {
     linkUrl: "/chairman-message",
   },
   director: {
+    key: "director",
     tabLabel: "Director's Message",
     name: "Mrs. Saima Waqas",
     designation: "Director",
+    roleShort: "Director",
     image: DirectorImg,
     imageClass: "",
     quoteTitle: "Empowering Future Leaders & Inspiring Excellence!",
@@ -33,9 +37,11 @@ const leadershipData = {
     linkUrl: "/principal-message",
   },
   codirector: {
+    key: "codirector",
     tabLabel: "Co-Director's Message",
     name: "Mrs. Noreen Faisal",
     designation: "Co-Director",
+    roleShort: "Co-Director",
     image: CoDirectorImg,
     imageClass: "leadership_portrait_img--codirector",
     quoteTitle: "Leadership Is About Inspiring Others & Fostering Innovation!",
@@ -61,44 +67,55 @@ export const LeadershipSection = () => {
     <section className="container-fluid leadership_section p-0" id="leadership">
       <div className="container px-3 px-sm-4">
         {/* Section Header */}
-        <div className="text-center" data-aos="fade-up">
+        <div className="text-center leadership_header_wrap" data-aos="fade-up">
           <div className="leadership_kicker">
             <FaCrown className="leadership_kicker_icon" />
-            <span>Executive Leadership</span>
+            <span>Executive Leadership &amp; Vision</span>
           </div>
-          <h2 className="leadership_main_title">Our Leadership Messages</h2>
+          <h2 className="leadership_main_title">Words of Wisdom from Our Leadership</h2>
           <p className="leadership_subtitle">
-            Visionary guidance and enduring commitment from the leadership of Future Foundation School &amp; College
+            Meet the distinguished mentors guiding Future Foundation School &amp; College toward academic distinction and holistic character excellence.
           </p>
         </div>
 
-        {/* 3 Interactive Switcher Buttons */}
-        <div className="leadership_tabs_wrap" data-aos="fade-up">
+        {/* 3 Interactive Leader Preview Cards */}
+        <div className="row g-3 g-md-4 justify-content-center leadership_nav_cards_row" data-aos="fade-up">
           {Object.keys(leadershipData).map((key) => {
             const leader = leadershipData[key];
             const isActive = activeKey === key;
             return (
-              <button
-                key={key}
-                type="button"
-                className={`leadership_tab_btn ${isActive ? "active" : ""}`}
-                onClick={() => setActiveKey(key)}
-                aria-pressed={isActive}
-              >
-                {isActive && <span className="leadership_tab_badge" />}
-                <span>{leader.tabLabel}</span>
-              </button>
+              <div key={key} className="col-12 col-md-4">
+                <button
+                  type="button"
+                  className={`leadership_nav_card ${isActive ? "active" : ""}`}
+                  onClick={() => setActiveKey(key)}
+                  aria-pressed={isActive}
+                >
+                  <div className="leadership_nav_avatar_wrap">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      className={`leadership_nav_avatar ${leader.imageClass}`}
+                    />
+                    {isActive && <span className="leadership_nav_active_ring" />}
+                  </div>
+                  <div className="leadership_nav_text">
+                    <h4 className="leadership_nav_name">{leader.name}</h4>
+                    <span className="leadership_nav_role">{leader.designation}</span>
+                  </div>
+                </button>
+              </div>
             );
           })}
         </div>
 
-        {/* Executive Showcase Card */}
+        {/* Active Executive Spotlight Showcase Card */}
         <div className="leadership_card" data-aos="fade-up" key={activeKey}>
           <div className="leadership_card_top_accent" />
           <div className="leadership_card_watermark">FFS</div>
 
           <div className="row g-4 g-lg-5 align-items-center">
-            {/* Left Column: Portrait & Details */}
+            {/* Left Column: Portrait & Designation */}
             <div className="col-lg-4 leadership_portrait_col">
               <div className="leadership_portrait_frame">
                 <div className="leadership_portrait_inner">
@@ -113,7 +130,7 @@ export const LeadershipSection = () => {
               <span className="leadership_designation_pill">
                 {activeLeader.designation}
               </span>
-              <p className="leadership_org_text">Future Foundation School</p>
+              <p className="leadership_org_text">Future Foundation School &amp; College</p>
             </div>
 
             {/* Right Column: Quote & Message Content */}
@@ -133,7 +150,7 @@ export const LeadershipSection = () => {
                   <MdArrowForward size={18} />
                 </Link>
                 <span className="leadership_footer_brand">
-                  Future Foundation School &amp; College
+                  Official Leadership Address
                 </span>
               </div>
             </div>
