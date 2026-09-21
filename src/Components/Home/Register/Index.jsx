@@ -30,7 +30,7 @@ export const RegisterSection = () => {
             The admission process at Future Foundation Schools is designed to be simple, transparent, and welcoming. We believe that personal interaction between parents or authorized guardians, the prospective student, and our school representatives carries far greater value than any conventional entrance exam.
           </p>
           <div className="d-flex align-items-center gap-3" data-aos="fade-up">
-            <button className="reg_btn" >
+            <button className="reg_btn" onClick={() => window.location.href = "/admission-process"}>
               View Admission Steps
               <div className="reg_circle">
                 <MdArrowForward className="reg_circle_icon" />

@@ -1,0 +1,379 @@
+﻿@import url('../../../App.css');
+
+.leadership_section {
+    position: relative;
+    background: linear-gradient(180deg, #e7f0fb 0%, #f4f8fd 100%);
+    padding: 60px 0 80px;
+    overflow: hidden;
+}
+
+.leadership_kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(11, 67, 189, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #0B43BD;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.leadership_kicker_icon {
+    color: #D4AF37;
+    font-size: 15px;
+}
+
+.leadership_main_title {
+    font-family: 'RecoletaAlt', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    color: #061D52;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.leadership_subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(15px, 1.25vw, 17px);
+    color: #475569;
+    max-width: 680px;
+    margin: 0 auto 36px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* 3 Buttons Switcher */
+.leadership_tabs_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.leadership_tab_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #061D52;
+    background: #ffffff;
+    border: 2px solid rgba(11, 67, 189, 0.15);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(6, 29, 82, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.leadership_tab_btn:hover {
+    transform: translateY(-2px);
+    border-color: #D4AF37;
+    box-shadow: 0 8px 20px rgba(11, 67, 189, 0.12);
+}
+
+.leadership_tab_btn.active {
+    background: linear-gradient(135deg, #0B43BD 0%, #061D52 100%);
+    color: #ffffff;
+    border-color: #D4AF37;
+    box-shadow: 0 10px 28px rgba(11, 67, 189, 0.32);
+    transform: translateY(-2px);
+}
+
+.leadership_tab_badge {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D4AF37;
+    box-shadow: 0 0 8px #D4AF37;
+}
+
+/* Executive Showcase Card */
+.leadership_card {
+    background: #ffffff;
+    border-radius: 32px;
+    border: 1px solid rgba(11, 67, 189, 0.12);
+    box-shadow: 0 24px 60px rgba(11, 67, 189, 0.1), 0 4px 20px rgba(0, 0, 0, 0.03);
+    padding: 48px 44px;
+    position: relative;
+    overflow: hidden;
+}
+
+.leadership_card_top_accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #0B43BD 0%, #D4AF37 50%, #061D52 100%);
+}
+
+.leadership_card_watermark {
+    position: absolute;
+    bottom: -20px;
+    right: 25px;
+    font-size: 170px;
+    font-weight: 900;
+    font-family: 'RecoletaAlt', serif;
+    color: rgba(11, 67, 189, 0.03);
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+}
+
+/* Leader Portrait Column */
+.leadership_portrait_col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.leadership_portrait_frame {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #D4AF37 0%, #0B43BD 50%, #D4AF37 100%);
+    box-shadow: 0 16px 36px rgba(11, 67, 189, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.leadership_portrait_frame:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(11, 67, 189, 0.28);
+}
+
+.leadership_portrait_inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(180deg, #f0f5fd 0%, #e2ecfc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leadership_portrait_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.leadership_portrait_img--codirector {
+    object-fit: cover;
+    object-position: center 20%;
+    transform: scale(1.15);
+}
+
+.leadership_name {
+    font-family: 'RecoletaAlt', serif;
+    font-size: clamp(24px, 2.2vw, 28px);
+    font-weight: 700;
+    color: #061D52;
+    margin: 0 0 8px;
+    line-height: 1.2;
+}
+
+.leadership_designation_pill {
+    display: inline-block;
+    background: linear-gradient(135deg, #0B43BD 0%, #061D52 100%);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0 4px 14px rgba(11, 67, 189, 0.25);
+    margin-bottom: 6px;
+}
+
+.leadership_org_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Leader Content Column */
+.leadership_content_col {
+    position: relative;
+    z-index: 1;
+}
+
+.leadership_quote_badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(212, 175, 55, 0.12);
+    color: #D4AF37;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.leadership_quote_title {
+    font-family: 'RecoletaAlt', serif;
+    font-size: clamp(24px, 2.6vw, 34px);
+    font-weight: 700;
+    color: #0B43BD;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.leadership_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(15px, 1.15vw, 16.5px);
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 24px;
+    text-align: justify;
+}
+
+.leadership_card_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(11, 67, 189, 0.18);
+}
+
+.leadership_readmore_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
+    color: #061D52;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+    transition: all 0.3s ease;
+}
+
+.leadership_readmore_btn:hover {
+    background: linear-gradient(135deg, #FFC700 0%, #E5A800 100%);
+    color: #061D52;
+    transform: translateX(4px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.leadership_footer_brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0B43BD;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Mobile & Tablet Adjustments */
+@media (max-width: 991.98px) {
+    .leadership_section {
+        padding: 40px 0 60px;
+    }
+
+    .leadership_card {
+        padding: 34px 22px;
+        border-radius: 24px;
+    }
+
+    .leadership_portrait_col {
+        margin-bottom: 28px;
+    }
+
+    .leadership_portrait_frame {
+        width: 200px;
+        height: 200px;
+    }
+
+    .leadership_quote_title {
+        font-size: clamp(22px, 5.5vw, 28px);
+        text-align: center;
+    }
+
+    .leadership_text {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .leadership_quote_badge {
+        margin: 0 auto 12px;
+        display: flex;
+    }
+
+    .leadership_tabs_wrap {
+        gap: 10px;
+    }
+
+    .leadership_tab_btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .leadership_section {
+        padding: 30px 0 50px;
+    }
+
+    .leadership_card {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .leadership_portrait_frame {
+        width: 170px;
+        height: 170px;
+    }
+
+    .leadership_name {
+        font-size: 21px;
+    }
+
+    .leadership_designation_pill {
+        font-size: 12px;
+        padding: 5px 14px;
+    }
+
+    .leadership_tab_btn {
+        padding: 9px 15px;
+        font-size: 13px;
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .leadership_card_footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

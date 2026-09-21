@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Layout } from "../layout/Index";
 import { HeroSection } from "../Components/Home/Hero/Index";
+import { LeadershipSection } from "../Components/Home/Leadership/Index";
 import { AboutSection } from "../Components/Home/About/Index";
 import { LocationSection } from "../Components/Home/Location/Index";
 import { RegisterSection } from "../Components/Home/Register/Index";
@@ -37,6 +38,7 @@ export const Home = () => {
   return (
     <Layout>
       <HeroSection />
+      <LeadershipSection />
       <AboutSection />
       <LocationSection />
       <TeacherSection />
