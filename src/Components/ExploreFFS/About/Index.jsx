@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "../../MessagePage/MessagePage.css";
 import ChairmanImg from "../../../assets/images/owner.png";
+import OwnerBg from "../../../assets/images/owner_bg.png";
+import OwnerEllipse from "../../../assets/images/owner_ellipse.png";
 import MessagePlanet from "../../../assets/images/facilities/about.png";
 import MessagePencil from "../../../assets/images/facilities/about-one.png";
 import MessageAbacus from "../../../assets/images/facilities/about-two.png";
@@ -33,10 +35,13 @@ export const AboutSection = () => {
         <div className="message-executive-card" data-aos="fade-up">
           <div className="message-card-watermark">FFS</div>
           <div className="row g-4 g-lg-5 align-items-center">
-            {/* Left Column: Chairman Portrait & Bio */}
+            {/* Left Column: Chairman Portrait with Blue Orbit Animation */}
             <div className="col-lg-4 message-profile-col">
-              <div className="message-portrait-frame">
-                <div className="message-portrait-img-wrap">
+              <div className="message-portrait-stage">
+                <img src={OwnerBg} alt="" className="message-portrait-bg" aria-hidden="true" />
+                <img src={OwnerEllipse} alt="" className="message-portrait-ellipse" aria-hidden="true" />
+                <div className="message-orbit-circle-blue" aria-hidden="true" />
+                <div className="message-portrait-inner-frame">
                   <img
                     src={ChairmanImg}
                     alt="Rana Sohail Ahmed - Founder & Chairman"

@@ -4,6 +4,8 @@ import "./Leadership.css";
 import ChairmanImg from "../../../assets/images/owner.png";
 import DirectorImg from "../../../assets/images/director2.png";
 import CoDirectorImg from "../../../assets/images/doc/co-director-cutout.png";
+import OwnerBg from "../../../assets/images/owner_bg.png";
+import OwnerEllipse from "../../../assets/images/owner_ellipse.png";
 import { FaQuoteLeft, FaCrown } from "react-icons/fa";
 import { MdArrowForward } from "react-icons/md";
 import AOS from "aos";
@@ -15,7 +17,6 @@ const leadershipData = {
     tabLabel: "Chairman's Message",
     name: "Rana Sohail Ahmed",
     designation: "Founder & Chairman",
-    roleShort: "Founder & Chairman",
     image: ChairmanImg,
     imageClass: "",
     quoteTitle: "Truly A Great Place To Think, Discover & Grow!",
@@ -28,7 +29,6 @@ const leadershipData = {
     tabLabel: "Director's Message",
     name: "Mrs. Saima Waqas",
     designation: "Director",
-    roleShort: "Director",
     image: DirectorImg,
     imageClass: "",
     quoteTitle: "Empowering Future Leaders & Inspiring Excellence!",
@@ -41,7 +41,6 @@ const leadershipData = {
     tabLabel: "Co-Director's Message",
     name: "Mrs. Noreen Faisal",
     designation: "Co-Director",
-    roleShort: "Co-Director",
     image: CoDirectorImg,
     imageClass: "leadership_portrait_img--codirector",
     quoteTitle: "Leadership Is About Inspiring Others & Fostering Innovation!",
@@ -115,9 +114,31 @@ export const LeadershipSection = () => {
           <div className="leadership_card_watermark">FFS</div>
 
           <div className="row g-4 g-lg-5 align-items-center">
-            {/* Left Column: Portrait & Designation */}
-            <div className="col-lg-4 leadership_portrait_col">
-              <div className="leadership_portrait_frame">
+            {/* Left Column: Portrait with Blue Orbiting Animation */}
+            <div className="col-lg-5 col-xl-4 leadership_portrait_col">
+              <div className="leadership_portrait_stage">
+                {/* Organic Backdrop */}
+                <img
+                  src={OwnerBg}
+                  alt=""
+                  className="leadership_portrait_bg"
+                  aria-hidden="true"
+                />
+
+                {/* Dashed Orbit Ring */}
+                <img
+                  src={OwnerEllipse}
+                  alt=""
+                  className="leadership_portrait_ellipse"
+                  aria-hidden="true"
+                />
+
+                {/* Orbiting Blue Circle Animation */}
+                <div className="leadership_orbit_circle" aria-hidden="true">
+                  <span className="leadership_orbit_inner_glint" />
+                </div>
+
+                {/* Leader Portrait */}
                 <div className="leadership_portrait_inner">
                   <img
                     src={activeLeader.image}
@@ -126,6 +147,7 @@ export const LeadershipSection = () => {
                   />
                 </div>
               </div>
+
               <h3 className="leadership_name">{activeLeader.name}</h3>
               <span className="leadership_designation_pill">
                 {activeLeader.designation}
@@ -134,7 +156,7 @@ export const LeadershipSection = () => {
             </div>
 
             {/* Right Column: Quote & Message Content */}
-            <div className="col-lg-8 leadership_content_col">
+            <div className="col-lg-7 col-xl-8 leadership_content_col">
               <div className="leadership_quote_badge">
                 <FaQuoteLeft />
               </div>

@@ -2,7 +2,7 @@
 
 .leadership_section {
     position: relative;
-    background: linear-gradient(180deg, #f1f6fd 0%, #e5eef9 100%);
+    background: linear-gradient(180deg, #f0f5fc 0%, #e3edf8 100%);
     padding: 65px 0 85px;
     overflow: hidden;
     border-top: 1px solid #dce8f5;
@@ -162,7 +162,7 @@
     border-radius: 30px;
     border: 1px solid rgba(11, 67, 189, 0.12);
     box-shadow: 0 24px 60px rgba(11, 67, 189, 0.1), 0 4px 20px rgba(0, 0, 0, 0.03);
-    padding: 46px 42px;
+    padding: 44px 38px;
     position: relative;
     overflow: hidden;
 }
@@ -199,29 +199,92 @@
     z-index: 1;
 }
 
-.leadership_portrait_frame {
+/* Portrait Stage with Orbiting Blue Circle */
+.leadership_portrait_stage {
     position: relative;
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(135deg, #D4AF37 0%, #0B43BD 50%, #D4AF37 100%);
-    box-shadow: 0 16px 36px rgba(11, 67, 189, 0.2);
-    margin-bottom: 20px;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    width: 310px;
+    height: 310px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
 }
 
-.leadership_portrait_frame:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 45px rgba(11, 67, 189, 0.28);
-}
-
-.leadership_portrait_inner {
+.leadership_portrait_bg {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+    filter: drop-shadow(0 10px 24px rgba(11, 67, 189, 0.18));
+}
+
+.leadership_portrait_ellipse {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* The Blue Orbiting Circle */
+.leadership_orbit_circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    margin-left: -24px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #60A5FA 0%, #0B43BD 60%, #061D52 100%);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 16px rgba(11, 67, 189, 0.75), 0 4px 12px rgba(6, 29, 82, 0.35);
+    z-index: 4;
+    pointer-events: none;
+    animation: rotateInCircleBlue 8s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leadership_orbit_inner_glint {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    filter: blur(1px);
+    transform: translate(-3px, -3px);
+}
+
+@keyframes rotateInCircleBlue {
+    0% {
+        transform: rotate(0deg) translateX(130px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(130px) rotate(-360deg);
+    }
+}
+
+/* Central Portrait Frame */
+.leadership_portrait_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 215px;
+    height: 215px;
     border-radius: 50%;
     overflow: hidden;
     background: linear-gradient(180deg, #f0f5fd 0%, #e2ecfc 100%);
+    border: 4px solid #ffffff;
+    box-shadow: 0 12px 30px rgba(11, 67, 189, 0.2);
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,10 +306,10 @@
 
 .leadership_name {
     font-family: 'RecoletaAlt', serif;
-    font-size: clamp(24px, 2.2vw, 28px);
+    font-size: clamp(23px, 2vw, 27px);
     font-weight: 700;
     color: #061D52;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
     line-height: 1.2;
 }
 
@@ -259,11 +322,11 @@
     font-weight: 600;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    padding: 6px 20px;
+    padding: 5px 18px;
     border-radius: 50px;
     border: 1px solid rgba(212, 175, 55, 0.5);
     box-shadow: 0 4px 14px rgba(11, 67, 189, 0.25);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .leadership_org_text {
@@ -295,11 +358,11 @@
 
 .leadership_quote_title {
     font-family: 'RecoletaAlt', serif;
-    font-size: clamp(23px, 2.4vw, 32px);
+    font-size: clamp(22px, 2.3vw, 30px);
     font-weight: 700;
     color: #0B43BD;
     line-height: 1.25;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .leadership_text {
@@ -307,7 +370,7 @@
     font-size: clamp(14.5px, 1.1vw, 16px);
     line-height: 1.8;
     color: #334155;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     text-align: justify;
 }
 
@@ -317,7 +380,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
-    padding-top: 20px;
+    padding-top: 18px;
     border-top: 1px dashed rgba(11, 67, 189, 0.18);
 }
 
@@ -328,9 +391,9 @@
     background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
     color: #061D52;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14.5px;
+    font-size: 14px;
     font-weight: 700;
-    padding: 10px 24px;
+    padding: 10px 22px;
     border-radius: 50px;
     text-decoration: none;
     box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
@@ -365,12 +428,7 @@
     }
 
     .leadership_portrait_col {
-        margin-bottom: 26px;
-    }
-
-    .leadership_portrait_frame {
-        width: 190px;
-        height: 190px;
+        margin-bottom: 24px;
     }
 
     .leadership_quote_title {
@@ -396,13 +454,27 @@
     }
 
     .leadership_card {
-        padding: 24px 16px;
+        padding: 22px 14px;
         border-radius: 18px;
     }
 
-    .leadership_portrait_frame {
-        width: 160px;
-        height: 160px;
+    .leadership_portrait_stage {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 12px;
+    }
+
+    .leadership_portrait_inner {
+        width: 172px;
+        height: 172px;
+    }
+
+    .leadership_orbit_circle {
+        width: 38px;
+        height: 38px;
+        margin-top: -19px;
+        margin-left: -19px;
+        animation: rotateInCircleBlueMobile 8s linear infinite;
     }
 
     .leadership_name {
@@ -436,5 +508,14 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
+    }
+}
+
+@keyframes rotateInCircleBlueMobile {
+    0% {
+        transform: rotate(0deg) translateX(105px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(105px) rotate(-360deg);
     }
 }
