@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { FaTimes } from "react-icons/fa";
 import "./AdmissionPopup.css";
-import AdmissionPoster from "../../assets/images/doc/pop-up image.png";
+import AdmissionPoster from "../../assets/images/admission_popup_poster.jpg";
 
 const STORAGE_KEY = "ffs-admission-popup-dismissed";
 
@@ -16,11 +17,11 @@ export const AdmissionPopup = () => {
     try {
       const dismissed = window.sessionStorage.getItem(STORAGE_KEY) === "1";
       if (!dismissed) {
-        const timer = window.setTimeout(() => setIsOpen(true), 700);
+        const timer = window.setTimeout(() => setIsOpen(true), 600);
         return () => window.clearTimeout(timer);
       }
     } catch {
-      const timer = window.setTimeout(() => setIsOpen(true), 700);
+      const timer = window.setTimeout(() => setIsOpen(true), 600);
       return () => window.clearTimeout(timer);
     }
   }, []);
@@ -84,11 +85,13 @@ export const AdmissionPopup = () => {
 
         <div className="admission-popup__poster-shell">
           <div className="admission-popup__poster-stage">
-            <img
-              src={AdmissionPoster}
-              alt="Future Foundation School admission poster"
-              className="admission-popup__poster-image"
-            />
+            <Link to="/admissionnow" onClick={handleClose} title="Click to apply online - Future Foundation School Admissions Open">
+              <img
+                src={AdmissionPoster}
+                alt="Future Foundation School Online Admissions Open 2026-27"
+                className="admission-popup__poster-image"
+              />
+            </Link>
           </div>
         </div>
       </div>

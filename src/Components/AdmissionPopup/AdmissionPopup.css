@@ -9,20 +9,21 @@
   background:
     radial-gradient(circle at top left, rgba(11, 67, 189, 0.25), transparent 34%),
     radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.22), transparent 32%),
-    rgba(6, 29, 82, 0.78);
+    rgba(6, 29, 82, 0.82);
   backdrop-filter: blur(10px);
 }
 
 .admission-popup__card {
   position: relative;
-  width: min(92vw, calc((100vh - 2rem) * 447 / 641));
-  max-width: 620px;
-  aspect-ratio: 447 / 641;
+  width: min(92vw, min(560px, calc(86vh)));
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   background: #fff;
-  border: 2px solid var(--secondaryColor);
-  box-shadow: 0 20px 70px rgba(5, 14, 61, 0.45);
+  border: 2px solid var(--secondaryColor, #D4AF37);
+  box-shadow: 0 20px 70px rgba(5, 14, 61, 0.5);
+  transition: transform 0.3s ease;
 }
 
 .admission-popup__card::before {
@@ -31,21 +32,31 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(135deg, rgba(11, 67, 189, 0.06), transparent 45%);
+    linear-gradient(135deg, rgba(11, 67, 189, 0.04), transparent 45%);
 }
 
 .admission-popup__close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 2;
-  width: 2.75rem;
-  height: 2.75rem;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 5;
+  width: 2.5rem;
+  height: 2.5rem;
   border: none;
   border-radius: 50%;
   color: #fff;
-  background: linear-gradient(135deg, var(--primaryColor), var(--blueColor));
-  box-shadow: 0 10px 24px rgba(11, 67, 189, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primaryColor, #0B43BD), var(--blueColor, #061D52));
+  box-shadow: 0 8px 20px rgba(11, 67, 189, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.admission-popup__close:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #e11d48, #be123c);
 }
 
 .admission-popup__poster-shell {
@@ -61,19 +72,36 @@
   overflow: hidden;
 }
 
+.admission-popup__poster-stage a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
 .admission-popup__poster-image {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 @media (max-width: 575.98px) {
   .admission-popup__overlay {
-    padding: 0.5rem;
+    padding: 0.75rem;
   }
 
   .admission-popup__card {
-    border-radius: 14px;
+    border-radius: 16px;
+    width: min(94vw, calc(80vh));
+  }
+
+  .admission-popup__close {
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 13px;
   }
 }
+
