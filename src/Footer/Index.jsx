@@ -39,7 +39,7 @@ export const Footer = () => {
             </p>
             <div className="footer_social_wrap">
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/19ZMLjokfx/"
                 target="_blank"
                 rel="noreferrer"
                 className="footer_social_btn"
@@ -48,7 +48,7 @@ export const Footer = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/futurefoundationschool?stkn=bHc2M3FxM2gwYmt3"
                 target="_blank"
                 rel="noreferrer"
                 className="footer_social_btn"
