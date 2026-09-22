@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Logo from "../assets/images/logo.png";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline, IoGlobeOutline } from "react-icons/io5";
 import { MdOutlinePhone, MdOutlineEmail } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -133,15 +133,26 @@ export const Footer = () => {
               </li>
               <li className="footer_contact_item">
                 <MdOutlinePhone className="footer_c_icon" />
-                <div className="footer_phones_wrap">
-                  <a href="tel:+447405431552" className="footer_phone_link">+44 740 543 1552</a>
-                  <span className="footer_sep">|</span>
-                  <a href="tel:+96878818854" className="footer_phone_link">+968 788 188 54</a>
-                </div>
+                <a href="tel:+923707503109" className="footer_phone_link">
+                  +92 370 750 31 09
+                </a>
               </li>
               <li className="footer_contact_item">
                 <MdOutlineEmail className="footer_c_icon" />
-                <a href="mailto:info@fttrack.pk" className="footer_phone_link">info@fttrack.pk</a>
+                <a href="mailto:Info@futurefoundationschool.edu.pk" className="footer_phone_link">
+                  Info@futurefoundationschool.edu.pk
+                </a>
+              </li>
+              <li className="footer_contact_item">
+                <IoGlobeOutline className="footer_c_icon" />
+                <a
+                  href="https://futurefoundationschool.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer_phone_link"
+                >
+                  futurefoundationschool.com
+                </a>
               </li>
             </ul>
 

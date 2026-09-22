@@ -201,6 +201,7 @@
     color: #cbd5e1;
     text-decoration: none;
     transition: color 0.2s ease;
+    word-break: break-word;
 }
 
 .footer_phone_link:hover {
