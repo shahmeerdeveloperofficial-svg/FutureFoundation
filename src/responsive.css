@@ -581,11 +581,11 @@ textarea {
     padding-right: 16px;
   }
 
-  .row > [class*="col-"] {
+  .row:not(.footer_row) > [class*="col-"] {
     width: 100%;
   }
 
-  .d-flex:not(.navbar_bg .d-flex):not(.mobile_nav_header):not(.mobile_nav_parent):not(.footer_input):not(.footer_bg .d-flex) {
+  .d-flex:not(.navbar_bg .d-flex):not(.mobile_nav_header):not(.mobile_nav_parent):not(.footer_input):not(.footer_bg .d-flex):not(.footer_root .d-flex):not(.footer_root *):not(.footer_brand_header):not(.footer_contact_item):not(.footer_newsletter_form) {
     flex-wrap: wrap;
   }
 

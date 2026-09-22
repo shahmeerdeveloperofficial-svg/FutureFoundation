@@ -7,29 +7,35 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 
-const handleContactNavigate = () => {
-  window.location.href = "/contact-us";
-};
-
 export const Footer = () => {
+  const handleScrollAbout = (e) => {
+    e.preventDefault();
+    const element = document.querySelector("#about");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#about";
+    }
+  };
+
   return (
     <footer className="footer_root">
       {/* Top Gold & Royal Blue Accent Line */}
       <div className="footer_top_accent" />
 
       <div className="container footer_container">
-        <div className="row g-4 justify-content-between">
+        <div className="row g-4 footer_row">
           {/* Col 1: Brand Info & Mission */}
-          <div className="col-lg-4 col-md-6 footer_brand_col">
-            <div className="d-flex align-items-center gap-3 mb-3">
+          <div className="col-lg-4 col-md-12 footer_brand_col">
+            <div className="footer_brand_header">
               <img src={Logo} alt="Future Foundation School Logo" className="footer_logo" />
-              <div>
+              <div className="footer_brand_titles">
                 <span className="footer_brand_title">FUTURE FOUNDATION</span>
                 <span className="footer_brand_subtitle">SCHOOL &amp; COLLEGE</span>
               </div>
             </div>
             <p className="footer_brand_text">
-              Founded in 1998, Future Foundation School inspires critical thinkers and cultivates global leaders across our network of 70+ campuses in Pakistan.
+              Founded in 1998, Future Foundation School inspires critical thinkers and cultivates global leaders across 70+ campuses nationwide.
             </p>
             <div className="footer_social_wrap">
               <a
@@ -60,7 +66,7 @@ export const Footer = () => {
                 <FaXTwitter />
               </a>
               <a
-                href="https://wa.me/92510000007"
+                href="https://wa.me/923707503109"
                 target="_blank"
                 rel="noreferrer"
                 className="footer_social_btn"
@@ -79,15 +85,7 @@ export const Footer = () => {
                 <a href="/" className="footer_link">Home</a>
               </li>
               <li>
-                <a
-                  className="footer_link footer_link_btn"
-                  onClick={() => {
-                    const element = document.querySelector("#about");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
+                <a href="#about" onClick={handleScrollAbout} className="footer_link">
                   About Us
                 </a>
               </li>
@@ -95,22 +93,20 @@ export const Footer = () => {
                 <a href="/our-campuses" className="footer_link">Our Campuses</a>
               </li>
               <li>
-                <a href="/admission-process" className="footer_link">Admission Process</a>
+                <a href="/admission-process" className="footer_link">Admissions</a>
               </li>
               <li>
-                <a onClick={handleContactNavigate} className="footer_link footer_link_btn">
-                  Contact Us
-                </a>
+                <a href="/contact-us" className="footer_link">Contact Us</a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Academics & Network */}
+          {/* Col 3: Academics */}
           <div className="col-lg-2 col-6 footer_links_col">
             <h5 className="footer_heading">Academics</h5>
             <ul className="footer_links_list">
               <li>
-                <a href="/montessori-wing" className="footer_link">Montessori Wing</a>
+                <a href="/montessori-wing" className="footer_link">Montessori</a>
               </li>
               <li>
                 <a href="/ai-robotics" className="footer_link">AI &amp; Robotics</a>
@@ -128,29 +124,29 @@ export const Footer = () => {
           </div>
 
           {/* Col 4: Contact & Newsletter */}
-          <div className="col-lg-4 col-md-6 footer_contact_col">
+          <div className="col-lg-4 col-md-12 footer_contact_col">
             <h5 className="footer_heading">Contact Details</h5>
             <ul className="footer_contact_list">
-              <li className="d-flex align-items-start gap-2">
-                <IoLocationOutline className="footer_c_icon mt-1" />
+              <li className="footer_contact_item">
+                <IoLocationOutline className="footer_c_icon" />
                 <span className="footer_c_text">Baraf Khana Chowk Misrial Road Rawalpindi</span>
               </li>
-              <li className="d-flex align-items-center gap-2">
+              <li className="footer_contact_item">
                 <MdOutlinePhone className="footer_c_icon" />
-                <div className="d-flex gap-2 flex-wrap">
+                <div className="footer_phones_wrap">
                   <a href="tel:+447405431552" className="footer_phone_link">+44 740 543 1552</a>
-                  <span style={{ color: "rgba(255,255,255,0.4)" }}>|</span>
+                  <span className="footer_sep">|</span>
                   <a href="tel:+96878818854" className="footer_phone_link">+968 788 188 54</a>
                 </div>
               </li>
-              <li className="d-flex align-items-center gap-2">
+              <li className="footer_contact_item">
                 <MdOutlineEmail className="footer_c_icon" />
                 <a href="mailto:info@fttrack.pk" className="footer_phone_link">info@fttrack.pk</a>
               </li>
             </ul>
 
-            <div className="footer_newsletter_wrap mt-3">
-              <span className="footer_newsletter_label">Subscribe for Updates</span>
+            <div className="footer_newsletter_wrap">
+              <span className="footer_newsletter_label">Stay Connected</span>
               <form onSubmit={(e) => e.preventDefault()} className="footer_newsletter_form">
                 <input
                   type="email"
@@ -166,10 +162,10 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Copyright Divider */}
+        {/* Bottom Copyright Bar */}
         <div className="footer_bottom_bar">
           <p className="footer_copyright_text">
-            Copyright &copy; 2026 Future Foundation Schools. All Rights Reserved.
+            &copy; 2026 Future Foundation Schools. All Rights Reserved.
           </p>
           <p className="footer_tagline_text">
             Nurturing Tomorrow&apos;s Leaders Today
