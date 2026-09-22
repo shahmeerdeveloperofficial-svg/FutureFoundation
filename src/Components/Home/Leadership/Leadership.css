@@ -2,10 +2,9 @@
 
 .leadership_section {
     position: relative;
-    background: linear-gradient(180deg, #f0f5fc 0%, #e3edf8 100%);
-    padding: 65px 0 85px;
+    background: linear-gradient(180deg, #e7f0fb 0%, #f4f8fd 100%);
+    padding: 55px 0 75px;
     overflow: hidden;
-    border-top: 1px solid #dce8f5;
 }
 
 .leadership_header_wrap {
