@@ -73,7 +73,7 @@ textarea {
   }
 
   .hero_main_div {
-    margin-top: clamp(98px, 14vw, 108px) !important;
+    margin-top: 94px !important;
   }
 
   .navbar_bg,
@@ -590,7 +590,7 @@ textarea {
   }
 
   .hero_main_div {
-    margin-top: clamp(96px, 14vw, 104px) !important;
+    margin-top: 88px !important;
   }
 
   .hero_main_div .row,
@@ -817,5 +817,11 @@ textarea {
   .footer_link,
   .footer_loc {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_main_div {
+    margin-top: 80px !important;
   }
 }

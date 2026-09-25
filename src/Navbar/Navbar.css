@@ -486,6 +486,12 @@ body.mobile-nav-open {
     }
 }
 
+@media (max-width: 480px) {
+    .navbar_bg {
+        top: 34px;
+    }
+}
+
 @media (max-width: 380px) {
     .navbar-logo {
         width: 38px;

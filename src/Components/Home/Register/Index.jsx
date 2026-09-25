@@ -20,7 +20,7 @@ export const RegisterSection = () => {
     <div className="container-fluid p-0 register_bg">
       <div className="row m-0 register_main">
         <div className="col-lg-6 p-0">
-          <img src={Register} alt="" data-aos="fade-up" />
+          <img src={Register} alt="The Admission Process" data-aos="fade-up" loading="lazy" decoding="async" />
         </div>
         <div className="col-lg-6">
           <p className="reg_name" data-aos="fade-up">

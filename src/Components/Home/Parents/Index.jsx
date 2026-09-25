@@ -90,7 +90,7 @@ export const ParentsSection = () => {
                   <h4 className="parent_title_color">{item.name}</h4>
                   <p className="parent_title">{item.review}</p>
                   <div className="d-flex align-items-center gap-3 mt-4">
-                    <img src={item.image} alt={item.name} className="parent_avatar" />
+                    <img src={item.image} alt={item.name} className="parent_avatar" loading="lazy" decoding="async" />
                     <div className="d-flex gap-1 flex-column">
                       <p className="parent_date">{item.date || "Verified Parent"}</p>
                     </div>
@@ -111,13 +111,13 @@ export const ParentsSection = () => {
                   >
                     <div>
                       <div className="mb-2">
-                        <img src={item.star} alt="5 stars" />
+                        <img src={item.star} alt="5 stars" loading="lazy" decoding="async" />
                       </div>
                       <h4 className="parent_title_color">{item.name}</h4>
                       <p className="parent_title">{item.review}</p>
                     </div>
                     <div className="d-flex align-items-center gap-3 mt-4">
-                      <img src={item.image} alt={item.name} className="parent_avatar" />
+                      <img src={item.image} alt={item.name} className="parent_avatar" loading="lazy" decoding="async" />
                       <div className="d-flex gap-1 flex-column">
                         <p className="parent_date">{item.date || "Verified Parent"}</p>
                       </div>

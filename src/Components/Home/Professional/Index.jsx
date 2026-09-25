@@ -154,8 +154,8 @@ export const ProfessionalSection = () => {
               {smartactivity.map((item, index) => (
                 <div key={index} className="col-lg-4" data-aos="fade-up">
                   <div className="d-flex justify-content-center position-relative pro_height">
-                    <img src={item.imageone} alt="" className="pro_img_one" />
-                    <img src={item.image} alt="" className="pro_img" />
+                    <img src={item.imageone} alt="" className="pro_img_one" loading="lazy" decoding="async" />
+                    <img src={item.image} alt="" className="pro_img" loading="lazy" decoding="async" />
                   </div>
                   <h5 className="mt-4 text-center pro_name">{item.name}</h5>
                   <p className="text-center">{item.description}</p>
@@ -167,13 +167,13 @@ export const ProfessionalSection = () => {
       </div>
       <div className="container-fluid p-0 mt-5 overflow-hidden">
         <div className="student_color p-0" data-aos="fade-up">
-          <img src={Alpha} alt="" className="alpha" />
+          <img src={Alpha} alt="" className="alpha" loading="lazy" decoding="async" />
           <div className="row counter_div m-0 justify-content-center">
             {counterData.map((item) => (
               <div key={item.id} className="col-6 col-md-3 p-2 d-flex flex-column gap-2 text-center">
                 <div className="counter_icon_wrapper position-relative d-flex justify-content-center align-items-center mb-1">
-                  <img src={Rounded} alt="" className="rounded_img" />
-                  <img src={item.img} alt="" className="one_img" />
+                  <img src={Rounded} alt="" className="rounded_img" loading="lazy" decoding="async" />
+                  <img src={item.img} alt="" className="one_img" loading="lazy" decoding="async" />
                 </div>
                 <motion.p
                   className="wdt-content-counter text-center"

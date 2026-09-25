@@ -5,5 +5,14 @@ export default defineConfig({
   plugins: [react()],
   build: {
     assetsDir: 'website-assets',
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router'],
+          icons: ['react-icons'],
+        },
+      },
+    },
   },
 })

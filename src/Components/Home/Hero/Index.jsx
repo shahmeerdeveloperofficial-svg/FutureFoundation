@@ -68,14 +68,12 @@ export const HeroSection = () => {
     <div className="container-fluid p-0 position-relative hero_main_div">
       <div className="video_container position-relative">
         <video
-          controls
           width="100%"
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          poster={Hero}
           id="customVideo"
         >
           <source src={Dream} type="video/mp4" />

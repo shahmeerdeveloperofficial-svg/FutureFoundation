@@ -34,7 +34,7 @@ export const AboutSection = () => {
               className="col-md-5 col-lg-5 d-flex justify-content-center justify-content-sm-center justify-content-lg-start"
               data-aos="fade-left"
             >
-              <img src={History_Img} alt="History of Our School" className="history_img" />
+              <img src={History_Img} alt="History of Our School" className="history_img" loading="lazy" decoding="async" />
             </div>
             <div className="col-md-7 col-lg-7 mt-3 mt-sm-3 mt-md-0" data-aos="fade-right">
               <p className="history_title">History of Our School</p>
@@ -69,8 +69,8 @@ export const AboutSection = () => {
               <div key={item.id} className="mt-3 col-lg-6" data-aos="fade-up">
                 <div className="cur_body_data">
                   <div className="cur_thumb">
-                    <img src={item.image} alt="" className="cur_img" />
-                    <img src={item.imageone} alt="" className="cur_imageone" />
+                    <img src={item.image} alt="" className="cur_img" loading="lazy" decoding="async" />
+                    <img src={item.imageone} alt="" className="cur_imageone" loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <p className="cur_item">{item.name}</p>
@@ -81,12 +81,12 @@ export const AboutSection = () => {
             ))}
           </div>
         </div>
-        <img src={Homework} alt="" className="cur_homwork" data-aos="fade-left" />
-        <img src={Cur_video} alt="" className="cur_video" data-aos="fade-right" />
-        <img src={Cur_book} alt="" className="cur_book" data-aos="fade-left" />
-        <img src={Cur_brain} alt="" className="cur_brain" data-aos="fade-right" />
-        <img src={Cur_world} alt="" className="cur_world" data-aos="fade-left" />
-        <img src={Cur_line} alt="" className="cur_line" />
+        <img src={Homework} alt="" className="cur_homwork" data-aos="fade-left" loading="lazy" decoding="async" />
+        <img src={Cur_video} alt="" className="cur_video" data-aos="fade-right" loading="lazy" decoding="async" />
+        <img src={Cur_book} alt="" className="cur_book" data-aos="fade-left" loading="lazy" decoding="async" />
+        <img src={Cur_brain} alt="" className="cur_brain" data-aos="fade-right" loading="lazy" decoding="async" />
+        <img src={Cur_world} alt="" className="cur_world" data-aos="fade-left" loading="lazy" decoding="async" />
+        <img src={Cur_line} alt="" className="cur_line" loading="lazy" decoding="async" />
       </div>
     </div>
   );

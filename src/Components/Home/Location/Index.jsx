@@ -23,7 +23,7 @@ export const LocationSection = () => {
     <div className="container-fluid location_main_div p-0 overflow-hidden">
       <div className="row m-0">
         <div className="col-lg-6 p-0 location_bg position-relative">
-          <img src={Map} alt="" className="map_icon" data-aos="fade-left" />
+          <img src={Map} alt="" className="map_icon" data-aos="fade-left" loading="lazy" decoding="async" />
           <img
             src={Circle}
             alt=""
@@ -54,9 +54,9 @@ export const LocationSection = () => {
                 className="position-relative d-flex align-items-center gap-3"
                 data-aos="fade-up"
               >
-                <img src={Maps} alt="" />
-                <img src={Map_one} alt="" className="map_one_img" />
-                <img src={Map_two} alt="" className="map_two_img" />
+                <img src={Maps} alt="" loading="lazy" decoding="async" />
+                <img src={Map_one} alt="" className="map_one_img" loading="lazy" decoding="async" />
+                <img src={Map_two} alt="" className="map_two_img" loading="lazy" decoding="async" />
                 <div>
                   <p className="map_name">70+</p>
                   <p className="map_cap">Campuses</p>

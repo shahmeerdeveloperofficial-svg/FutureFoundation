@@ -55,6 +55,8 @@ export const TeacherSection = () => {
                   src={member.image}
                   alt={member.name}
                   className="img-fluid"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
