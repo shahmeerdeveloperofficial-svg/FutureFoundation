@@ -15,7 +15,8 @@ export const TeacherSection = () => {
   }, []); // Run this effect only once when the component mounts
 
   return (
-    <div className="container pt-5">
+    <div className="container-fluid bg-white p-0">
+      <div className="container pt-5">
       <div className="d-flex justify-content-center flex-column">
         <div className="d-flex justify-content-center" data-aos="fade-up">
           <svg
@@ -65,6 +66,7 @@ export const TeacherSection = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

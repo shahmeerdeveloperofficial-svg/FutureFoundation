@@ -65,7 +65,7 @@ export const ParentsSection = () => {
   };
 
   return (
-    <div className="container-fluid parents_main p-0">
+    <div className="container-fluid parents_main p-0 bg-white">
       <div className="container px-3">
         <div className="d-flex align-items-center justify-content-between mb-2">
           <p className="news_title">Parents Reviews</p>
