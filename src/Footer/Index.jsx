@@ -3,7 +3,7 @@ import "./Footer.css";
 import Logo from "../assets/images/logo.png";
 import { IoLocationOutline, IoGlobeOutline } from "react-icons/io5";
 import { MdOutlinePhone, MdOutlineEmail } from "react-icons/md";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube, FaTiktok } from "react-icons/fa";
 
 export const Footer = () => {
   const handleScrollAbout = (e) => {
@@ -53,6 +53,24 @@ export const Footer = () => {
                 aria-label="Instagram"
               >
                 <FaInstagram aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.youtube.com/@FutureFoundationSchool"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer_social_btn"
+                aria-label="YouTube"
+              >
+                <FaYoutube aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@futurefoundationschool?_r=1&_t=ZS-9ANxQB355Dp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer_social_btn"
+                aria-label="TikTok"
+              >
+                <FaTiktok aria-hidden="true" />
               </a>
               <a
                 href="https://wa.me/923707503109"
