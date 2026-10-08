@@ -40,7 +40,7 @@
 }
 
 .map_main_div {
-    padding: 100px 120px 50px 200px;
+    padding: clamp(30px, 4vw, 60px) clamp(20px, 3vw, 50px);
 }
 
 .map_one_img {
@@ -57,33 +57,33 @@
 
 .map_name {
     font-family: 'Montserrat';
-    font-size: 77px;
-    line-height: 77px;
+    font-size: clamp(34px, 4.2vw, 52px);
+    line-height: 1.15;
     color: var(--blueColor);
     margin-bottom: 0;
 }
 
 .map_cap {
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
     color: var(--primaryColor);
     margin-bottom: 0;
 }
 
 .map_loc {
     font-family: 'RecoletaAlt';
-    font-size: 65px;
-    line-height: 60px;
+    font-size: clamp(26px, 3.2vw, 40px);
+    line-height: 1.25;
     color: var(--blueColor);
     margin-bottom: 0;
-    margin-top: 30px;
+    margin-top: 18px;
 }
 
 .map_find{
     font-family: 'RecoletaAlt';
-    font-size: 27px;
+    font-size: 22px;
     margin-bottom: 0;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .map_input_body {

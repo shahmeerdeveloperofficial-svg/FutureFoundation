@@ -34,11 +34,11 @@
 
 .reg_name {
     font-family: 'RecoletaAlt';
-    font-size: clamp(32px, 5vw, 65px);
-    line-height: 1.15;
+    font-size: clamp(26px, 3.4vw, 42px);
+    line-height: 1.2;
     color: var(--whiteColor);
     margin-bottom: 0;
-    padding-top: 20px;
+    padding-top: 15px;
     max-width: 500px;
 }
 
