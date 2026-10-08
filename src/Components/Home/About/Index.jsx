@@ -49,28 +49,28 @@ export const AboutSection = () => {
         </div>
       </div>
       <div className="container-fluid currculum_bg p-0 position-relative overflow-hidden">
-        <img src={About_line} alt="" className="history_line_img" data-aos="fade-up" />
-        <img src={About_rocket} alt="" className="cur_rocket_img" data-aos="fade-up" />
+        <img src={About_line} alt="" className="history_line_img" data-aos="fade-up" aria-hidden="true" />
+        <img src={About_rocket} alt="" className="cur_rocket_img" data-aos="fade-up" aria-hidden="true" />
           <div className="container cur_div">
-            <p className="about_desp" data-aos="fade-up">
+            <h2 className="about_desp" data-aos="fade-up">
               Our Curriculum
-            </p>
+            </h2>
             <p className="history_desp_one text-center" data-aos="fade-up">
             At Future Foundation School, our academic curriculum is meticulously designed to match the cognitive, affective, and psychomotor developmental milestones of our students. We believe in providing a progressive learning environment that balances robust modern education with deep-rooted values.
           </p>
           <p className="history_desp_one text-center" data-aos="fade-up">
-            Our curriculum is built upon the following core pillars: Montessori Wing, Global Skills, Digital Education, AI & Robotics, STEAM Learning, and Competency-Based Education.
+            Our curriculum is built upon the following core pillars: Montessori Wing, Global Skills, Digital Education, AI &amp; Robotics, STEAM Learning, and Competency-Based Education.
           </p>
           <div className="row cur_row_div pt-1">
             {Curdata.slice(0, 6).map((item) => (
               <div key={item.id} className="mt-3 col-lg-6" data-aos="fade-up">
                 <div className="cur_body_data">
                   <div className="cur_thumb">
-                    <img src={item.image} alt="" className="cur_img" loading="lazy" decoding="async" />
-                    <img src={item.imageone} alt="" className="cur_imageone" loading="lazy" decoding="async" />
+                    <img src={item.image} alt="" className="cur_img" loading="lazy" decoding="async" aria-hidden="true" />
+                    <img src={item.imageone} alt="" className="cur_imageone" loading="lazy" decoding="async" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="cur_item">{item.name}</p>
+                    <h3 className="cur_item">{item.name}</h3>
                     <p className="cur_desp">{item.description}</p>
                   </div>
                 </div>
@@ -78,12 +78,12 @@ export const AboutSection = () => {
             ))}
           </div>
         </div>
-        <img src={Homework} alt="" className="cur_homwork" data-aos="fade-left" loading="lazy" decoding="async" />
-        <img src={Cur_video} alt="" className="cur_video" data-aos="fade-right" loading="lazy" decoding="async" />
-        <img src={Cur_book} alt="" className="cur_book" data-aos="fade-left" loading="lazy" decoding="async" />
-        <img src={Cur_brain} alt="" className="cur_brain" data-aos="fade-right" loading="lazy" decoding="async" />
-        <img src={Cur_world} alt="" className="cur_world" data-aos="fade-left" loading="lazy" decoding="async" />
-        <img src={Cur_line} alt="" className="cur_line" loading="lazy" decoding="async" />
+        <img src={Homework} alt="" className="cur_homwork" data-aos="fade-left" loading="lazy" decoding="async" aria-hidden="true" />
+        <img src={Cur_video} alt="" className="cur_video" data-aos="fade-right" loading="lazy" decoding="async" aria-hidden="true" />
+        <img src={Cur_book} alt="" className="cur_book" data-aos="fade-left" loading="lazy" decoding="async" aria-hidden="true" />
+        <img src={Cur_brain} alt="" className="cur_brain" data-aos="fade-right" loading="lazy" decoding="async" aria-hidden="true" />
+        <img src={Cur_world} alt="" className="cur_world" data-aos="fade-left" loading="lazy" decoding="async" aria-hidden="true" />
+        <img src={Cur_line} alt="" className="cur_line" loading="lazy" decoding="async" aria-hidden="true" />
       </div>
     </div>
   );

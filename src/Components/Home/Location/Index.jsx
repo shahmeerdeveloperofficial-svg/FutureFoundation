@@ -23,12 +23,13 @@ export const LocationSection = () => {
     <div className="container-fluid location_main_div p-0 overflow-hidden">
       <div className="row m-0">
         <div className="col-lg-6 p-0 location_bg position-relative">
-          <img src={Map} alt="" className="map_icon" data-aos="fade-left" loading="lazy" decoding="async" />
+          <img src={Map} alt="" className="map_icon" data-aos="fade-left" loading="lazy" decoding="async" aria-hidden="true" />
           <img
             src={Circle}
             alt=""
             className="map_yellow_circle"
             data-aos="fade-left"
+            aria-hidden="true"
           />
           <div className="position-relative">
             <img
@@ -36,51 +37,58 @@ export const LocationSection = () => {
               alt=""
               className="map_line"
               data-aos="fade-right"
+              aria-hidden="true"
             />
             <img
               src={Map_rocket}
               alt=""
               className="map_rocket"
               data-aos="fade-right"
+              aria-hidden="true"
             />
             <img
               src={Map_circle}
               alt=""
               className="map_circle_img"
               data-aos="fade-right"
+              aria-hidden="true"
             />
             <div className="map_main_div">
               <div
                 className="position-relative d-flex align-items-center gap-3"
                 data-aos="fade-up"
               >
-                <img src={Maps} alt="" loading="lazy" decoding="async" />
-                <img src={Map_one} alt="" className="map_one_img" loading="lazy" decoding="async" />
-                <img src={Map_two} alt="" className="map_two_img" loading="lazy" decoding="async" />
+                <img src={Maps} alt="" loading="lazy" decoding="async" aria-hidden="true" />
+                <img src={Map_one} alt="" className="map_one_img" loading="lazy" decoding="async" aria-hidden="true" />
+                <img src={Map_two} alt="" className="map_two_img" loading="lazy" decoding="async" aria-hidden="true" />
                 <div>
                   <p className="map_name">70+</p>
                   <p className="map_cap">Campuses</p>
                 </div>
               </div>
-              <p className="map_loc" data-aos="fade-up">
+              <h2 className="map_loc" data-aos="fade-up">
                 Our Locations
-              </p>
+              </h2>
               <p className="map_find" data-aos="fade-up">
                 Find Out Our Campus Near You.
               </p>
               <div className="map_input_body" data-aos="fade-up">
+                <label htmlFor="campus-city-search" className="visually-hidden">Select City</label>
                 <input
+                  id="campus-city-search"
                   type="text"
                   placeholder="Select City"
+                  aria-label="Select City"
                   className="map_input"
                 />
-                <button className="map_find_now">Find Now</button>
+                <button type="button" className="map_find_now">Find Now</button>
               </div>
             </div>
           </div>
         </div>
         <div className="col-lg-6 p-0">
           <iframe
+            title="Future Foundation School Campus Locations Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106389.83298142784!2d72.93574724333932!3d33.561630353449104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df948974419acb%3A0x984357e1632d30f!2sRawalpindi%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1739156070719!5m2!1sen!2s"
             className="map_load"
             loading="lazy"

@@ -58,9 +58,9 @@ export const CustomNavbar = () => {
                         <>
                           <span>{link.label}</span>
                           {openDropdown === index ? (
-                            <MdKeyboardArrowUp className="navbar_icon" />
+                            <MdKeyboardArrowUp className="navbar_icon" aria-hidden="true" />
                           ) : (
-                            <MdKeyboardArrowDown className="navbar_icon" />
+                            <MdKeyboardArrowDown className="navbar_icon" aria-hidden="true" />
                           )}
                         </>
                       ) : (
@@ -90,13 +90,11 @@ export const CustomNavbar = () => {
             </div>
             <div className="d-flex align-items-center gap-2 flex-shrink-0 navbar_action_wrap">
               <div className="d-none d-lg-block flex-shrink-0">
-                <Link to="/admissionnow" style={{ textDecoration: "none", color: "inherit" }}>
-                  <button className="navbar_btn" type="button">
-                    <span>Admission Now</span>
-                    <div className="navbar_circle">
-                      <MdArrowForward className="navbar_circle_icon" />
-                    </div>
-                  </button>
+                <Link to="/admissionnow" className="navbar_btn" style={{ textDecoration: "none" }}>
+                  <span>Admission Now</span>
+                  <div className="navbar_circle">
+                    <MdArrowForward className="navbar_circle_icon" aria-hidden="true" />
+                  </div>
                 </Link>
               </div>
               <div className="navbar_toggle d-lg-none">
@@ -107,7 +105,7 @@ export const CustomNavbar = () => {
                   aria-expanded={mobileOpen}
                   onClick={() => setMobileOpen((isOpen) => !isOpen)}
                 >
-                  {mobileOpen ? <IoClose /> : <IoReorderThreeOutline />}
+                  {mobileOpen ? <IoClose aria-hidden="true" /> : <IoReorderThreeOutline aria-hidden="true" />}
                 </button>
               </div>
             </div>
@@ -115,7 +113,11 @@ export const CustomNavbar = () => {
         </div>
       </header>
       {mobileOpen && <button className="mobile_nav_backdrop" type="button" aria-label="Close menu" onClick={closeMobileMenu} />}
-      <nav className={`mobile_nav_panel ${mobileOpen ? "is-open" : ""}`} aria-label="Mobile navigation">
+      <nav
+        className={`mobile_nav_panel ${mobileOpen ? "is-open" : ""}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!mobileOpen}
+      >
         <div className="mobile_nav_header">
           <a href="/" className="navbar-brand-link mobile-brand-link" onClick={(event) => {
             closeMobileMenu();
@@ -128,7 +130,7 @@ export const CustomNavbar = () => {
             </div>
           </a>
           <button className="mobile_nav_close" type="button" aria-label="Close menu" onClick={closeMobileMenu}>
-            <IoClose />
+            <IoClose aria-hidden="true" />
           </button>
         </div>
         <div className="mobile_nav_links">
@@ -143,7 +145,11 @@ export const CustomNavbar = () => {
                     onClick={() => setMobileDropdown((current) => (current === index ? null : index))}
                   >
                     <span>{link.label}</span>
-                    {mobileDropdown === index ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                    {mobileDropdown === index ? (
+                      <MdKeyboardArrowUp aria-hidden="true" />
+                    ) : (
+                      <MdKeyboardArrowDown aria-hidden="true" />
+                    )}
                   </button>
                   <div className={`mobile_submenu ${mobileDropdown === index ? "is-open" : ""}`}>
                     {link.menuItems.map((item, i) => (
@@ -163,7 +169,7 @@ export const CustomNavbar = () => {
         </div>
         <Link to="/admissionnow" className="mobile_admission_link" onClick={closeMobileMenu}>
           Admission Now
-          <MdArrowForward />
+          <MdArrowForward aria-hidden="true" />
         </Link>
       </nav>
     </>

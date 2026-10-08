@@ -39,36 +39,36 @@ export const Footer = () => {
               <a
                 href="https://www.facebook.com/FutureFoundationSchools"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="footer_social_btn"
                 aria-label="Facebook"
               >
-                <FaFacebookF />
+                <FaFacebookF aria-hidden="true" />
               </a>
               <a
                 href="https://www.instagram.com/futurefoundationschool/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="footer_social_btn"
                 aria-label="Instagram"
               >
-                <FaInstagram />
+                <FaInstagram aria-hidden="true" />
               </a>
               <a
                 href="https://wa.me/923707503109"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="footer_social_btn"
                 aria-label="WhatsApp"
               >
-                <FaWhatsapp />
+                <FaWhatsapp aria-hidden="true" />
               </a>
             </div>
           </div>
 
           {/* Col 2: Quick Links */}
           <div className="col-lg-2 col-6 footer_links_col">
-            <h5 className="footer_heading">Quick Links</h5>
+            <h3 className="footer_heading">Quick Links</h3>
             <ul className="footer_links_list">
               <li>
                 <a href="/" className="footer_link">Home</a>
@@ -92,7 +92,7 @@ export const Footer = () => {
 
           {/* Col 3: Academics */}
           <div className="col-lg-2 col-6 footer_links_col">
-            <h5 className="footer_heading">Academics</h5>
+            <h3 className="footer_heading">Academics</h3>
             <ul className="footer_links_list">
               <li>
                 <a href="/montessori-wing" className="footer_link">Montessori</a>
@@ -114,30 +114,30 @@ export const Footer = () => {
 
           {/* Col 4: Contact Details */}
           <div className="col-lg-4 col-md-12 footer_contact_col">
-            <h5 className="footer_heading">Contact Details</h5>
+            <h3 className="footer_heading">Contact Details</h3>
             <ul className="footer_contact_list">
               <li className="footer_contact_item">
-                <IoLocationOutline className="footer_c_icon" />
+                <IoLocationOutline className="footer_c_icon" aria-hidden="true" />
                 <span className="footer_c_text">Baraf Khana Chowk Misrial Road Rawalpindi</span>
               </li>
               <li className="footer_contact_item">
-                <MdOutlinePhone className="footer_c_icon" />
+                <MdOutlinePhone className="footer_c_icon" aria-hidden="true" />
                 <a href="tel:+923707503109" className="footer_phone_link">
                   +92 370 750 31 09
                 </a>
               </li>
               <li className="footer_contact_item">
-                <MdOutlineEmail className="footer_c_icon" />
+                <MdOutlineEmail className="footer_c_icon" aria-hidden="true" />
                 <a href="mailto:Info@futurefoundationschool.edu.pk" className="footer_phone_link">
                   Info@futurefoundationschool.edu.pk
                 </a>
               </li>
               <li className="footer_contact_item">
-                <IoGlobeOutline className="footer_c_icon" />
+                <IoGlobeOutline className="footer_c_icon" aria-hidden="true" />
                 <a
                   href="https://futurefoundationschool.edu.pk"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="footer_phone_link"
                 >
                   futurefoundationschool.edu.pk

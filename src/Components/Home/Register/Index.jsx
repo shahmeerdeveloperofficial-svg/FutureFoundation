@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Register.css";
 import Register from "../../../assets/images/register.png";
 import { MdArrowForward } from "react-icons/md";
@@ -11,11 +11,12 @@ export const RegisterSection = () => {
       offset: 300,
       duration: 1000,
     });
-  }, []); // Run this effect only once when the component mounts
+  }, []);
 
   const handleContactNavigate = () => {
     window.location.href = "/contact-us";
   };
+
   return (
     <div className="container-fluid p-0 register_bg">
       <div className="row m-0 register_main">
@@ -23,23 +24,31 @@ export const RegisterSection = () => {
           <img src={Register} alt="The Admission Process" data-aos="fade-up" loading="lazy" decoding="async" />
         </div>
         <div className="col-lg-6">
-          <p className="reg_name" data-aos="fade-up">
+          <h2 className="reg_name" data-aos="fade-up">
             The Admission Process
-          </p>
+          </h2>
           <p className="reg_desp" data-aos="fade-up">
             The admission process at Future Foundation Schools is designed to be simple, transparent, and welcoming. We believe that personal interaction between parents or authorized guardians, the prospective student, and our school representatives carries far greater value than any conventional entrance exam.
           </p>
           <div className="d-flex align-items-center gap-3" data-aos="fade-up">
-            <button className="reg_btn" onClick={() => window.location.href = "/admission-process"}>
+            <button
+              type="button"
+              className="reg_btn"
+              onClick={() => (window.location.href = "/admission-process")}
+            >
               View Admission Steps
               <div className="reg_circle">
-                <MdArrowForward className="reg_circle_icon" />
+                <MdArrowForward className="reg_circle_icon" aria-hidden="true" />
               </div>
             </button>
-            <button className="reg_btn_one" onClick={handleContactNavigate}>
+            <button
+              type="button"
+              className="reg_btn_one"
+              onClick={handleContactNavigate}
+            >
               Contact Us
               <div className="reg_circle">
-                <MdArrowForward className="reg_circle_icon" />
+                <MdArrowForward className="reg_circle_icon" aria-hidden="true" />
               </div>
             </button>
           </div>

@@ -68,13 +68,23 @@ export const ParentsSection = () => {
     <div className="container-fluid parents_main p-0 bg-white">
       <div className="container px-3">
         <div className="d-flex align-items-center justify-content-between mb-2">
-          <p className="news_title">Parents Reviews</p>
+          <h2 className="news_title">Parents Reviews</h2>
           <div className="d-flex align-items-center gap-3">
-            <button className="news_prev_controller" onClick={goToPrev} aria-label="Previous review">
-              <MdArrowBack />
+            <button
+              type="button"
+              className="news_prev_controller"
+              onClick={goToPrev}
+              aria-label="Previous review"
+            >
+              <MdArrowBack aria-hidden="true" />
             </button>
-            <button className="news_prev_controller" onClick={goToNext} aria-label="Next review">
-              <MdArrowForward />
+            <button
+              type="button"
+              className="news_prev_controller"
+              onClick={goToNext}
+              aria-label="Next review"
+            >
+              <MdArrowForward aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -85,9 +95,9 @@ export const ParentsSection = () => {
               <div key={item.id} className="col-lg-4 ps-2 pe-2 mt-4">
                 <div className="parents_main_card parent_card">
                   <div className="mb-2">
-                    <img src={item.star} alt="5 stars" />
+                    <img src={item.star} alt="5 stars" aria-hidden="true" />
                   </div>
-                  <h4 className="parent_title_color">{item.name}</h4>
+                  <h3 className="parent_title_color">{item.name}</h3>
                   <p className="parent_title">{item.review}</p>
                   <div className="d-flex align-items-center gap-3 mt-4">
                     <img src={item.image} alt={item.name} className="parent_avatar" loading="lazy" decoding="async" />
@@ -111,9 +121,9 @@ export const ParentsSection = () => {
                   >
                     <div>
                       <div className="mb-2">
-                        <img src={item.star} alt="5 stars" loading="lazy" decoding="async" />
+                        <img src={item.star} alt="5 stars" aria-hidden="true" />
                       </div>
-                      <h4 className="parent_title_color">{item.name}</h4>
+                      <h3 className="parent_title_color">{item.name}</h3>
                       <p className="parent_title">{item.review}</p>
                     </div>
                     <div className="d-flex align-items-center gap-3 mt-4">

@@ -287,29 +287,30 @@ export const GallerySection = () => {
   };
 
   return (
-    <section className="gallery_section position-relative">
-
+    <section className="gallery_section position-relative" aria-label="Campus Gallery">
       <div className="container position-relative gallery_container">
         {/* Section Header */}
         <div className="text-center mb-5" data-aos="fade-up">
-          <span className="gallery_badge">CAMPUS LIFE & MEMORIES</span>
-          <h2 className="gallery_main_title">Glimpses of Excellence & Vibrant Life at FFS</h2>
-          <div className="gallery_title_underline"></div>
+          <span className="gallery_badge">CAMPUS LIFE &amp; MEMORIES</span>
+          <h2 className="gallery_main_title">Glimpses of Excellence &amp; Vibrant Life at FFS</h2>
+          <div className="gallery_title_underline" aria-hidden="true"></div>
           <p className="gallery_main_desc">
             Discover the vibrant journey at Future Foundation School — from record-setting worldwide board positions and high-energy annual sports galas to soul-inspiring character-building events and dynamic stage celebrations.
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="gallery_filter_wrapper mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div className="gallery_filter_wrapper mb-5" data-aos="fade-up" data-aos-delay="100" role="toolbar" aria-label="Filter gallery categories">
           {categories.map((cat) => (
             <button
               key={cat.key}
+              type="button"
               className={`gallery_filter_btn ${activeFilter === cat.key ? "active" : ""}`}
               onClick={() => {
                 setActiveFilter(cat.key);
                 setVisibleCount(12);
               }}
+              aria-pressed={activeFilter === cat.key}
             >
               {cat.label}
               <span className="filter_count_tag">{cat.key === "all" ? galleryData.length : galleryData.filter(i => i.category === cat.key).length}</span>
@@ -327,21 +328,27 @@ export const GallerySection = () => {
               data-aos-delay={(index % 4) * 100}
             >
               <div className="gallery_card h-100">
-                <div className="gallery_img_wrapper" onClick={() => openLightbox(index)}>
+                <button
+                  type="button"
+                  className="gallery_img_wrapper bg-transparent border-0 p-0 text-start w-100"
+                  onClick={() => openLightbox(index)}
+                  aria-label={`View full image: ${item.title}`}
+                >
                   <img
                     src={item.image}
                     alt={item.title}
                     className="gallery_img"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="gallery_img_overlay">
                     <span className="gallery_zoom_btn">
-                      <MdZoomIn className="zoom_icon" />
+                      <MdZoomIn className="zoom_icon" aria-hidden="true" />
                     </span>
                     <span className="gallery_view_hint">Click to enlarge</span>
                   </div>
                   <span className="gallery_category_badge">{item.badge}</span>
-                </div>
+                </button>
 
                 <div className="gallery_card_body">
                   <h3 className="gallery_card_title">{item.title}</h3>
@@ -356,11 +363,12 @@ export const GallerySection = () => {
         {visibleCount < filteredData.length && (
           <div className="text-center mt-5" data-aos="fade-up">
             <button
+              type="button"
               className="gallery_load_more_btn"
               onClick={() => setVisibleCount(filteredData.length)}
             >
               View All {filteredData.length} Pictures
-              <span className="btn_glow_circle"></span>
+              <span className="btn_glow_circle" aria-hidden="true"></span>
             </button>
           </div>
         )}
@@ -368,10 +376,16 @@ export const GallerySection = () => {
 
       {/* Fullscreen Lightbox Modal */}
       {selectedImageIndex !== null && displayedData[selectedImageIndex] && (
-        <div className="gallery_lightbox_overlay" onClick={closeLightbox}>
+        <div
+          className="gallery_lightbox_overlay"
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image preview modal"
+        >
           <div className="gallery_lightbox_content" onClick={(e) => e.stopPropagation()}>
             <button className="lightbox_close_btn" onClick={closeLightbox} aria-label="Close image">
-              <MdClose />
+              <MdClose aria-hidden="true" />
             </button>
 
             <button
@@ -379,7 +393,7 @@ export const GallerySection = () => {
               onClick={prevImage}
               aria-label="Previous image"
             >
-              <MdNavigateBefore />
+              <MdNavigateBefore aria-hidden="true" />
             </button>
 
             <button
@@ -387,7 +401,7 @@ export const GallerySection = () => {
               onClick={nextImage}
               aria-label="Next image"
             >
-              <MdNavigateNext />
+              <MdNavigateNext aria-hidden="true" />
             </button>
 
             <div className="lightbox_img_box">

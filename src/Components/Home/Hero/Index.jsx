@@ -86,14 +86,14 @@ export const HeroSection = () => {
         </svg>
       </div>
       <div className="container position-relative hero_div ">
-        <img src={Hero_line} alt="" className="hero_line_img " />
-        <img src={Hero_rocket} alt="" className="hero_rocket_img " />
+        <img src={Hero_line} alt="" className="hero_line_img " aria-hidden="true" />
+        <img src={Hero_rocket} alt="" className="hero_rocket_img " aria-hidden="true" />
         <div className="row">
           <div className="col-lg-6 ps-4 pe-4 ps-sm-0 pe-sm-0" data-aos="fade-left">
             <p className="hero_title">About Us</p>
-            <p className="hero_sub_title">A Leading School Chain in Pakistan</p>
+            <h1 className="hero_sub_title">A Leading School Chain in Pakistan</h1>
             <p className="hero_desp">
-              In 1998, Future Foundation School began its journey to fulfill the visionary goals set by the leadership of Mr & Mrs Rana Sohail Ahmed. Since then, by the grace of Allah Almighty, the institution has grown continuously.
+              In 1998, Future Foundation School began its journey to fulfill the visionary goals set by the leadership of Mr &amp; Mrs Rana Sohail Ahmed. Since then, by the grace of Allah Almighty, the institution has grown continuously.
             </p>
             <p className="hero_desp pt-4">
               Over the years, the school has consistently achieved its educational and societal milestones. We remain deeply committed to promoting National and Islamic values while uplifting educational standards across the country.
@@ -106,7 +106,7 @@ export const HeroSection = () => {
             >
               Explore Now
               <div className="hero_circle">
-                <MdArrowForward className="hero_circle_icon" />
+                <MdArrowForward className="hero_circle_icon" aria-hidden="true" />
               </div>
             </button>
           </div>
@@ -114,15 +114,15 @@ export const HeroSection = () => {
             className="col-lg-6 d-flex justify-content-center position-relative mt-4 mt-sm-4 mt-md-4 mt-lg-0"
             data-aos="fade-right"
           >
-            <img src={Hero_Img_one} alt="" className="hero_second_img" />
-            <img src={hero_img} alt="" className="hero_main_img" />
-            <img src={Hero_ellipse} alt="" className="hero_ellipse" />
-            <img src={Hero_ellipse} alt="" className="hero_ellipse_one" />
+            <img src={Hero_Img_one} alt="" className="hero_second_img" aria-hidden="true" />
+            <img src={hero_img} alt="" className="hero_main_img" aria-hidden="true" />
+            <img src={Hero_ellipse} alt="" className="hero_ellipse" aria-hidden="true" />
+            <img src={Hero_ellipse} alt="" className="hero_ellipse_one" aria-hidden="true" />
           </div>
         </div>
       </div>
       <div className="hero_bottom_wave">
-        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "70px", display: "block", marginBottom: "-1px" }}>
+        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ width: "100%", height: "70px", display: "block", marginBottom: "-1px" }} aria-hidden="true">
           <path d="M0,35 C360,85 1080,20 1440,55 L1440,90 L0,90 Z" fill="#e7f0fb" />
         </svg>
       </div>
@@ -143,7 +143,7 @@ export const HeroSection = () => {
               &times;
             </button>
 
-            <h3 className="modal-head" >About Future Foundation</h3>
+            <h2 className="modal-head" >About Future Foundation</h2>
             <p className="modal-desp" style={{ fontFamily:"Montserrat", marginBottom: "0.5rem", lineHeight: 1.6 }}>
               The inspiration behind establishing Future Foundation School stemmed from the visionary leadership of Rana Sohail Ahmed, whose lifelong ambition has been to reform the community through quality education. Throughout his distinguished career, he has made significant contributions to upgrading educational standards across society.
             </p>

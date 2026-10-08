@@ -68,7 +68,7 @@ export const LeadershipSection = () => {
         {/* Section Header */}
         <div className="text-center leadership_header_wrap" data-aos="fade-up">
           <div className="leadership_kicker">
-            <FaCrown className="leadership_kicker_icon" />
+            <FaCrown className="leadership_kicker_icon" aria-hidden="true" />
             <span>Executive Leadership &amp; Vision</span>
           </div>
           <h2 className="leadership_main_title">Words of Wisdom from Our Leadership</h2>
@@ -99,7 +99,7 @@ export const LeadershipSection = () => {
                     {isActive && <span className="leadership_nav_active_ring" />}
                   </div>
                   <div className="leadership_nav_text">
-                    <h4 className="leadership_nav_name">{leader.name}</h4>
+                    <h3 className="leadership_nav_name">{leader.name}</h3>
                     <span className="leadership_nav_role">{leader.designation}</span>
                   </div>
                 </button>
@@ -160,7 +160,7 @@ export const LeadershipSection = () => {
             {/* Right Column: Quote & Message Content */}
             <div className="col-lg-7 col-xl-8 leadership_content_col">
               <div className="leadership_quote_badge">
-                <FaQuoteLeft />
+                <FaQuoteLeft aria-hidden="true" />
               </div>
               <h3 className="leadership_quote_title">{activeLeader.quoteTitle}</h3>
               <p className="leadership_text">{activeLeader.message}</p>
@@ -171,7 +171,7 @@ export const LeadershipSection = () => {
                   className="leadership_readmore_btn"
                 >
                   <span>Read Full Message</span>
-                  <MdArrowForward size={18} />
+                  <MdArrowForward size={18} aria-hidden="true" />
                 </Link>
                 <span className="leadership_footer_brand">
                   Official Leadership Address

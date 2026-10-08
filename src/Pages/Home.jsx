@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Layout } from "../layout/Index";
 import { HeroSection } from "../Components/Home/Hero/Index";
 import { LeadershipSection } from "../Components/Home/Leadership/Index";
@@ -51,6 +51,8 @@ export const Home = () => {
       <a
         href="https://wa.me/923707503109"
         target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Future Foundation School on WhatsApp"
         className="position-fixed"
         style={{
           fontSize: "3.5rem",
@@ -67,12 +69,14 @@ export const Home = () => {
           (e.currentTarget.style.transform = "translateY(0)")
         }
       >
-        <FaWhatsappSquare />
+        <FaWhatsappSquare aria-hidden="true" />
       </a>
 
       {isVisible && (
-        <span
-          className="position-fixed"
+        <button
+          type="button"
+          aria-label="Scroll to top of page"
+          className="position-fixed bg-transparent border-0 p-0"
           onClick={scrollToTop}
           style={{
             zIndex: "4",
@@ -88,8 +92,8 @@ export const Home = () => {
             (e.currentTarget.style.transform = "translateY(0)")
           }
         >
-          <img src={Scroll} alt="" />
-        </span>
+          <img src={Scroll} alt="" aria-hidden="true" />
+        </button>
       )}
     </Layout>
   );
