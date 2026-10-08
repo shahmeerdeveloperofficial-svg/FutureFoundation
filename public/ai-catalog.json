@@ -7,16 +7,26 @@
   },
   "entries": [
     {
-      "identifier": "urn:ai:futurefoundationschool:llms-txt",
+      "identifier": "urn:air:futurefoundationschool:knowledge:school-profile",
       "displayName": "Future Foundation School LLMs Info",
-      "type": "text/plain",
-      "url": "https://futurefoundationschool.edu.pk/llms.txt"
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://futurefoundationschool.edu.pk/llms.txt",
+      "representativeQueries": [
+        "Future Foundation School admissions and branches",
+        "FFS curriculum Montessori to College level",
+        "AI Robotics and STEAM education Pakistan"
+      ]
     },
     {
-      "identifier": "urn:ai:futurefoundationschool:llms-full-txt",
+      "identifier": "urn:air:futurefoundationschool:directory:complete-catalog",
       "displayName": "Future Foundation School Complete Directory",
-      "type": "text/plain",
-      "url": "https://futurefoundationschool.edu.pk/llms-full.txt"
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://futurefoundationschool.edu.pk/llms-full.txt",
+      "representativeQueries": [
+        "Future Foundation School campus locations and contacts",
+        "Apply for school admission online in Pakistan",
+        "Future Foundation School leadership and principal message"
+      ]
     }
   ]
 }

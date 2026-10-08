@@ -14,12 +14,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const HeroSection = () => {
+  const [videoSrc, setVideoSrc] = useState(null);
+
   useEffect(() => {
     AOS.init({
       offset: 300,
       duration: 1000,
     });
-  }, []); // Run this effect only once when the component mounts
+
+    // Defer video stream until after critical page paint
+    const timer = setTimeout(() => {
+      setVideoSrc(Dream);
+    }, 600);
+    return () => clearTimeout(timer);
+  }, []);
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -76,7 +84,7 @@ export const HeroSection = () => {
           preload="none"
           id="customVideo"
         >
-          <source src={Dream} type="video/mp4" />
+          {videoSrc && <source src={videoSrc} type="video/mp4" />}
           Your browser does not support the video tag.
         </video>
       </div>
