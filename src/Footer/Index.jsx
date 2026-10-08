@@ -128,8 +128,8 @@ export const Footer = () => {
               </li>
               <li className="footer_contact_item">
                 <MdOutlineEmail className="footer_c_icon" aria-hidden="true" />
-                <a href="mailto:Info@futurefoundationschool.edu.pk" className="footer_phone_link">
-                  Info@futurefoundationschool.edu.pk
+                <a href="mailto:futuredocuments786@gmail.com" className="footer_phone_link">
+                  futuredocuments786@gmail.com
                 </a>
               </li>
               <li className="footer_contact_item">
