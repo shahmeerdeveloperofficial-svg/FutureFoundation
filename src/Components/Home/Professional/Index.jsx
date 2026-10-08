@@ -112,9 +112,11 @@ export const ProfessionalSection = () => {
         <p className="professional_title" data-aos="fade-up">
           Our Smart Activities
         </p>
-        <p className="professional_subtitle rainbow_heading_text" data-aos="fade-up">
-          Bridging Innovation, Values, and Interactive Learning
-        </p>
+        <div className="d-flex justify-content-center text-center w-100">
+          <h3 className="professional_subtitle rainbow_heading_text" data-aos="fade-up">
+            Bridging Innovation, Values, and Interactive Learning
+          </h3>
+        </div>
         <div className="d-flex justify-content-center" data-aos="fade-up">
           <p className="professional_desp">
             At Future Foundation School, we believe that education should be active, immersive, and vibrant. Our Smart Activities program seamlessly integrates state-of-the-art technology, physical development, and experiential learning, encouraging students to think critically, collaborate deeply, and explore their passions beyond standard textbooks.
