@@ -144,6 +144,8 @@ export const LeadershipSection = () => {
                     src={activeLeader.image}
                     alt={activeLeader.name}
                     className={`leadership_portrait_img ${activeLeader.imageClass}`}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

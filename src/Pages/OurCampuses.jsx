@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { Layout } from "../layout/Index";
 import { HeroSection } from "../Components/BecomeFranchisee/OurCampuses/Hero/Index";
 import { AboutSection } from "../Components/BecomeFranchisee/OurCampuses/About/Index";
@@ -32,7 +32,7 @@ export const OurCampuses = () => {
       <HeroSection />
       <AboutSection />
       <a
-        href="https://wa.me/92510000007"
+        href="https://wa.me/923707503109"
         target="_blank"
         className="position-fixed"
         style={{

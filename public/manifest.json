@@ -1,0 +1,21 @@
+{
+  "short_name": "FFS",
+  "name": "Future Foundation School & College",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#061D52",
+  "theme_color": "#061D52",
+  "display": "standalone",
+  "orientation": "portrait"
+}
