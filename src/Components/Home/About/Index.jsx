@@ -29,15 +29,15 @@ export const AboutSection = () => {
         <div className="container position-relative history_div">
           <img src={History_line} alt="" className="history_line" />
           <img src={History_rocket} alt="" className="history_rocket_img" />
-          <div className="row align-items-center">
+          <div className="row align-items-center g-4">
             <div
-              className="col-md-5 col-lg-5 d-flex justify-content-center justify-content-sm-center justify-content-lg-start"
+              className="col-lg-6 col-md-6 d-flex justify-content-center justify-content-lg-start"
               data-aos="fade-left"
             >
-              <img src={History_Img} alt="History of Our School" className="history_img" loading="lazy" decoding="async" />
+              <img src={History_Img} alt="History of Our School - Future Foundation School Head Office" className="history_img" loading="lazy" decoding="async" />
             </div>
-            <div className="col-md-7 col-lg-7 mt-3 mt-sm-3 mt-md-0" data-aos="fade-right">
-              <p className="history_title">History of Our School</p>
+            <div className="col-lg-6 col-md-6 mt-3 mt-md-0" data-aos="fade-right">
+              <h2 className="history_title">History of Our School</h2>
               <p className="history_desp">
                 Founded in 1998, Future Foundation School was established with a singular, profound mission: to inspire critical thinkers and challenge students to view the world with curiosity and wonder. We began our journey with a commitment to providing more than just standard schooling, seeking to create an environment where pupils are genuinely fascinated by the process of learning.
               </p>
