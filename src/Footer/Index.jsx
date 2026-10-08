@@ -4,8 +4,6 @@ import Logo from "../assets/images/logo.png";
 import { IoLocationOutline, IoGlobeOutline } from "react-icons/io5";
 import { MdOutlinePhone, MdOutlineEmail } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { IoIosSend } from "react-icons/io";
 
 export const Footer = () => {
   const handleScrollAbout = (e) => {
@@ -39,7 +37,7 @@ export const Footer = () => {
             </p>
             <div className="footer_social_wrap">
               <a
-                href="https://www.facebook.com/share/19ZMLjokfx/"
+                href="https://www.facebook.com/FutureFoundationSchools"
                 target="_blank"
                 rel="noreferrer"
                 className="footer_social_btn"
@@ -48,22 +46,13 @@ export const Footer = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://www.instagram.com/futurefoundationschool?stkn=bHc2M3FxM2gwYmt3"
+                href="https://www.instagram.com/futurefoundationschool/"
                 target="_blank"
                 rel="noreferrer"
                 className="footer_social_btn"
                 aria-label="Instagram"
               >
                 <FaInstagram />
-              </a>
-              <a
-                href="https://x.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="footer_social_btn"
-                aria-label="X Twitter"
-              >
-                <FaXTwitter />
               </a>
               <a
                 href="https://wa.me/923707503109"
@@ -123,7 +112,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Col 4: Contact & Newsletter */}
+          {/* Col 4: Contact Details */}
           <div className="col-lg-4 col-md-12 footer_contact_col">
             <h5 className="footer_heading">Contact Details</h5>
             <ul className="footer_contact_list">
@@ -146,30 +135,15 @@ export const Footer = () => {
               <li className="footer_contact_item">
                 <IoGlobeOutline className="footer_c_icon" />
                 <a
-                  href="https://futurefoundationschool.com"
+                  href="https://futurefoundationschool.edu.pk"
                   target="_blank"
                   rel="noreferrer"
                   className="footer_phone_link"
                 >
-                  futurefoundationschool.com
+                  futurefoundationschool.edu.pk
                 </a>
               </li>
             </ul>
-
-            <div className="footer_newsletter_wrap">
-              <span className="footer_newsletter_label">Stay Connected</span>
-              <form onSubmit={(e) => e.preventDefault()} className="footer_newsletter_form">
-                <input
-                  type="email"
-                  className="footer_newsletter_input"
-                  placeholder="Enter your email"
-                  required
-                />
-                <button type="submit" className="footer_newsletter_btn" aria-label="Subscribe">
-                  <IoIosSend />
-                </button>
-              </form>
-            </div>
           </div>
         </div>
 
