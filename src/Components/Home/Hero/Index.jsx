@@ -73,7 +73,7 @@ export const HeroSection = () => {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           id="customVideo"
         >
           <source src={Dream} type="video/mp4" />
@@ -81,7 +81,7 @@ export const HeroSection = () => {
         </video>
       </div>
       <div className="hero_top_wave">
-        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="hero_curve_svg">
+        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="hero_curve_svg" aria-hidden="true">
           <path d="M0,35 C360,85 1080,20 1440,55 L1440,90 L0,90 Z" fill="#061D52" />
         </svg>
       </div>
@@ -114,10 +114,10 @@ export const HeroSection = () => {
             className="col-lg-6 d-flex justify-content-center position-relative mt-4 mt-sm-4 mt-md-4 mt-lg-0"
             data-aos="fade-right"
           >
-            <img src={Hero_Img_one} alt="" className="hero_second_img" aria-hidden="true" />
-            <img src={hero_img} alt="" className="hero_main_img" aria-hidden="true" />
-            <img src={Hero_ellipse} alt="" className="hero_ellipse" aria-hidden="true" />
-            <img src={Hero_ellipse} alt="" className="hero_ellipse_one" aria-hidden="true" />
+            <img src={Hero_Img_one} alt="" className="hero_second_img" aria-hidden="true" loading="lazy" decoding="async" />
+            <img src={hero_img} alt="Future Foundation School Students" className="hero_main_img" fetchPriority="high" decoding="async" />
+            <img src={Hero_ellipse} alt="" className="hero_ellipse" aria-hidden="true" decoding="async" />
+            <img src={Hero_ellipse} alt="" className="hero_ellipse_one" aria-hidden="true" decoding="async" />
           </div>
         </div>
       </div>

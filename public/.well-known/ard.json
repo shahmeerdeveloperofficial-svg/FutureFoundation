@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ards-project/ard-spec/main/spec/schemas/ai-catalog.schema.json",
   "specVersion": "1.0",
   "host": {
     "displayName": "Future Foundation School",
@@ -8,32 +7,16 @@
   },
   "entries": [
     {
-      "identifier": "urn:ffs:network:info",
-      "displayName": "Future Foundation School Information & Network",
-      "type": "text/markdown",
-      "url": "https://futurefoundationschool.edu.pk/llms.txt",
-      "description": "Comprehensive school profile, history, STEAM programs, 70+ campuses, and leadership."
+      "identifier": "urn:ai:futurefoundationschool:llms-txt",
+      "displayName": "Future Foundation School LLMs Info",
+      "type": "text/plain",
+      "url": "https://futurefoundationschool.edu.pk/llms.txt"
     },
     {
-      "identifier": "urn:ffs:network:full",
-      "displayName": "Future Foundation School Full Knowledge Base",
-      "type": "text/markdown",
-      "url": "https://futurefoundationschool.edu.pk/llms-full.txt",
-      "description": "Full directory including campuses, contact details, curriculum guide, and admission guidelines."
-    },
-    {
-      "identifier": "urn:ffs:admissions:apply",
-      "displayName": "Online Student Admission",
-      "type": "text/html",
-      "url": "https://futurefoundationschool.edu.pk/admissionnow",
-      "description": "Online admission inquiry and enrollment form for prospective students."
-    },
-    {
-      "identifier": "urn:ffs:campuses:locator",
-      "displayName": "Campuses Directory",
-      "type": "text/html",
-      "url": "https://futurefoundationschool.edu.pk/our-campuses",
-      "description": "Nationwide campus locations and contact numbers across Pakistan."
+      "identifier": "urn:ai:futurefoundationschool:llms-full-txt",
+      "displayName": "Future Foundation School Complete Directory",
+      "type": "text/plain",
+      "url": "https://futurefoundationschool.edu.pk/llms-full.txt"
     }
   ]
 }
