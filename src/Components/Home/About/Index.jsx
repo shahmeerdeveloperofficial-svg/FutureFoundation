@@ -39,13 +39,10 @@ export const AboutSection = () => {
             <div className="col-lg-6 col-md-6 mt-3 mt-md-0" data-aos="fade-right">
               <h2 className="history_title">History of Our School</h2>
               <p className="history_desp">
-                Founded in 1998, Future Foundation School was established with a singular, profound mission: to inspire critical thinkers and challenge students to view the world with curiosity and wonder. We began our journey with a commitment to providing more than just standard schooling, seeking to create an environment where pupils are genuinely fascinated by the process of learning.
+                Founded in 1998, Future Foundation School was established with a mission to inspire critical thinking, curiosity, and a lifelong passion for learning. From a single branch, we have grown into a trusted network of 70+ branches across Pakistan.
               </p>
               <p className="history_desp">
-                What started as a single, visionary branch has now proudly expanded into a prestigious network of 70+ branches across Pakistan.
-              </p>
-              <p className="history_desp">
-                Throughout this incredible journey of growth, the cornerstone of our success has remained unchanged: the quality of our mentorship. Over the decades, we have meticulously built a highly experienced, skillful, and dedicated faculty. By working collaboratively, our teaching and support staff have consistently provided the care, guidance, and academic flexibility required to meet the individual needs of every child. Today, our rich history stands as a legacy of academic excellence deeply rooted in national and Islamic values, and dedicated to shaping the global leaders of tomorrow.
+                Our success is built on experienced, dedicated teachers who provide quality education, personalized guidance, and a supportive learning environment. Rooted in national and Islamic values, we remain committed to academic excellence, character development, and preparing confident, responsible leaders for the future.
               </p>
             </div>
           </div>
