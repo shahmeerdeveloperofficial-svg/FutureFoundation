@@ -17,11 +17,11 @@ export const AdmissionPopup = () => {
     try {
       const dismissed = window.sessionStorage.getItem(STORAGE_KEY) === "1";
       if (!dismissed) {
-        const timer = window.setTimeout(() => setIsOpen(true), 600);
+        const timer = window.setTimeout(() => setIsOpen(true), 3200);
         return () => window.clearTimeout(timer);
       }
     } catch {
-      const timer = window.setTimeout(() => setIsOpen(true), 600);
+      const timer = window.setTimeout(() => setIsOpen(true), 3200);
       return () => window.clearTimeout(timer);
     }
   }, []);
@@ -74,6 +74,13 @@ export const AdmissionPopup = () => {
       onClick={handleClose}
     >
       <div className="admission-popup__card" onClick={(event) => event.stopPropagation()}>
+        <h2 id="admission-popup-title" className="visually-hidden">
+          Admissions Open 2026-2027 - Future Foundation School
+        </h2>
+        <p id="admission-popup-description" className="visually-hidden">
+          Online admissions are open from Montessori to College level. Click to apply online.
+        </p>
+
         <button
           type="button"
           className="admission-popup__close"
@@ -85,11 +92,18 @@ export const AdmissionPopup = () => {
 
         <div className="admission-popup__poster-shell">
           <div className="admission-popup__poster-stage">
-            <Link to="/admissionnow" onClick={handleClose} title="Click to apply online - Future Foundation School Admissions Open">
+            <Link
+              to="/admissionnow"
+              onClick={handleClose}
+              aria-label="Apply online for Future Foundation School Admissions 2026-27"
+              title="Click to apply online - Future Foundation School Admissions Open"
+            >
               <img
                 src={AdmissionPoster}
                 alt="Future Foundation School Online Admissions Open 2026-27"
                 className="admission-popup__poster-image"
+                width="600"
+                height="600"
               />
             </Link>
           </div>

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Future Foundation School & College",
+  "version": "1.0.0",
+  "description": "Discoverable resources, admissions, and campus network catalog for Future Foundation School.",
+  "homepage": "https://futurefoundationschool.edu.pk",
+  "publisher": {
+    "name": "Future Foundation School",
+    "url": "https://futurefoundationschool.edu.pk",
+    "email": "Info@futurefoundationschool.edu.pk"
+  },
+  "endpoints": [
+    {
+      "name": "Home",
+      "url": "https://futurefoundationschool.edu.pk/",
+      "description": "Main overview and educational programs."
+    },
+    {
+      "name": "Online Admissions",
+      "url": "https://futurefoundationschool.edu.pk/admissionnow",
+      "description": "Apply online for student admissions across all levels."
+    },
+    {
+      "name": "Campus Network",
+      "url": "https://futurefoundationschool.edu.pk/our-campuses",
+      "description": "Complete list of 70+ campus locations nationwide."
+    },
+    {
+      "name": "Contact Us",
+      "url": "https://futurefoundationschool.edu.pk/contact-us",
+      "description": "Contact school administration and helpdesk."
+    }
+  ]
+}
