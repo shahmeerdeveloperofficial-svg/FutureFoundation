@@ -10,18 +10,19 @@
 }
 
 .navbar-inner-row {
-    padding-top: 0.45rem;
-    padding-bottom: 0.45rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    gap: clamp(6px, 1vw, 16px);
 }
 
 .navbar-brand-link {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
     color: inherit;
     flex-shrink: 0;
-    margin-right: clamp(10px, 1.8vw, 24px);
+    margin-right: clamp(4px, 1vw, 16px);
 }
 
 .navbar-brand-link:hover {
@@ -37,7 +38,7 @@
 
 .navbar-brand-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: clamp(13px, 1.05vw, 15px);
     font-weight: 800;
     letter-spacing: 0.4px;
     color: #ffffff;
@@ -47,7 +48,7 @@
 
 .navbar-brand-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 10.5px;
+    font-size: clamp(8.5px, 0.75vw, 10px);
     font-weight: 700;
     letter-spacing: 1.2px;
     color: #F5B800;
@@ -56,10 +57,10 @@
 }
 
 .navbar-logo {
-    width: 58px;
-    height: 58px;
-    min-width: 58px;
-    min-height: 58px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     object-fit: contain;
     border-radius: 50%;
     background: #ffffff;
@@ -88,6 +89,8 @@
     display: inline-flex;
     align-items: center;
     min-height: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12.5px, 0.9vw, 14px);
     transition: color 0.25s ease, text-decoration-color 0.25s ease;
 }
 
@@ -106,16 +109,16 @@
     padding: 7px 20px 7px 20px;
     color: var(--whiteColor);
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .navbar_link {
     display: flex;
-    gap: 8px;
+    gap: 4px;
     align-items: center;
     color: var(--whiteColor);
-    font-family: 'Montserrat';
-    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12.5px, 0.9vw, 14px);
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -133,7 +136,12 @@
 
 .navbar_icon {
     color: var(--whiteColor);
-    font-size: 20px;
+    font-size: 15px;
+    min-width: 15px;
+    margin-left: 1px;
+    vertical-align: -1px;
+    display: inline-flex;
+    align-items: center;
     transition: transform 0.3s ease;
 }
 
@@ -179,12 +187,12 @@
 .navbar_btn{
     border: none;
     border-radius: 50px;
-    padding: 7px 8px 7px 20px;
-    font-family: 'Montserrat';
-    font-size: 14px;
+    padding: 6px 6px 6px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12.5px, 0.9vw, 13.5px);
     font-weight: 700;
-    display: flex;
-    gap: 10px;
+    display: inline-flex;
+    gap: 8px;
     background: linear-gradient(135deg, #F5B800 0%, #D4AF37 100%);
     align-items: center;
     color: #061D52;
@@ -192,6 +200,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .navbar_btn:hover {
@@ -203,12 +212,15 @@
 .navbar_circle{
     border-radius: 50%;
     background: #061D52;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    min-height: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .navbar_btn:hover .navbar_circle {
@@ -217,7 +229,7 @@
 
 .navbar_circle_icon{
     color: #ffffff;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .navbar_toggle{

@@ -88,11 +88,11 @@ export const CustomNavbar = () => {
                 ))}
               </nav>
             </div>
-            <div className="d-flex align-items-center gap-2">
-              <div className="d-none d-lg-block">
+            <div className="d-flex align-items-center gap-2 flex-shrink-0 navbar_action_wrap">
+              <div className="d-none d-lg-block flex-shrink-0">
                 <Link to="/admissionnow" style={{ textDecoration: "none", color: "inherit" }}>
                   <button className="navbar_btn" type="button">
-                    Admission Now
+                    <span>Admission Now</span>
                     <div className="navbar_circle">
                       <MdArrowForward className="navbar_circle_icon" />
                     </div>
